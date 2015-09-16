@@ -1,8 +1,8 @@
-@extends('layouts.master')
-<div class="container">
-    <div class="content">
+
+<div class="row">
+    <center>
         <img src="https://www.eternallynocturnal.com/images/witeskull.png" class="img-responsive" />
-        <form method="POST" action="/auth/login">
+        <form method="POST" action="auth/login">
             {!! csrf_field() !!}
 
             <div class="col-sm-12">
@@ -32,5 +32,6 @@
                 <button class="btn btn-sm btn-primary" type="submit">Login</button>
             </div>
         </form>
-    </div>
+
+    </center>
 </div>
