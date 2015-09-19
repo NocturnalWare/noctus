@@ -2,11 +2,10 @@
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:image" content="https://www.eternallynocturnal.com/images/blackskull.jpg">
-    <link rel="stylesheet" href="../resources/assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../resources/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../resources/assets/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../public/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap-theme.min.css">
     <script src="../public/js/bundle.js"></script>
-    <script src="../resources/assets/bootstrap/js/bootstrap.min.js"></script>
         <title>Noctus</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
