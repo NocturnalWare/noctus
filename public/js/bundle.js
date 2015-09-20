@@ -2673,7 +2673,19 @@ new Vue({
 
 });
 
-},{"./jquery.min.js":2,"./vue.min.js":4}],4:[function(require,module,exports){
+},{"./jquery.min.js":2,"./vue.min.js":5}],4:[function(require,module,exports){
+'use strict';
+
+new Vue({
+    el: '#ProductManager',
+    data: {},
+    ready: function ready() {
+        alert();
+    }
+
+});
+
+},{}],5:[function(require,module,exports){
 /*!
  * Vue.js v0.12.14
  * (c) 2015 Evan You
@@ -4402,4 +4414,4 @@ new Vue({
   }]);
 });
 
-},{}]},{},[3,4,2,1]);
+},{}]},{},[3,4,5,2,1]);
