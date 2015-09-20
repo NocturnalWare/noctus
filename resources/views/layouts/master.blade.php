@@ -62,7 +62,8 @@
 
 
 
-<div class="div-sm-12" style="max-width:100%">
+<div class="div-sm-12">
+@include('layouts.topcarousel')
 @include('layouts.publicnav')
 <body  style="min-height:900px">
 @yield('content')

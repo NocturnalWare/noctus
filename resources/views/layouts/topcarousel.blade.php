@@ -9,16 +9,16 @@
   <div class="carousel-inner" style="max-height:300px" role="listbox">
     <div class="item active">
       <center>
-        <img height="45%;" class="hidden-lg hidden-md hidden-sm" src="https://www.eternallynocturnal.com/store/public/images/products/SpringLineBanner.jpg" alt="...">
-        <img height="100%;" class="hidden-xs" src="https://www.eternallynocturnal.com/store/public/images/products/SpringLineBanner.jpg" alt="...">
+        <img class="img-responsive hidden-lg hidden-md hidden-sm" src="https://www.eternallynocturnal.com/store/public/images/products/SpringLineBanner.jpg" alt="...">
+        <img  class="img-responsive hidden-xs" src="https://www.eternallynocturnal.com/store/public/images/products/SpringLineBanner.jpg" alt="...">
       </center>
       <div class="carousel-caption">
       </div>
     </div>
     <div class="item">
       <center>
-        <img  height="45%;" class="hidden-lg hidden-md hidden-sm" src="https://www.eternallynocturnal.com/images/MaskShirtSlide.png" alt="...">
-        <img  height="100%;" class="hidden-xs" src="https://www.eternallynocturnal.com/images/MaskShirtSlide.png" alt="...">
+        <img  class="img-responsive hidden-lg hidden-md hidden-sm" src="https://www.eternallynocturnal.com/images/MaskShirtSlide.png" alt="...">
+        <img   class="img-responsive hidden-xs" src="https://www.eternallynocturnal.com/images/MaskShirtSlide.png" alt="...">
       </center>
       <div class="carousel-caption">
       </div>
