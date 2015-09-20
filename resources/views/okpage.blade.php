@@ -33,13 +33,20 @@
 	</div>
 
 <div class="col-sm-12 en-text">
-<h1>Welcome to Noctus! This is the database engine that will run our primary services!</h1>
+<h1>Welcome to Noctus! This is the database engine that will run our primary services! (soon)</h1>
 
 
-How to Slack:
-
-
-
+<h1 style="color:#fff">How to Slack:</h1>
 <br>
+Login:<br>
+email@eternallynocturnal.com<br>
+Your Password.<br>
+
+<a href="https://etnoc.slack.com"> 
+<h1 style="color:#fff">Click here to go to login.</h1>
+</a>
+
+
+
 </div>
 @stop
