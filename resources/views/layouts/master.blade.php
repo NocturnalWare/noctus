@@ -64,15 +64,14 @@
 
 
 
-<div class="div-sm-12" style="min-height:100%">
 
+<body class="div-sm-12" style="min-height:900px">
 @include('layouts.topcarousel')
 @include('layouts.publicnav')
-<body>
-    @yield('content')
-</body>
+@yield('content')
 
-</div>
+
+</body>
 
 </html>
 
