@@ -43,7 +43,7 @@ email@eternallynocturnal.com<br>
 Your Password.<br>
 
 <a href="https://etnoc.slack.com"> 
-<h1 style="color:#fff">Click here to go to login.</h1>
+<button class="btn btn-primary">Click here to go to login.</button>
 </a>
 
 
