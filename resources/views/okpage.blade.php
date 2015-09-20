@@ -3,10 +3,12 @@
 
 	<div class="col-lg-4 col-sm-6">
 		<div class="col-sm-4"></div>
-		<a class="col-sm-4 well well-sm en-big-well-button" href="{{route('productManager')}}">
-			Product Manager<br>
-			<i class="fa fa-gift" style="font-size:100px;"></i>
-		</a>
+		<div class="col-sm-4 well well-sm en-big-well-button">
+			<a href="{{route('productManager')}}">
+				Product Manager<br>
+				<i class="fa fa-gift" style="font-size:100px;"></i>
+			</a>
+		</div>
 		<div class="col-sm-4"></div>
 	</div>
 	<div class="col-lg-4 col-sm-6">
