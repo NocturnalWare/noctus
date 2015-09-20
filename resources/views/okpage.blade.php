@@ -3,8 +3,8 @@
 
 	<div class="col-lg-4 col-sm-6">
 		<div class="col-sm-4"></div>
-		<div class="col-sm-4 well well-sm en-big-well-button">
-			<a href="{{route('productManager')}}">
+		<div class="col-sm-4 well well-sm">
+			<a href="{{route('productManager')}}" class="en-big-well-button">
 				Product Manager<br>
 				<i class="fa fa-gift" style="font-size:100px;"></i>
 			</a>
@@ -14,16 +14,20 @@
 	<div class="col-lg-4 col-sm-6">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4 well well-sm en-big-well-button">
-			Contact Manager<br>
-			<i class="fa fa-users" style="font-size:100px;"></i>
+			<a href="{{route('contactManager')}}" class="en-big-well-button">
+				Contact Manager<br>
+				<i class="fa fa-users" style="font-size:100px;"></i>
+			</a>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>
 	<div class="col-lg-4 col-sm-6">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4 well well-sm en-big-well-button">
-			Venue Manager<br>
-			<i class="fa fa-university" style="font-size:100px;"></i>
+			<a href="{{route('venueManager')}}" class="en-big-well-button">
+				Venue Manager<br>
+				<i class="fa fa-university" style="font-size:100px;"></i>
+			</a>
 		</div>
 		<div class="col-sm-4"></div>
 	</div>

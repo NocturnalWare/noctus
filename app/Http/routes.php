@@ -31,3 +31,5 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
 Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
+Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
+Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
