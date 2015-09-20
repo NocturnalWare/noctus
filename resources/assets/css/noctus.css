@@ -23,7 +23,10 @@ body {
     background-attachment: fixed;
 }
 .en-label{
-	color:#fff;
+    color:#fff;
+}
+.en-label-bl{
+    color:#000;
 }
 
 .en-text{

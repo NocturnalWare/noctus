@@ -5,7 +5,7 @@
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4 well well-sm en-big-well-button">
 			<a href="{{route('productManager')}}" class="en-big-well-button">
-				Product Manager<br>
+				<label class="en-label-bl">Product Manager</label><br>
 				<i class="fa fa-gift" style="font-size:100px;"></i>
 			</a>
 		</div>
@@ -15,7 +15,7 @@
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4 well well-sm en-big-well-button">
 			<a href="{{route('contactManager')}}" class="en-big-well-button">
-				Contact Manager<br>
+				<label class="en-label-bl">Contact Manager</label><br>
 				<i class="fa fa-users" style="font-size:100px;"></i>
 			</a>
 		</div>
@@ -25,7 +25,7 @@
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4 well well-sm en-big-well-button">
 			<a href="{{route('venueManager')}}" class="en-big-well-button">
-				Venue Manager<br>
+				<label class="en-label-bl">Venue Manager</label><br>
 				<i class="fa fa-university" style="font-size:100px;"></i>
 			</a>
 		</div>
