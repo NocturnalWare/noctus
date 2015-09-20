@@ -2676,6 +2676,8 @@ new Vue({
 },{"./jquery.min.js":2,"./vue.min.js":5}],4:[function(require,module,exports){
 'use strict';
 
+var Vue = require('./vue.min.js');
+
 new Vue({
     el: '#ProductManager',
     data: {},
@@ -2685,7 +2687,7 @@ new Vue({
 
 });
 
-},{}],5:[function(require,module,exports){
+},{"./vue.min.js":5}],5:[function(require,module,exports){
 /*!
  * Vue.js v0.12.14
  * (c) 2015 Evan You
