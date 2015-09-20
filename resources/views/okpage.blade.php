@@ -1,19 +1,17 @@
 @extends('layouts.backend')
 @section('content')
 
-	<div class="col-sm-3 well well-sm">
-		Product Manager
-		<i class="fa fa-gift en-text" style="font-size:100px;"></i>
+	<div class="col-lg-4 col-sm-6 well well-sm">
+		Product Manager<br>
+		<i class="fa fa-gift" style="font-size:100px;"></i>
 	</div>
-	<div class="col-sm-1"></div>
-	<div class="col-sm-3 well well-sm">
-		Contact Manager
-		<i class="fa fa-users en-text" style="font-size:100px;"></i>
+	<div class="col-lg-4 col-sm-6 well well-sm">
+		Contact Manager<br>
+		<i class="fa fa-users" style="font-size:100px;"></i>
 	</div>
-	<div class="col-sm-1"></div>
-	<div class="col-sm-3 well well-sm">
-		Venue Manager
-		<i class="fa fa-university en-text" style="font-size:100px;"></i>
+	<div class="col-lg-4 col-sm-6 well well-sm">
+		Venue Manager<br>
+		<i class="fa fa-university" style="font-size:100px;"></i>
 	</div>
 </div>
 <div class="col-sm-12 en-text">
