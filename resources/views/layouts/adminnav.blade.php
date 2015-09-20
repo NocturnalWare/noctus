@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid"  style="background-color:#000;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://www.eternallynocturnal.com" style=""><img height="130%" src="https://www.eternallynocturnal.com/images/mainenheader.png" /></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span style="padding:0px"class="icon-bar"></span>
+        <span style="padding:0px"class="icon-bar"></span>
+        <span style="padding:0px"class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://twitter.com/enclothingco"><i class="fa fa-twitter"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://www.facebook.com/EternallyNocturnal"><i class="fa fa-facebook-official"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://instagram.com/eternally_nocturnal/"><i class="fa fa-instagram"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button style="background-color:#000" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Shop
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" style="background-color:#000;" aria-labelledby="dLabel">
+
+          </ul>
+        </li>
+        <li class="btn btn-sm nav-button-etnoc hidden-xs"></li>
+        <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Shows</li>
+        <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Bands</li>
+        <li class="btn btn-sm nav-button-etnoc hidden-xs" data-toggle="modal" data-target="#Feedback">Contact</li>
+        <li><button style="background-color:#000;" class='nav-button-etnoc btn btn-lg hidden-xs'>Cart</button></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

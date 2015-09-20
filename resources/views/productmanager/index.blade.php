@@ -1,7 +1,5 @@
-@extends('layouts.master')
-
+@extends('layouts.backend')
 @section('content')
-@include('layouts.backend')
 
 <div id="ProductManager">
 
