@@ -25,8 +25,6 @@
                 background: -webkit-gradient(radial, top center, 0px, top center, 100%, , color-stop(0%, rgba(99,3,35,1)), color-stop(100%, rgba(41,8,20,1)));
                 background: -webkit-radial-gradient(top center, ellipse cover, rgba(99,3,35,1) 0%, rgba(41,8,20,1) 100%);
                 background: rgba(99,3,35,1);
-
-
                 background: -moz-radial-gradient(top center, ellipse cover, rgba(99,3,35,1) 0%, rgba(7,0,16,1) 100%);
                 background: -webkit-gradient(radial, top center, 0px, top center, 100%, , color-stop(0%, rgba(99,3,35,1)), color-stop(100%, rgba(7,0,16,1)));
                 background: -webkit-radial-gradient(top center, ellipse cover, rgba(99,3,35,1) 0%, rgba(7,0,16,1) 100%);
@@ -64,14 +62,19 @@
 
 
 
-
-<body class="div-sm-12" style="min-height:900px">
-@include('layouts.topcarousel')
-@include('layouts.publicnav')
+<div class="div-sm-12">
+    @include('layouts.topcarousel')
+</div>
+<div class="div-sm-12">
+    @include('layouts.publicnav')
+</div>
+<div class="div-sm-12">
+<body  style="min-height:900px">
 @yield('content')
-
-
 </body>
+</div>
+
+
 
 </html>
 
