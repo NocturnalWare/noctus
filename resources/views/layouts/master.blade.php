@@ -65,11 +65,13 @@
 
 
 
+<div class="div-sm-12" style="min-height:100%">
 
 @include('layouts.topcarousel')
 @include('layouts.publicnav')
 @yield('content')
 
+</div>
 
 </body>
 </html>
