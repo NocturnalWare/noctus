@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/final.css">
     <script src="/js/bundle.js"></script>
-        <title>Noctus</title>
+        <title>#StayAwakeToCreate</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -20,7 +20,7 @@
 <div class="div-sm-12">
 @include('layouts.topcarousel')
 @include('layouts.publicnav')
-<body  style="min-height:900px">
+<body>
 @yield('content')
 </body>
 

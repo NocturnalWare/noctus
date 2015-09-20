@@ -22,24 +22,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-.container {
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.content {
-    text-align: center;
-    display: inline-block;
-    background-color:black;
-    width: 25%; 
-    border-radius: 25px;
-}
-
 .en-label{
 	color:#fff;
 }
-.title {
-    font-size: 96px;
+
+.en-text{
+    color:#fff;
 }
