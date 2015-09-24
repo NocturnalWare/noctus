@@ -2678,8 +2678,17 @@ new Vue({
 
 var Vue = require('./vue.min.js');
 
-new Vue({
-    el: '#ProductManager',
+var productManager = new Vue({
+    el: '#productManager',
+    data: {},
+    ready: function ready() {
+        alert();
+    }
+
+});
+
+var orderManager = new Vue({
+    el: '#orderManager',
     data: {},
     ready: function ready() {
         alert();

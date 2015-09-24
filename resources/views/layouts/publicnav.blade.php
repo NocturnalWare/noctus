@@ -19,21 +19,36 @@
         <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://instagram.com/eternally_nocturnal/"><i class="fa fa-instagram"></i></li></a>
         <li class="btn btn-sm mobile-nav-button-etnoc"></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="text-align:center">
         <li>
-          <button style="background-color:#000" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button style="background-color:#000;color:#fff" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Shop
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu" style="background-color:#000;" aria-labelledby="dLabel">
+          <ul class="dropdown-menu" style="background-color:#000;color:#fff" aria-labelledby="dLabel">
 
           </ul>
         </li>
+
         <li class="btn btn-sm nav-button-etnoc hidden-xs"></li>
         <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Shows</li>
         <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Bands</li>
-        <li class="btn btn-sm nav-button-etnoc hidden-xs" data-toggle="modal" data-target="#Feedback">Contact</li>
-        <li><button style="background-color:#000;" class='nav-button-etnoc btn btn-lg hidden-xs'>Cart</button></li>
+        <li>
+          <button style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Feedback">
+            <b>Contact</b>
+          </button>
+
+        </li>
+        <li>
+          <button style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Feedback">
+              <b>Cart</b>
+          </button>
+        </li>
+        <li>
+          <button style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Login">
+              <b>Login</b>
+          </button>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -48,7 +63,7 @@
     <div class="modal-content">
       <div class="modal-header"  style="background-color:#000">
         <button type="button" class="btn btn-danger pull-right" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button></button>
-        <h4 class="modal-title" id="FeedbackLabel">Send us a message!</h4>
+        <h4 class="modal-title" id="FeedbackLabel" style="color:#fff">Send us a message!</h4>
       </div>
       <div class="modal-body" style="background-color:#000">
         <form action="/" method="post">
