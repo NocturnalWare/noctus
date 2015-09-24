@@ -21,15 +21,13 @@ linkedin.com/in/saranshsinha
 
 
 <div class="div-sm-12">
-@include('layouts.topcarousel')
-@include('layouts.publicnav')
 <body>
-    <div id='stars'></div>
+<div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
-<div id='title'>
+@include('layouts.topcarousel')
+@include('layouts.publicnav')
 @yield('content')
-</div>
 </body>
 
 
