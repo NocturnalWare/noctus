@@ -20,13 +20,13 @@ linkedin.com/in/saranshsinha
 
 
 
-<div class="div-sm-12">
 <body>
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
 @include('layouts.topcarousel')
 @include('layouts.publicnav')
+<div class="div-sm-12" style="overflow:scroll;">
 @yield('content')
 </body>
 
