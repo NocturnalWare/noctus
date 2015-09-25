@@ -1,11 +1,11 @@
-<div id="carousel-example-generic" class="carousel slide" style="background-color:#000;opacity:1.0" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide" style="background-color:#000" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
   </ol>
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" style="max-height:300px;background-color:#000;opacity:1.0" role="listbox">
+  <div class="carousel-inner" style="max-height:300px" role="listbox">
     <div class="item active">
       <center>
         <img class="img-responsive hidden-lg hidden-md hidden-sm" src="https://www.eternallynocturnal.com/store/public/images/products/SpringLineBanner.jpg" alt="...">

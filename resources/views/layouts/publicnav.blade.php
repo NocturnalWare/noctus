@@ -14,9 +14,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
-        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://twitter.com/enclothingco"><i class="fa fa-twitter"></i></li></a>
-        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://www.facebook.com/EternallyNocturnal"><i class="fa fa-facebook-official"></i></li></a>
-        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://instagram.com/eternally_nocturnal/"><i class="fa fa-instagram"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff;font-size:2em" href="https://twitter.com/enclothingco"><i class="fa fa-twitter"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff;font-size:2em" href="https://www.facebook.com/EternallyNocturnal"><i class="fa fa-facebook-official"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff;font-size:2em" href="https://instagram.com/eternally_nocturnal/"><i class="fa fa-instagram"></i></li></a>
         <li class="btn btn-sm mobile-nav-button-etnoc"></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" style="text-align:center">
