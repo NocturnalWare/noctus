@@ -22,7 +22,7 @@
 					<center><img height="10%" class="img-responsive" src="https://www.eternallynocturnal.com/images/mainenheader.png" /></center>
 				</p>
 		</div>
-		<div class="col-md-12 col-sm-12 en-content-box">
+		<div class="col-md-12 col-sm-12 en-content-box" style="margin-top:10px;">
 			<h3 class="en-blog-title">Take 1. Scene: Northville Woods. Acti...cops.</h3>
 				<p>
 					We tried to shoot some footage in the woods near the Northville asylum (not the buildings) 
@@ -44,7 +44,6 @@
 					<br><br>
 					That's interesting. </span>
 					<br><br>
-					Don't forget to vote to end this "small government" bullshit parade in 2016.
 
 				</p>
 		</div>
