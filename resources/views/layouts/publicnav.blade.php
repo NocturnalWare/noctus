@@ -19,7 +19,7 @@
         <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff;font-size:2em" href="https://instagram.com/eternally_nocturnal/"><i class="fa fa-instagram"></i></li></a>
         <li class="btn btn-sm mobile-nav-button-etnoc"></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right" style="text-align:center">
+      <ul class="nav navbar-nav navbar-right" style="text-align:center;padding-top:10px;">
         <li>
           <button style="background-color:#000;color:#fff" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Shop
