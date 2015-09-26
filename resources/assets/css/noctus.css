@@ -4,8 +4,19 @@ html, body {
 
 body {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: scroll;
+  color: #ffffff;
+    background: -webkit-gradient(radial, top center, 0px, top center, 100%, , color-stop(0%, #1b2735), color-stop(100%, #090a0f));
+    background: -webkit-radial-gradient(top center, ellipse cover, #1b2735 0%, #090a0f 100%);
+    background: #1b2735;
+    background: -moz-radial-gradient(top center, ellipse cover, #1b2735 0%, #090a0f 100%);
+    background: -webkit-gradient(radial, top center, 0px, top center, 100%, , color-stop(0%, #1b2735), color-stop(100%, #090a0f));
+    background: -webkit-radial-gradient(top center, ellipse cover, #1b2735 0%, #090a0f 100%);
+    background: -o-radial-gradient(top center, ellipse cover, #1b2735 0%, #090a0f 100%);
+    background: -ms-radial-gradient(top center, ellipse cover, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at top center, #1b2735 0%, #090a0f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#036323', endColorstr='#072110', GradientType=1 );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #stars {
