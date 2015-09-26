@@ -26,7 +26,7 @@ linkedin.com/in/saranshsinha
 <div id='stars3'></div>
 @include('layouts.topcarousel')
 @include('layouts.publicnav')
-<div class="div-sm-12" style="overflow:scroll;">
+<div class="div-sm-12">
 @yield('content')
 </body>
 
