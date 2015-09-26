@@ -13,7 +13,7 @@
 
 					<br><br>it looked a bit less like crap.<br><br>
 
-					 We hope you like the new "Nightfall" look -- we've got so much more than a cool website theme and new clothes this time around.
+					 We hope you like the new "Nightfall" look -- we've been working on so much more than a cool website theme and new clothes....
 
 					<br><br>
 
