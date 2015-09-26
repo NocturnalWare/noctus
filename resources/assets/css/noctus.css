@@ -101,7 +101,6 @@ body {
 .en-content-box{
   background-color:#000;
   border:1px solid #fff;
-  height:100%;
   color:#fff;
   padding:15px;
   border-radius:4px;
@@ -115,6 +114,13 @@ body {
 
 .en-text{
     color:#fff;
+}
+
+.en-blog-title{
+  color:#fff;
+  font-family: "Arial Black", Gadget, sans-serif;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
 }
 
 .en-big-well-button{
