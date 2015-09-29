@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <div class="window1">
-		<div class="col-md-8 col-sm-12 en-content-box" style="margin-top:3%;opacity:.8;box-shadow:6px 6px 6px 6px #000;">
+		<div class="col-md-8 col-sm-12 en-content-box" style="max-height:400px;margin-top:3%;opacity:.8;box-shadow:6px 6px 6px 6px #000;">
 			<h3 class="en-blog-title" style="text-align:center">Site Update</h3>
 				<p style="font-size:1.2em;text-align:center">
 					Last year immediately after the show, we launched our website with lofty goals in mind 
@@ -22,11 +22,11 @@
 				</p>
 		</div>
 		<div class="col-md-1"></div>
-		<div class="col-md-3 col-sm-12 en-content-box" style="margin-top:3%;opacity:.8;text-align:center;height:100%">
+		<div class="col-md-3 col-sm-12 en-content-box" style="margin-top:3%;opacity:.8;text-align:center;height:100%;max-height:400px;">
 			<h3 class="en-blog-title" style="text-align:center">Upcomming Shows:</h3>
 			PUTNAMS HALLOWEEN Friday 10/16<br>
 		</div>
-		<div class="col-md-12 col-sm-12 en-content-box" style="margin-top:3%;opacity:1;text-align:center;overflow:visible;z-index:5;position:relative">
+		<div class="col-md-12 col-sm-12 en-content-box" style="margin-top:3%;opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
 				<div class="col-sm-6 col-md-4" style="background-color:#000">
 					<div class="col-sm-4 well well-sm en-big-well-button">
 							<label class="en-label-bl">Blackout Hat 29.99</label><br>
