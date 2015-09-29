@@ -22,7 +22,7 @@
 				</p>
 		</div>
 		<div class="col-md-1"></div>
-		<div class="col-md-3 col-sm-12 en-content-box" style="margin-top:3%;opacity:.8;text-align:center">
+		<div class="col-md-3 col-sm-12 en-content-box" style="margin-top:3%;opacity:.8;text-align:center;height:100%">
 			<h3 class="en-blog-title" style="text-align:center">Upcomming Shows:</h3>
 			PUTNAMS HALLOWEEN Friday 10/16<br>
 		</div>
