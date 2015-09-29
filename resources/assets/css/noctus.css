@@ -9,7 +9,7 @@ body {
 }
 
 .window1{
-  background-image: url('http://localhost/noctus/public/images/midyear.png');
+  background-image: url('../public/images/midyear.png');
     background-position: center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
