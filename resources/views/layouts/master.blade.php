@@ -21,10 +21,9 @@ linkedin.com/in/saranshsinha
 
 
 <body>
-<div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
-@include('layouts.topcarousel')
+<!-- <div id='stars'></div> -->
+<!-- <div id='stars2'></div> -->
+<!-- <div id='stars3'></div> -->
 @include('layouts.publicnav')
 <div class="div-sm-12">
 @yield('content')
