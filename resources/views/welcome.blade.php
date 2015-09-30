@@ -27,7 +27,12 @@
 			PUTNAMS HALLOWEEN Friday 10/16<br>
 		</div>
 		<div class="col-md-12 col-sm-12 en-content-box" style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
+				<div class="col-sm-12 col-md-4" style="background-color:#000">
+					<iframe  class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/nNJZ4V87O2U" frameborder="0" allowfullscreen></iframe>
+
+				</div>
 				<div class="col-sm-6 col-md-4" style="background-color:#000">
+					<div class="col-sm-4"></div>
 					<div class="col-sm-4 well well-sm en-big-well-button">
 							<label class="en-label-bl">Blackout Hat 29.99</label><br>
 							<img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/blackoutmockup.png">
@@ -35,6 +40,7 @@
 				</div>
 
 				<div class="col-sm-6 col-md-4" style="background-color:#000">
+					<div class="col-sm-4"></div>
 					<div class="col-sm-4 well well-sm en-big-well-button">
 							<label class="en-label-bl">Darby Overload Tank 19.99</label><br>
 							<img class="img-responsive" style="background-color:#000" src="https://www.eternallynocturnal.com/store/public/images/products/OverloadTank.png">

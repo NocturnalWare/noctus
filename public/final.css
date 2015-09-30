@@ -9,7 +9,7 @@ body {
 }
 
 .window1{
-  background-image: url('/images/midyear.png');
+  background-image: url('../public/images/midyear.png');
     background-position: center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -130,8 +130,7 @@ body {
   color:#fff;
   padding:15px;
   margin-top:3%;
-  opacity:.8;
-  box-shadow:6px 6px 6px 6px #000;
+  opacity:.9;
   border-radius:4px;
 }
 .en-label{
