@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <div class="window1">
-		<div class="col-md-8 col-sm-12 en-content-box" style="max-height:400px;overflow-y:scroll">
+		<div class="col-md-8 col-sm-12 en-content-box" style="max-height:500px;overflow-y:scroll">
 			<h3 class="en-blog-title" style="text-align:center">Site Update</h3>
 				<p style="font-size:1.2em;text-align:center">
 					Last year immediately after the show, we launched our website with lofty goals in mind 
