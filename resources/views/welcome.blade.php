@@ -4,7 +4,7 @@
 		<div class="col-md-8 col-sm-12 en-content-box">
 			<h3 class="en-blog-title" style="text-align:center">Site Update</h3>
 				<p style="font-size:1.2em;text-align:center">
-					Last year immediately after the show, we launched our website with lofty goals in mind 
+					Last year immediately after Putnam's Halloween, we launched our website with lofty goals in mind 
 					
 					<br><br>it looked like crap.<br><br>
 

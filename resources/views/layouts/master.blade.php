@@ -25,7 +25,7 @@ linkedin.com/in/saranshsinha
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
 @include('layouts.publicnav')
-<div class="div-sm-12">
+<div class="div-sm-12" style="margin-top:70px;">
 @yield('content')
 </body>
 
