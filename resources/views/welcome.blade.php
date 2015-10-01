@@ -23,13 +23,13 @@
 						</center>
 				</p>
 		</div>
-		<div class="col-md-1"></div>
+		<div class="hidden-sm col-md-1" style="width:40px">&nbsp</div>
 		<div class="col-md-3 col-sm-12 en-content-box" style="text-align:center;height:100%;max-height:400px;">
 			<h3 class="en-blog-title" style="text-align:center">Upcoming Shows:</h3>
 			PUTNAMS HALLOWEEN Friday 10/16<br>
 		</div>
 		<div class="col-md-6 col-sm-12 en-content-box embed-responsive-16by9"style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
-					<iframe style="width:100%;height:100%;max-height:675px;" src="https://www.youtube.com/embed/nNJZ4V87O2U" frameborder="0" allowfullscreen></iframe>
+					<iframe style="width:100%;height:100%;max-height:675px;" src="https://www.youtube.com/embed/nNJZ4V87O2U" allowfullscreen></iframe>
 		</div>
 		<div class="col-md-6 col-sm-12 en-content-box" style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
 				<div class="col-sm-6 col-md-6" style="background-color:#000">
