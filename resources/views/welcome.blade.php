@@ -28,7 +28,7 @@
 		</div>
 		<div class="col-md-12 col-sm-12 en-content-box" style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
 				<div class="col-sm-12 col-md-4" style="background-color:#000">
-					<iframe  class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/nNJZ4V87O2U" frameborder="0" allowfullscreen></iframe>
+					<iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/nNJZ4V87O2U" frameborder="0" allowfullscreen></iframe>
 
 				</div>
 				<div class="col-sm-6 col-md-4" style="background-color:#000">
