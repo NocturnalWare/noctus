@@ -12,7 +12,15 @@ class CreateCartsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('carts', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('customer_id');
+            $table->integer('product_id');
+            $table->string('size');
+            $table->integer('quantity');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +30,6 @@ class CreateCartsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('carts');
     }
 }
