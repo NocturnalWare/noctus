@@ -28,6 +28,7 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+Route::resource('products', 'ProductsController');
 
 
 Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
