@@ -19,3 +19,22 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define()
+
+
+
+$factory->define(Makeros\Marketplace\MarketSubscription::class, function (Faker\Generator $faker) {
+    return [
+        'module_id' => rand(1,10),
+        'user_id' => 1,
+        'provider_id' => 1,
+        'price' => rand(14, 59)."99",
+        'billing_type' => $faker->randomElement($array = array ('ach', 'cc')), //Annual, Monthly, Free
+        'billing_method' => $faker->randomElement($array = array ('a', 'm', 'f')), //Bill CC or bill account
+        'cycle_start' => $faker->date($max = 'now'),
+        'cycle_end' => $faker->date($max = 'now'),
+    ];
+});
+

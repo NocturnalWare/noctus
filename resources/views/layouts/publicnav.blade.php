@@ -26,8 +26,12 @@
             Shop
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu" style="background-color:#000;color:#fff" aria-labelledby="dLabel">
+          <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">
+            @foreach(\App\ProductCategory::all() as $shop)
+              <a href="{{route('productsort', $shop->name)}}"><li class="btn btn-lg">{{$shop->name}}</li></a>
+              <br>
 
+            @endforeach
           </ul>
         </li>
 
