@@ -5,11 +5,11 @@ linkedin.com/in/saranshsinha
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:image" content="https://www.eternallynocturnal.com/images/blackskull.jpg">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="final.css">
-    <script src="js/bundle.js"></script>
+    <link rel="stylesheet" href="http://159.203.77.45/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://159.203.77.45/final.css">
+    <script src="http://159.203.77.45/js/bundle.js"></script>
         <title>#StayAwakeToCreate</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
