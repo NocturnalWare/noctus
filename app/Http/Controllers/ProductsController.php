@@ -16,6 +16,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
+        $products = \App\Product::all();
+        return view('products.index', compact('products'));
     }
 
     public function sortindex($category){
