@@ -35,4 +35,7 @@ Route::get('products/sort/{category}', array('as' => 'productsort', 'uses' => 'P
 Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
 Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
 Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+Route::get('ordermanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+Route::get('shippingmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 
