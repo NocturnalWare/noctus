@@ -20,9 +20,9 @@
 
 
 
-<div class="div-sm-12">
+<div class="div-sm-12" style="margin-top:70px;">
 @include('layouts.adminnav')
-<body>
+<body style="background-color:#000">
 @yield('content')
 </body>
 

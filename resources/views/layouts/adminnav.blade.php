@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
+  
   <div class="container-fluid"  style="background-color:#000;">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,26 +15,36 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
-        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://twitter.com/enclothingco"><i class="fa fa-twitter"></i></li></a>
-        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://www.facebook.com/EternallyNocturnal"><i class="fa fa-facebook-official"></i></li></a>
-        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff"href="https://instagram.com/eternally_nocturnal/"><i class="fa fa-instagram"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff;font-size:2em" href="https://twitter.com/enclothingco"><i class="fa fa-twitter"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff;font-size:2em" href="https://www.facebook.com/EternallyNocturnal"><i class="fa fa-facebook-official"></i></li></a>
+        <li class="btn btn-sm mobile-nav-button-etnoc"> <a target="_blank" style="color:#fff;font-size:2em" href="https://instagram.com/eternally_nocturnal/"><i class="fa fa-instagram"></i></li></a>
         <li class="btn btn-sm mobile-nav-button-etnoc"></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="text-align:center;padding-top:10px;">
         <li>
-          <button style="background-color:#000" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Shop
+          <a style="background-color:#000;color:#fff" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Manage
             <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" style="background-color:#000;" aria-labelledby="dLabel">
-
+          </a>
+          <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">
+            <li></li>
+            <li class="btn btn-lg">Shows</li>
+            <li class="btn btn-lg">Bands</li>
+              <a href="{{route('products.index')}}" style="color:#fff"><li class="btn btn-lg">Storefront</li></a>
           </ul>
         </li>
+
         <li class="btn btn-sm nav-button-etnoc hidden-xs"></li>
-        <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Shows</li>
-        <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Bands</li>
-        <li class="btn btn-sm nav-button-etnoc hidden-xs" data-toggle="modal" data-target="#Feedback">Contact</li>
-        <li><button style="background-color:#000;" class='nav-button-etnoc btn btn-lg hidden-xs'>Cart</button></li>
+        <li>
+          <a href="{{route('productManager')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
+              <b>Cart</b>
+          </a>
+        </li>
+        <li>
+          <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Login">
+              <b>Logout</b>
+          </a>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

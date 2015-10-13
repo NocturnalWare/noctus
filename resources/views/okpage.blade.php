@@ -61,6 +61,16 @@
 		</div>
 		<div class="col-sm-4"></div>
 	</div>
+<div class="col-lg-4 col-sm-6">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4 well well-sm en-big-well-button">
+			<a href="{{route('venueManager')}}" class="en-big-well-button">
+				<label class="en-label-bl">Show Manager</label><br>
+				<i class="fa fa-magic" style="font-size:100px;"></i>
+			</a>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
 <div class="col-sm-12 en-text">
 <h1>Welcome to Noctus! This is the database engine that will run our primary services! (soon)</h1>
