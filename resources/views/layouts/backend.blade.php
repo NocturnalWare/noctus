@@ -20,7 +20,7 @@
 
 
 
-<div class="div-sm-12" style="margin-top:70px;">
+<div class="div-sm-12" style="margin-top:70px;height:100%;">
 @include('layouts.adminnav')
 <body style="background-color:#000">
 @yield('content')

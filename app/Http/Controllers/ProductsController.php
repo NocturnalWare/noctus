@@ -54,7 +54,9 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = \App\Product::where('id', $id)->with('inventories')->first();
+
+        return view('products.show', compact('product'));
     }
 
     /**

@@ -28,17 +28,15 @@
           </a>
           <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">
             <li></li>
-            <li class="btn btn-lg">Shows</li>
+            <li class="btn btn-lg">Products</li>
+            <li class="btn btn-lg">Contacts</li>
+            <li class="btn btn-lg">Venues</li>
+            <li class="btn btn-lg">Orders</li>
             <li class="btn btn-lg">Bands</li>
-              <a href="{{route('products.index')}}" style="color:#fff"><li class="btn btn-lg">Storefront</li></a>
+            <li class="btn btn-lg">Shipping</li>
+            <li class="btn btn-lg">Shows</li>
+              <a href="{{route('products.index')}}" style="color:#fff"><li class="btn btn-lg">Go to Storefront</li></a>
           </ul>
-        </li>
-
-        <li class="btn btn-sm nav-button-etnoc hidden-xs"></li>
-        <li>
-          <a href="{{route('productManager')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
-              <b>Cart</b>
-          </a>
         </li>
         <li>
           <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Login">

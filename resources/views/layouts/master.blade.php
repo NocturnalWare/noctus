@@ -17,12 +17,12 @@
 
 
 
-<body>
+<body style="background-color:#000">
 <!-- <div id='stars'></div> -->
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
 @include('layouts.publicnav')
-<div class="div-sm-12" style="margin-top:70px;">
+<div class="div-sm-12" style="margin-top:20px;">
 @yield('content')
 </body>
 
