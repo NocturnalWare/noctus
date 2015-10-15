@@ -98,4 +98,49 @@ class CartsController extends Controller
         Cart::destroy($id);
         return Redirect::route('carts.index');
     }
+
+    public function checkCart(Request $request){
+        return \App\Cart::where('customer_id', \Session::get('cart_id'))->where('product_id', $request->input('product'))->get();
+    }
+
+    public function addToCart(Request $request)
+    {   
+        // Session::forget('cart_id');
+        if(\Session::get('cart_id')){
+            $customer_id = \Session::get('cart_id');
+        }else{
+            $customer_id = str_random(50);
+            \Session::put('cart_id', $customer_id);
+        }
+        // $item = Input::get('product_id');
+        $size = $request->input('size');
+        $item = $request->input('product');
+        if(\App\Cart::where('customer_id', $customer_id)
+            ->where('product_id', $item)
+            ->where('size', $size)
+            ->pluck('quantity')){
+            $quantit = \App\Cart::where('customer_id', $customer_id)
+                        ->where('product_id', $item)
+                        ->where('size', $size)
+                        ->pluck('quantity');
+            $cart = \App\Cart::where('customer_id', $customer_id)
+                    ->where('product_id', $item)
+                    ->where('size', $size)
+                    ->first();
+            $cart->customer_id = $customer_id;
+            $cart->product_id = $item;
+            $cart->size = $size;
+            $cart->quantity = $quantit+1;
+            $cart->save();
+        }else{
+            $cart = \App\Cart::create([
+                'customer_id' => $customer_id,
+                'size' => $size,
+                'product_id' => $item,
+                'quantity' => 1,
+            ]);
+        return('sucksess');
+        }
+    }
+ 
 }
