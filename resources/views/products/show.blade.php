@@ -1,11 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-	{{$product->name}}
 
-
-
-	<legend class="product-header-etnoc">{{$product->name}}</legend>
+	<legend style="margin-top:70px;" class="product-header-etnoc">{{$product->name}}</legend>
 	<div class="col-xs-12 col-md-7">
 		<img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/{{$product->main_image}}" />
 	</div>
