@@ -14,11 +14,9 @@ class Cart extends Model
 	protected $table = 'carts';
 
 	public function findItemProp($property){
-		$item = Product::where('id', $this->item)->pluck($property);
-		return($item);
+		return \App\Product::where('id', $this->product_id)->pluck($property);
 	}
 	public function checkoutPrice(){
-		$price = $this->quantity * Price::where('product_id', $this->item)->pluck($this->size);
-		return($price);
+		return $this->quantity * \App\Price::where('product_id', $this->id)->pluck($this->size);
 	}
 }

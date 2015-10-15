@@ -21,7 +21,7 @@ class CartsController extends Controller
             return view('carts.index', compact('carts'));
         }
         else{
-            return Redirect::route('landing');
+            return redirect()->back();
         }
     }
     /**
@@ -141,6 +141,25 @@ class CartsController extends Controller
             ]);
         return('sucksess');
         }
+    }
+
+    public function removeFromCart(Request $request)
+    {
+        $item = $request->input('product');
+        $customer_id = \Session::get('cart_id');
+        \App\Cart::destroy($item);
+        if(\App\Cart::where('customer_id', $customer_id)->first()){
+            return redirect()->back();
+        }
+
+        return redirect()->route('products.index');
+    }
+    
+    public function emptyCart()
+    {
+        \Session::forget('checkoutAmt');
+        \Session::forget('cart_id');
+        return redirect()->route('products.index');
     }
  
 }

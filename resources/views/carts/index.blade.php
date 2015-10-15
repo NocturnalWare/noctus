@@ -1,9 +1,10 @@
 @extends('layouts.master')
+
 @section('content')
 <?php $pricetag = 0;?>
 	@foreach($carts as $cart)
 		
-		<div class="row" style="margin-left:40px;width:80%;border:1px #ffffff solid;border-radius:35px;border-left:transparent;border-right:transparent;padding:15px;">
+		<div class="row" style="margin-top:70px;margin-left:40px;width:80%;border:1px #ffffff solid;border-radius:35px;border-left:transparent;border-right:transparent;padding:15px;">
 				<div class="col-xs-12 col-md-3">
 					<center>
 						<img  style="height:100px" class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/{{$cart->findItemProp('main_image')}}" />
@@ -13,7 +14,7 @@
 					{{$cart->findItemProp('Name')}}<br>
 				</div>
 				<div class="col-xs-4 col-md-2">
-					{{str_slug($cart->size)}}
+					{{studly_case($cart->size)}}
 				</div>
 				<div class="col-xs-4 col-md-2">
 					{{$cart->quantity}}
@@ -23,11 +24,13 @@
 						${{substr($cart->checkoutPrice(),0, -2)}}.{{substr($cart->checkoutPrice(),-2)}}
 					</div>
 					<div class="col-xs-6">
-						{{Form::open(array('route' => 'commerceDirector'))}}
-						{{Form::hidden('commerceType', 'removeFromCart')}}
-						{{Form::hidden('product', $cart->id)}}
-						<button type="submit" class="btn btn-sm btn-cancel-etnoc"><i class="fa fa-times"></i></button>
-						{{Form::close()}}
+						<form action="{{route('removeFromCart')}}" method="post">
+							<input type="hidden" name="product" value="{{$cart->id}}" />
+							<input type="hidden" name="_token" value="{{csrf_token()}}">
+
+							<button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
+						</form>
+					
 					</div>
 				</div>
 				
@@ -52,19 +55,20 @@
 ?>
 
 <div style="color:#f0f0f0;font-size:16px">Shipping total: ${{substr($shipcost,0,-2)}}.{{substr($shipcost,-2)}}</div>
-{{Form::open(array('route' => 'commerceDirector', 'method' => 'post'))}}
-{{Form::hidden('commerceType', 'checkout')}}
-{{Form::hidden('checkoutAmt', $pricetag)}}
+<form action="{{route('cart.index')}}" method="post">
+<input type="hidden" name="checkoutAmt" value="{{$pricetag}}">
+<input type="hidden" name="_token" value="{{csrf_token()}}">
 
-<button type="submit" class="btn btn-sm btn-continue-etnoc">${{substr($pricetag,0,-2)}}.{{substr($pricetag,-2)}}<br>Check Out</button>
+<button type="submit" class="btn btn-sm btn-primary">${{substr($pricetag,0,-2)}}.{{substr($pricetag,-2)}}<br>Check Out</button>
 
-{{Form::close()}}
+</form>
+
 <br><br>
 
-{{Form::open(array('route' => 'commerceDirector'))}}
-{{Form::hidden('commerceType', 'emptyCart')}}
-<button type="submit" class="button tiny" style="border-radius:35px;background-color:#700000">Empty Cart</button>
-{{Form::close()}}
+<form action="{{route('emptyCart')}}" method="post">
+<input type="hidden" name="_token" value="{{csrf_token()}}">
+<button type="submit" class="btn btn-danger btn-xs" style="border-radius:35px;background-color:#700000">Empty Cart</button>
+</form>
 </div>
 
 @else
