@@ -46,7 +46,7 @@
 
         </li>
         <li>
-          <a href="{{route('productManager')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
+          <a href="{{route('cart.index')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
               <b>Cart</b>
           </a>
         </li>

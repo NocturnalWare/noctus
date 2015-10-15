@@ -12,7 +12,20 @@ class CreatePricesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('prices', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer('product_id');
+            $table->integer('xsmall')->nullable();
+            $table->integer('small')->nullable();
+            $table->integer('medium')->nullable();
+            $table->integer('large')->nullable();
+            $table->integer('xlarge')->nullable();
+            $table->integer('xxlarge')->nullable();
+            $table->integer('xxxlarge')->nullable();
+            $table->integer('onesize')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +35,6 @@ class CreatePricesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('prices');
     }
 }

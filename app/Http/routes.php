@@ -42,3 +42,5 @@ Route::get('shippingmanager/index', array('as' => 'venueManager', 'uses' => 'Pro
 
 Route::post('/cart/checkCart', array('as' => 'checkCart', 'uses' => 'CartsController@checkCart'));
 Route::post('/cart/addToCart', array('as' => 'addToCart', 'uses' => 'CartsController@addToCart'));
+
+Route::resource('cart', 'CartsController');

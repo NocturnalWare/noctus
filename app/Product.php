@@ -14,4 +14,8 @@ class Product extends Model
 	{
 		return $this->hasOne('\App\Inventory', 'product_id', 'id');
 	}
+
+	public function prices(){
+		return $this->hasOne('\App\Price', 'product_id', 'id');
+	}
 }

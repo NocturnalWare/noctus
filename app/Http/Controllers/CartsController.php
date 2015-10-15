@@ -16,9 +16,9 @@ class CartsController extends Controller
      */
     public function index()
     {
-        if(Session::get('cart_id')){
-            $carts = Cart::where('customer_id', Session::get('cart_id'))->get();
-            return View::make('carts.index', compact('carts'));
+        if(\Session::get('cart_id')){
+            $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
+            return view('carts.index', compact('carts'));
         }
         else{
             return Redirect::route('landing');
