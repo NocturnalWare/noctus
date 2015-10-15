@@ -86,7 +86,6 @@
         data: $post,
         cache: false,
         success: function(data){
-        	alert(data);
            checkCart();
            return;
         }
