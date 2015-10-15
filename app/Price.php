@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Price extends Model
 {
 	protected $rules = [];
-	protected $fillable = 
+	protected $fillable = [
 			'product_id',
 			'xsmall',
 			'small',
