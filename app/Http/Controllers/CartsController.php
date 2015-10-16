@@ -37,7 +37,7 @@ class CartsController extends Controller
     public function createShipping(Request $request)
     {
         \Session::put('checkoutAmt', $request->input('checkoutAmt'));
-        return view('carts.createShipping');
+        return view('carts.createshipping');
     }
     /**
      * Store a newly created cart in storage.
