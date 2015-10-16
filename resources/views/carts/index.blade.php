@@ -55,7 +55,7 @@
 ?>
 
 <div style="color:#f0f0f0;font-size:16px">Shipping total: ${{substr($shipcost,0,-2)}}.{{substr($shipcost,-2)}}</div>
-<form action="{{route('cart.index')}}" method="post">
+<form action="{{route('createShipping')}}" method="post">
 <input type="hidden" name="checkoutAmt" value="{{$pricetag}}">
 <input type="hidden" name="_token" value="{{csrf_token()}}">
 
@@ -73,7 +73,7 @@
 
 @else
 <div style="min-height:800px">
-THERE DOESNT SEEM TO BE ANYTHING IN YOUR CARTE! SHOPPE HARDER!
+THERE DOESNT SEEM TO BE ANYTHING IN YOUR CART!
 
 @endif
 

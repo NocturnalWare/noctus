@@ -33,6 +33,12 @@ class CartsController extends Controller
     {
         return View::make('carts.create');
     }
+
+    public function createShipping(Request $request)
+    {
+        \Session::put('checkoutAmt', $request->input('checkoutAmt'));
+        return view('carts.createShipping');
+    }
     /**
      * Store a newly created cart in storage.
      *
@@ -43,10 +49,10 @@ class CartsController extends Controller
         $validator = Validator::make($data = Input::all(), Cart::$rules);
         if ($validator->fails())
         {
-            return Redirect::back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput();
         }
-        Cart::create($data);
-        return Redirect::route('carts.index');
+        // \Cart::create($data);
+        return redirect()->route('carts.index');
     }
     /**
      * Display the specified cart.
@@ -56,8 +62,8 @@ class CartsController extends Controller
      */
     public function show($id)
     {
-        $cart = Cart::findOrFail($id);
-        return View::make('carts.show', compact('cart'));
+        // $cart = \Cart::findOrFail($id);
+        return view('carts.index', compact('cart'));
     }
     /**
      * Show the form for editing the specified cart.
@@ -67,8 +73,8 @@ class CartsController extends Controller
      */
     public function edit($id)
     {
-        $cart = Cart::find($id);
-        return View::make('carts.edit', compact('cart'));
+        // $cart = Cart::find($id);
+        return view('carts.index', compact('cart'));
     }
     /**
      * Update the specified cart in storage.
@@ -78,14 +84,14 @@ class CartsController extends Controller
      */
     public function update($id)
     {
-        $cart = Cart::findOrFail($id);
+        // $cart = Cart::findOrFail($id);
         $validator = Validator::make($data = Input::all(), Cart::$rules);
         if ($validator->fails())
         {
-            return Redirect::back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput();
         }
         $cart->update($data);
-        return Redirect::route('carts.index');
+        return redirect()->route('carts.index');
     }
     /**
      * Remove the specified cart from storage.
@@ -96,7 +102,7 @@ class CartsController extends Controller
     public function destroy($id)
     {
         Cart::destroy($id);
-        return Redirect::route('carts.index');
+        return redirect()->route('carts.index');
     }
 
     public function checkCart(Request $request){

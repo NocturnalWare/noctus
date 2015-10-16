@@ -44,5 +44,6 @@ Route::post('/cart/checkCart', array('as' => 'checkCart', 'uses' => 'CartsContro
 Route::post('/cart/addToCart', array('as' => 'addToCart', 'uses' => 'CartsController@addToCart'));
 Route::post('/cart/removeFromCart', array('as' => 'removeFromCart', 'uses' => 'CartsController@removeFromCart'));
 Route::post('/cart/emptyCart', array('as' => 'emptyCart', 'uses' => 'CartsController@emptyCart'));
+Route::post('/cart/createshipping', array('as' => 'createShipping', 'uses' => 'CartsController@createShipping'));
 
 Route::resource('cart', 'CartsController');

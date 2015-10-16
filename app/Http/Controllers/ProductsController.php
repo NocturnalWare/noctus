@@ -22,7 +22,11 @@ class ProductsController extends Controller
 
     public function sortindex($category){
         $products = \App\Product::where('category', $category)->with('inventories')->get();
-        return view('products.index', compact('products'));
+        if($products){
+            return view('products.index', compact('products'));
+        }
+
+        return redirect()->back();
     }
 
     /**
