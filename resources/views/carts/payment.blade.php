@@ -1,12 +1,10 @@
 @extends('layouts.master')
 @section('content')
-<?php $checkoutAmt = Session::get('checkoutAmt');?>
+<?php $checkoutAmt = session('checkoutAmt');?>
 <div style="background-color:#000000; min-height:900px">
 <div class="col-sm-12 col-md-12">
 
  <h2 style="color:#ffffff">Please verify the information below is correct before entring your credit card details</h2>
-{{Form::close()}}
-
 </div>
 
 <div class="col-sm-12 col-md-12">

@@ -20,7 +20,7 @@
 
 
 
-<form action="" method="">
+<form action="{{route('addShipping')}}" method="POST">
 	<div class="col-xs-12 col-lg-12">
 		<div class="col-sm-6 col-md-4">
 			<div class="col-md-6">
@@ -121,6 +121,7 @@
 @if(session('checkoutAmt'))
 <input type="hidden" name="cart_id" value="{{session('cart_id')}}" />
 <input type="hidden" name="cart_amt" value="{{session('checkoutAmt')}}" />
+<input type="hidden" name="_token" value="{{csrf_token()}}" />
 <h2 style="color:#f0f0f0">Total with shipping: ${{substr(session('checkoutAmt'),0,-2)}}.{{substr(session('checkoutAmt'),-2)}}</h2>
 @endif
 

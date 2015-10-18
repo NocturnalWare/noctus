@@ -34,7 +34,7 @@ class CartsController extends Controller
         return View::make('carts.create');
     }
 
-    public function createShipping(Request $request)
+    public function createShippingForm(Request $request)
     {
         \Session::put('checkoutAmt', $request->input('checkoutAmt'));
         return view('carts.createshipping');
@@ -147,6 +147,46 @@ class CartsController extends Controller
             ]);
         return('sucksess');
         }
+    }
+
+    public function createShipping(Request $request){
+        if(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('payment_status') == 'Paid'){
+                return redirect()->route('alreadyPaid');
+        }elseif(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('cart_id') > ''){
+            $cart = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
+            $cart->email = $request->input('email');
+            $cart->phone = $request->input('phone');
+            $cart->ship_f_name = $request->input('ship_f_name');
+            $cart->ship_l_name = $request->input('ship_l_name');
+            $cart->ship_address1 = $request->input('ship_address1');
+            $cart->ship_address2 = $request->input('ship_address2');
+            $cart->ship_city = $request->input('ship_city');
+            $cart->ship_state = $request->input('ship_state');
+            $cart->ship_zip = $request->input('ship_zip');
+            $cart->cart_amt = \Session::get('checkoutAmt');
+            $cart->save();
+            return  redirect()->route('makeCCPayment');
+        }else{
+        $validator = \Validator::make($data = $request->except('_token', 'password'), \App\Shipping::$rules);
+        if ($validator->fails())
+        {
+            return redirect()->route('createShipping');
+        }
+        \App\Shipping::create($data);
+        if($request->input('password'))
+        {
+            if(Customer::where('email', $request->input('email'))->pluck('id') == Null)
+            {
+                Customer::create(array('username' => $request->input('email'), 'password' => Hash::make($request->input('password')), 'email' => $request->input('email')));
+            }
+        }
+        return redirect()->route('makeCCPayment');
+        }
+    }
+
+    public function makeCCPayment()
+    {
+        return view('carts.payment');
     }
 
     public function removeFromCart(Request $request)
