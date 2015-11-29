@@ -30,7 +30,6 @@
             @foreach(\App\ProductCategory::all() as $shop)
               <a href="{{route('productsort', $shop->name)}}" style="color:#fff"><li class="btn btn-lg">{{$shop->name}}</li></a>
               <br>
-
             @endforeach
               <a href="{{route('products.index')}}" style="color:#fff"><li class="btn btn-lg">Everything</li></a>
           </ul>
