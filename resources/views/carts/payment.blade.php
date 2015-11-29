@@ -65,7 +65,10 @@
     </div>
 
     <hr>
-    	<input type="hidden" data-description="{{$checkoutAmt}}">
+
+    <form action="{{route('completePayment')}}" method="post">
+      <input type="hidden" name="_token" value="{{csrf_token()}}">
+      <input type="hidden" name="data-description" value="{{$checkoutAmt}}">
       <script
         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="{{env('STRIPE_PK')}}"
