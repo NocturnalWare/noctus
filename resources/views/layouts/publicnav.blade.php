@@ -90,14 +90,14 @@
       </div>
       <div class="modal-body" style="background-color:#000;padding:30px">
         <form action="{{route('sendFeedback')}}" method="post">
-          <input type="hidden" name="_token" value="{{csrf_token()}}">
+          <input type="hidden" name="_token" value="{{csrf_token()}}" style="color:#000000;">
          <div class="row">
             <div class="small-12 large-12 columns">
-              <input name="name" placeholder="Your Name">
+              <input name="name" placeholder="Your Name" style="color:#000000;">
             </div>
             
             <div class="small-12 large-12 columns">
-              <input name="email" placeholder="An email we can reply to">
+              <input name="email" placeholder="An email we can reply to" style="color:#000000;">
             </div>
 
             <div class="small-12 large-12 columns">
@@ -106,7 +106,7 @@
           </div>
       </div>
       <div class="modal-footer" style="background-color:#000">
-        <button type="submit" class="btn btn-warning">Send Feedback</button>
+        <button type="submit" class="btn btn-primary">Send Feedback</button>
       </form>
       </div>
     </div>
