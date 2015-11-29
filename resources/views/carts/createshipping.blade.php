@@ -137,7 +137,9 @@
 	jQuery(document).ready(function(){
 		checkRequired();
 		
-		jQuery('.shippingRequiredInput').on('keyup', function(){
+		jQuery('.shippingRequiredInput').on('change', function(){
+			checkRequired();
+		}).on('keyup', function(){
 			checkRequired();
 		});
 
