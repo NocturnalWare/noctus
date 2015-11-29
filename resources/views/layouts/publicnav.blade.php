@@ -89,7 +89,8 @@
         <h4 class="modal-title" id="FeedbackLabel" style="color:#fff">Send us a message!</h4>
       </div>
       <div class="modal-body" style="background-color:#000;padding:30px">
-        <form action="/" method="post">
+        <form action="{{route('sendFeedback')}}" method="post">
+          <input type="hidden" name="_token" value="{{csrf_token()}}">
          <div class="row">
             <div class="small-12 large-12 columns">
               <input name="name" placeholder="Your Name">
@@ -105,7 +106,7 @@
           </div>
       </div>
       <div class="modal-footer" style="background-color:#000">
-        <button type="button" class="btn btn-warning">Send Feedback</button>
+        <button type="submit" class="btn btn-warning">Send Feedback</button>
       </form>
       </div>
     </div>

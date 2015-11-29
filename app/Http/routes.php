@@ -19,6 +19,7 @@ Route::get('/home', function () {
     return view('okpage');
 });
 
+Route::post('/sendFeedback', array('as' => 'sendFeedback', 'uses' => 'ProductManagerController@sendFeedback'));
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => env('MAIL_SEND_FROM', 'Eternally Nocturnal'),
+    'from' => array('address' => 'feedback@eternallynocturnal.com', 'name' => 'Eternally Nocturnal Web'),
 
     /*
     |--------------------------------------------------------------------------
@@ -119,6 +119,6 @@ return [
     |
     */
 
-    'pretend' => true,
+    'pretend' => false,
 
 ];

@@ -106,12 +106,16 @@ class CheckoutsController extends Controller
 
          // Get the credit card details submitted by the form
          $token = $request->input('stripeToken');
+         // dd(\Session::get('cart_id'));
+         if(!\Session::get('cart_id')){
+          return redirect()->route('alreadyPaid');
+         }
 
+         if(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('payment_status') == 'Paid'){
+          return redirect()->route('alreadyPaid');
+         }
      // Create the charge on Stripe's servers - this will charge the user's card
      try {
-         // if(\App\Shipping::where('cart_id', Session::get('cart_id'))->pluck('payment_status') == 'Paid'){
-         //  return Redirect::route('alreadyPaid');
-         // }
      $charge = Charge::create(array(
        "amount" => 50, // amount in cents, again
        "currency" => "usd",

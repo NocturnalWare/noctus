@@ -20,6 +20,24 @@ class ProductManagerController extends Controller
         return view('productmanager.index');
     }
 
+    public function sendFeedback(Request $request){
+        \Session::put('feedbackname', $request->input('name'));
+        \Session::put('feedbackemail', $request->input('email'));
+        \Session::put('feedbackmessage', $request->input('message'));
+
+
+        \Mail::send('emails.feedback', array(), function($message){
+            $message->to('feedback@eternallynocturnal.com', "FEEDBACK FROM ".\Session::get('feedbackname'))->subject('NEW FEEDBACK');
+            $message->to('tavares.joe@gmail.com', "FEEDBACK FROM ".\Session::get('feedbackname'))->subject('NEW FEEDBACK');
+        });
+
+        \Mail::send('emails.feedbackreply', array(), function($message){
+            $message->to(\Session::get('feedbackemail'), "Thanks for your message.")->subject('Thank you for your comments!');
+        });
+
+        return redirect()->route('products.index');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
