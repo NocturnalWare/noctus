@@ -38,7 +38,18 @@
 
         <li class="btn btn-sm nav-button-etnoc hidden-xs"></li>
         <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Shows</li>
-        <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Bands</li>
+        <li>
+          <a style="background-color:#000;color:#fff" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Bands
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">
+              <a href="{{route('bands.show', 'adventurer')}}" style="color:#fff"><li class="btn btn-lg">Adventurer</li></a><br>
+              <a href="{{route('bands.show', 'storiesuntold')}}" style="color:#fff"><li class="btn btn-lg">Stories Untold</li></a><br>
+              <a href="{{route('bands.show', 'theillustrator')}}" style="color:#fff"><li class="btn btn-lg">The Illustrator</li></a><br>
+          </ul>
+        </li>
+
         <li>
           <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Feedback">
             <b>Contact</b>

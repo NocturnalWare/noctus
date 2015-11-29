@@ -49,3 +49,4 @@ Route::post('/cart/addshipping', array('as' => 'addShipping', 'uses' => 'CartsCo
 Route::post('/cart/makeCCPayment', array('as' => 'makeCCPayment', 'uses' => 'CartsController@makeCCPayment'));
 
 Route::resource('cart', 'CartsController');
+Route::resource('bands', 'BandsController');

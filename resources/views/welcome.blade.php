@@ -28,23 +28,23 @@
 			<h3 class="en-blog-title" style="text-align:center">Upcoming Shows:</h3>
 			PUTNAMS HALLOWEEN Friday 10/16<br>
 		</div>
+		
 		<div class="col-md-6 col-sm-12 en-content-box embed-responsive-16by9"style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
-					<iframe style="width:100%;height:100%;max-height:675px;" src="https://www.youtube.com/embed/nNJZ4V87O2U" allowfullscreen></iframe>
+			@include('landing.video-carousel')
 		</div>
-		<div class="col-md-6 col-sm-12 en-content-box" style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
-				<div class="col-sm-6 col-md-6" style="background-color:#000">
-					<div class="well well-sm en-big-well-button">
-							<label class="en-label-bl">Blackout Hat 29.99</label><br>
-							<img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/blackoutmockup.png">
-					</div>
-				</div>
+		<div class="col-md-6 col-sm-12 en-content-box embed-responsive-16by9"style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
+			@include('landing.featured-products-carousel')
+		</div>
 
-				<div class="col-sm-6 col-md-6" style="background-color:#000">
-					<div class="well well-sm en-big-well-button">
-							<label class="en-label-bl">Darby Overload Tank 19.99</label><br>
-							<img class="img-responsive" style="background-color:#000" src="https://www.eternallynocturnal.com/store/public/images/products/OverloadTank.png">
-					</div>
-				</div>
+		<div class="col-md-6 col-sm-12" style="background-color:#000">
+			<div class="col-md-4 col-sm-12">
+			</div>
+			<div class="col-md-4 col-sm-12">
+			</div>
+			<div class="col-md-4 col-sm-12">
+			</div>
 		</div>
 	</div>
+</div>
+
 @stop

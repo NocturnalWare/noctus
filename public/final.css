@@ -9,7 +9,7 @@ body {
 }
 
 .window1{
-  background-image: url('/images/midyear.png');
+  background-image: url('http://159.203.77.45/images/midyear.png');
     background-position: center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
