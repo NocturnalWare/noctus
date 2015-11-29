@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <h2>{{$errors->first()}}</h2>
-<div style="background-color:#000;margin-top:70px;">
+<div style="background-color:#000;margin-top:75px;">
 
 
 <!-- <form action="" method="">
@@ -20,14 +20,14 @@
 
 
 
-<form action="{{route('addShipping')}}" method="POST">
+<form action="{{route('addShipping')}}" style="color:#000" method="POST">
 	<div class="col-xs-12 col-lg-12">
 		<div class="col-sm-6 col-md-4">
 			<div class="col-md-6">
 				<label style="color:#ffffff">Email Address*</label>
 			</div>
 			<div class="col-md-6">
-				<input type="text" name='email' placeholder='Email' />
+				<input type="text" name='email' value="{{$shipping->email}}" placeholder='Email' />
 			</div>
 		</div>
 		
@@ -47,7 +47,7 @@
 				<label style="color:#ffffff">Phone</label>
 			</div>
 			<div class="col-md-6">
-				<input type="text" name='phone' placeholder='Phone Number' />
+				<input type="text" name='phone' value="{{$shipping->phone}}" placeholder='Phone Number' />
 			</div>
 		</div>
 
@@ -59,7 +59,7 @@
 			<label style="color:#ffffff">First Name*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_f_name' placeholder='First Name' />
+			<input type="text" name='ship_f_name' value="{{$shipping->ship_f_name}}" placeholder='First Name' />
 		</div>
 	</div>
 	<div class="col-xs-12 col-md-4">
@@ -67,7 +67,7 @@
 			<label style="color:#ffffff">Last Name*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_l_name' placeholder='Last Name' />
+			<input type="text" name='ship_l_name' value="{{$shipping->ship_l_name}}" placeholder='Last Name' />
 		</div>
 	</div>
 
@@ -76,7 +76,7 @@
 			<label style="color:#ffffff">Address*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_address1' placeholder='Address 1' />
+			<input type="text" name='ship_address1' value="{{$shipping->ship_address1}}" placeholder='Address 1' />
 		</div>
 	</div>
 
@@ -85,7 +85,7 @@
 			<label style="color:#ffffff">Address 2</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_address2' placeholder='Address 2' />
+			<input type="text" name='ship_address2' value="{{$shipping->ship_address_2}}" placeholder='Address 2' />
 		</div>
 	</div>
 
@@ -94,7 +94,7 @@
 			<label style="color:#ffffff">City*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_city' placeholder='City' />
+			<input type="text" name='ship_city' value="{{$shipping->ship_city}}" placeholder='City' />
 		</div>
 	</div>
 
@@ -103,7 +103,7 @@
 			<label style="color:#ffffff">State*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_state' placeholder='State' />
+			<input type="text" name='ship_state' value="{{$shipping->ship_state}}" placeholder='State' />
 		</div>
 	</div>
 
@@ -112,7 +112,7 @@
 			<label style="color:#ffffff">Zip*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_zip' placeholder='Zip' />
+			<input type="text" name='ship_zip' value="{{$shipping->ship_zip}}" placeholder='Zip' />
 		</div>
 	</div>
 	</div>

@@ -1,58 +1,90 @@
 @extends('layouts.master')
 @section('content')
 <?php $checkoutAmt = session('checkoutAmt');?>
-<div style="background-color:#000000; min-height:900px">
-<div class="col-sm-12 col-md-12">
+<div style="margin-left:25%;margin-top:15%;color:#000;background-color:#000000; width:50%;min-height:900px;text-align:center">
+  <div class="col-sm-12 col-md-12">
 
- <h2 style="color:#ffffff">Please verify the information below is correct before entring your credit card details</h2>
-</div>
+   <h2 style="color:#ffffff">Please verify that the information below is correct before entring your credit card details</h2>
+  </div>
 
-<div class="col-sm-12 col-md-12">
-<label style="whiteouttext">Email</label>
-{{$customer['email']}}
-</div>
+  <div class="row well pull-right">
+    <div style="border:1px solid #000" class="col-sm-12 col-md-12">
+        <div class="col-sm-6 col-md-6">
+          <label>Email</label>
+        </div>
+        <div class="col-sm-6 col-md-6">
+          {{$customer['email']}}
+        </div>
+    </div>
 
-@if($customer['phone'])
-<div class="col-sm-12 col-md-12">
-<label style="whiteouttext">Phone</label>
-{{$customer['phone']}}
-</div>
-@endif
+    @if($customer['phone'])
+      <div style="border:1px solid #000" class="col-sm-12 col-md-12">
+        <div class="col-sm-6 col-md-6">
+          <label>Phone</label>
+        </div>
+        <div class="col-sm-6 col-md-6">
+          {{$customer['phone']}}
+        </div>
+      </div>
+    @endif
 
-<div class="col-sm-12 col-md-12">
-<label style="whiteouttext">Name</label>
-{{$customer['ship_f_name']}} {{$customer['ship_l_name']}}
-</div>
+    <div style="border:1px solid #000" class="col-sm-12 col-md-12">
+      <div class="col-sm-6 col-md-6">
+        <label>Name</label>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        {{$customer['ship_f_name']}} {{$customer['ship_l_name']}}
+      </div>
+    </div>
 
-<div class="col-sm-12 col-md-12">
-<label style="whiteouttext">Street Address</label>
-{{$customer['ship_address1']}} {{$customer['ship_address2']}}
-</div>
+    <div style="border:1px solid #000" class="col-sm-12 col-md-12">
+      <div class="col-sm-6 col-md-6">
+        <label>Street Address</label>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        {{$customer['ship_address1']}} {{$customer['ship_address2']}}
+      </div>
+    </div>
 
-<div class="col-sm-12 col-md-12">
-<label style="whiteouttext">City/State/Zip</label>
-{{$customer['ship_city']}} {{$customer['ship_state']}}, {{$customer['ship_zip']}}
-</div>
+    <div style="border:1px solid #000" class="col-sm-12 col-md-12">
+      <div class="col-sm-6 col-md-6">
+        <label>City/State/Zip</label>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        {{$customer['ship_city']}} {{$customer['ship_state']}}, {{$customer['ship_zip']}}
+      </div>
+    </div>
 
-<div class="col-sm-12 col-md-12">
-<label style="whiteouttext">Total including shipping</label>
-${{substr(Session::get('checkoutAmt'),0,-2)}}.{{substr(Session::get('checkoutAmt'),-2)}}
-</div>
+    <div style="border:1px solid #000" class="col-sm-12 col-md-12">
+      <div class="col-sm-6 col-md-6">
+        <label>Total including shipping</label>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        ${{substr(Session::get('checkoutAmt'),0,-2)}}.{{substr(Session::get('checkoutAmt'),-2)}}
+      </div>
+    </div>
 
-<hr>
-	{{Form::hidden('data-description', $checkoutAmt)}}
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_live_wnPUnS7F4EcVpHtFBkkdPwz6"
-    data-amount="{{$checkoutAmt}}"
-    data-name="Eternally Nocturnal"
-    data-description= "${{substr($checkoutAmt,0,-2)}}.{{substr($checkoutAmt,-2)}}"
-    data-image="https://www.eternallynocturnal.com/images/blackskull.jpg">
-  </script>
-  	{{Form::close()}}
+    <hr>
+    	<input type="hidden" data-description="{{$checkoutAmt}}">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{env('STRIPE_PK')}}"
+        data-amount="10"
+        data-name="Eternally Nocturnal"
+        data-description= "10"
+        data-image="https://www.eternallynocturnal.com/images/blackskull.jpg">
+      </script>
+    </form>
 
-    <br><br>
+        <br><br>
 
-<button type="submit" class="button tiny" style="background-color:#700000;color:#ffffff;border-radius:45px"><b>Edit Shipping Info</b></button>
+        <form action="{{route('createShipping')}}" method="post">
+          <input type="hidden" name="checkoutAmt" value="{{$checkoutAmt}}">
+          <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+          <button type="submit" style="background-color:#700000;color:#ffffff;border-radius:45px"><b>Edit Shipping Info</b></button>
+
+        </form>
+  </div>
 </div>
 @stop

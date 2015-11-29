@@ -17,6 +17,6 @@ class Cart extends Model
 		return \App\Product::where('id', $this->product_id)->pluck($property);
 	}
 	public function checkoutPrice(){
-		return $this->quantity * \App\Price::where('product_id', $this->id)->pluck($this->size);
+		return $this->quantity * \App\Price::where('product_id', $this->product_id)->pluck($this->size);
 	}
 }

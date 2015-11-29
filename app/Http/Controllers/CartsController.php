@@ -16,6 +16,7 @@ class CartsController extends Controller
      */
     public function index()
     {
+        // \Session::flush();
         if(\Session::get('cart_id')){
             $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
             return view('carts.index', compact('carts'));
@@ -35,9 +36,15 @@ class CartsController extends Controller
     }
 
     public function createShippingForm(Request $request)
-    {
+    {   
+        $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
+        $shipping = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
         \Session::put('checkoutAmt', $request->input('checkoutAmt'));
-        return view('carts.createshipping');
+        if(!isset($shipping)){
+            $shipping = new \App\Shipping;
+        }
+
+        return view('carts.createshipping', compact('carts', 'shipping'));
     }
     /**
      * Store a newly created cart in storage.
@@ -46,6 +53,8 @@ class CartsController extends Controller
      */
     public function store()
     {
+
+
         $validator = Validator::make($data = Input::all(), Cart::$rules);
         if ($validator->fails())
         {
@@ -62,8 +71,10 @@ class CartsController extends Controller
      */
     public function show($id)
     {
-        // $cart = \Cart::findOrFail($id);
-        return view('carts.index', compact('cart'));
+        if(\Session::get('cart_id')){
+            $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
+            return view('carts.index', compact('cart'));
+        }
     }
     /**
      * Show the form for editing the specified cart.
@@ -165,29 +176,33 @@ class CartsController extends Controller
             $cart->ship_zip = $request->input('ship_zip');
             $cart->cart_amt = \Session::get('checkoutAmt');
             $cart->save();
-            return  redirect()->route('makeCCPayment');
+            
+            return $this->makeCCPayment();
+
         }else{
-        $validator = \Validator::make($data = $request->except('_token', 'password'), \App\Shipping::$rules);
-        if ($validator->fails())
-        {
-            return redirect()->route('createShipping');
-        }
-        \App\Shipping::create($data);
-        if($request->input('password'))
-        {
-            if(Customer::where('email', $request->input('email'))->pluck('id') == Null)
+            $validator = \Validator::make($data = $request->except('_token', 'password'), \App\Shipping::$rules);
+            if ($validator->fails())
             {
-                Customer::create(array('username' => $request->input('email'), 'password' => Hash::make($request->input('password')), 'email' => $request->input('email')));
+                return redirect()->route('createShipping');
+            }
+            \App\Shipping::create($data);
+            if($request->input('password'))
+            {
+                if(Customer::where('email', $request->input('email'))->pluck('id') == Null)
+                {
+                    Customer::create(array('username' => $request->input('email'), 'password' => Hash::make($request->input('password')), 'email' => $request->input('email')));
+                }
             }
         }
-        return redirect()->route('makeCCPayment');
-        }
+        return $this->makeCCPayment();
     }
 
     public function makeCCPayment()
     {
-        return view('carts.payment');
+        $customer = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
+        return view('carts.payment', compact('customer'));
     }
+
 
     public function removeFromCart(Request $request)
     {
