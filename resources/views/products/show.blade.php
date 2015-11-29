@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-
-	<legend style="margin-top:70px;" class="product-header-etnoc">{{$product->name}}</legend>
+<center>
+	<legend style="margin-top:70px;text-align:center" class="product-header-etnoc">{{$product->name}}</legend>
 	<div class="col-xs-12 col-md-7">
 		<img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/{{$product->main_image}}" />
 	</div>
@@ -45,8 +45,9 @@
 			<br>
 			<div id="checkCart"></div> 
 			<br>
-			<button id="cart" type="button" class="btn-xs btn-warning"><i class="fa fa-plus"></i> Add to Cart</button>
+			<button id="cart" type="button" class="btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button>
 	</div>
+</center>
 	<div class="col-md-3"></div>
 	<script>
 	checkCart();
@@ -61,15 +62,20 @@
             url: url,
             cache: false,
             success: function(data){
-               jQuery('#checkCart').html('');
-               jQuery.each(data, function(val, text){
-               		jQuery('#checkCart').append(text.quantity+" "+text.size+' Currently in your cart.<br>');
-               });
+				jQuery('#checkCart').html('');
+				jQuery.each(data, function(val, text){
+						jQuery('#checkCart').append(text.quantity+" "+text.size+' Currently in your cart.<br>');
+				});
+				if(data > ''){
+					jQuery('#showCartIcon').removeClass('hidden');
+					jQuery('#hideCartIcon').addClass('hidden');
+				}
                return;
             }
         });
 		return false;	
 	}
+
 		
 	jQuery('#cart').on('click', function(){
 		var $post = {};

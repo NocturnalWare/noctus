@@ -21,6 +21,18 @@
         <li class="btn btn-sm mobile-nav-button-etnoc"></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" style="text-align:center;padding-top:10px;">
+        @if(\Session::get('cart_id'))
+        <li id="hideCartIcon">
+          <a href="{{route('cart.index')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
+              <b>Cart</b>
+          </a>
+        </li>
+        @endif
+          <li id='showCartIcon' class="hidden">
+          <a href="{{route('cart.index')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
+              <b>Cart</b>
+          </a>
+        </li>
         <li>
           <a style="background-color:#000;color:#fff" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Shop
@@ -54,11 +66,6 @@
             <b>Contact</b>
           </a>
 
-        </li>
-        <li>
-          <a href="{{route('cart.index')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
-              <b>Cart</b>
-          </a>
         </li>
         <li>
           <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Login">

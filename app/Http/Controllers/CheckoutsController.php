@@ -26,6 +26,8 @@ class CheckoutsController extends Controller
 
     public function alreadyPaid()
     {
+        \Session::forget('cart_id');
+        \Session::forget('checkoutAmt');
         return view('carts.alreadyPaid');
     }
 

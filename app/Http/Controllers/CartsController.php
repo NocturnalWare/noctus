@@ -181,16 +181,18 @@ class CartsController extends Controller
 
         }else{
             $validator = \Validator::make($data = $request->except('_token', 'password'), \App\Shipping::$rules);
+            
             if ($validator->fails())
             {
-                return redirect()->route('createShipping');
+                return redirect()->back();
             }
+
             \App\Shipping::create($data);
             if($request->input('password'))
             {
-                if(Customer::where('email', $request->input('email'))->pluck('id') == Null)
+                if(\App\Customer::where('email', $request->input('email'))->pluck('id') == Null)
                 {
-                    Customer::create(array('username' => $request->input('email'), 'password' => Hash::make($request->input('password')), 'email' => $request->input('email')));
+                    \App\Customer::create(array('username' => $request->input('email'), 'password' => Hash::make($request->input('password')), 'email' => $request->input('email')));
                 }
             }
         }
@@ -212,8 +214,8 @@ class CartsController extends Controller
         if(\App\Cart::where('customer_id', $customer_id)->first()){
             return redirect()->back();
         }
-
-        return redirect()->route('products.index');
+        
+       return $this->emptyCart();
     }
     
     public function emptyCart()

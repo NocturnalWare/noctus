@@ -33,7 +33,7 @@
 	<th>Item</th>
 	<th>Quantity</th>
 	<th>Size</th><tr>
-@foreach(Cart::where('customer_id', $cart)->get() as $items)
+@foreach(\App\Cart::where('customer_id', $cart)->get() as $items)
 
 <td>{{$items->findItemProp('Name')}}	
 <td>{{$items->quantity}}

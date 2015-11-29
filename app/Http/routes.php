@@ -49,9 +49,10 @@ Route::post('/cart/addshipping', array('as' => 'addShipping', 'uses' => 'CartsCo
 Route::post('/cart/makeCCPayment', array('as' => 'makeCCPayment', 'uses' => 'CartsController@makeCCPayment'));
 Route::post('/cart/checkout', array('as' => 'completePayment', 'uses' => 'CheckoutsController@completePayment'));
 
+Route::get('checkout/transSuccess', array('as' => 'transSuccess', 'uses' => 'CheckoutsController@index'));
+Route::get('/alreadyPaid', array('as' => 'alreadyPaid', 'uses' => 'CheckoutsController@alreadyPaid'));
+
 Route::resource('cart', 'CartsController');
 Route::resource('bands', 'BandsController');
 
 
-Route::get('/cart/transSuccess', array('as' => 'transSuccess', 'uses' => 'CheckoutsController@index'));
-Route::get('/alreadyPaid', array('as' => 'alreadyPaid', 'uses' => 'CheckoutsController@alreadyPaid'));
