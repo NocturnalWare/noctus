@@ -2,7 +2,7 @@
 
 @section('content')
 <center>
-	<legend style="margin-top:70px;text-align:center" class="product-header-etnoc">{{$product->name}}</legend>
+	<legend style="margin-top:70px;text-align:center;color:#fff" class="product-header-etnoc">{{$product->name}}</legend>
 	<div class="col-xs-12 col-md-7">
 		<img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/{{$product->main_image}}" />
 	</div>
@@ -45,7 +45,9 @@
 			<br>
 			<div id="checkCart"></div> 
 			<br>
-			<button id="cart" type="button" class="btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button>
+			<button id="cart" type="button" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button><br><br>
+			<a href="{{route('cart.index')}}" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-shopping-cart"></i> View Cart</a>
+
 	</div>
 </center>
 	<div class="col-md-3"></div>
@@ -64,7 +66,11 @@
             success: function(data){
 				jQuery('#checkCart').html('');
 				jQuery.each(data, function(val, text){
+					if(text.size == 'onesize'){
+						jQuery('#checkCart').append(text.quantity+' Currently in your cart.<br>');
+					}else{
 						jQuery('#checkCart').append(text.quantity+" "+text.size+' Currently in your cart.<br>');
+					}
 				});
 				if(data > ''){
 					jQuery('#showCartIcon').removeClass('hidden');
