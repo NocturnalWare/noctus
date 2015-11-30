@@ -135,7 +135,7 @@ class CheckoutsController extends Controller
             {    
              $inventory = \App\Inventory::where('product_id', $purgeCarts->item)->pluck($purgeCarts->size);
              $newsize = $inventory - $purgeCarts->quantity;
-             DB::table('inventories')->where('product_id', $purgeCarts->item)->update(array($purgeCarts->size => $newsize));
+             \DB::table('inventories')->where('product_id', $purgeCarts->item)->update(array($purgeCarts->size => $newsize));
             }
 
             
