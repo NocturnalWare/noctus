@@ -9,13 +9,13 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
+    <div class="item hidden">
       <iframe style="width:100%;height:100%;max-height:675px;" src="https://www.youtube.com/embed/nNJZ4V87O2U" allowfullscreen></iframe>
       <div class="carousel-caption">
       </div>
     </div>
 
-    <div class="item">
+    <div class="item active">
       <iframe style="width:100%;height:100%;max-height:675px;" src="https://www.youtube.com/embed/Qo6bg5QLFFg" allowfullscreen></iframe>
       <div class="carousel-caption">
 
