@@ -18,24 +18,24 @@
 
 <h1 style="color:#fff;text-align:center">Shipping Information</h1>
 
-<div class="col-sm-12 well" style="width:50%;margin-left:25%">
-
+<div class="col-md-3">&nbsp</div>
+<div class="col-sm-12 col-md-6 well well-sm">
 <form action="{{route('addShipping')}}" style="color:#000" method="POST">
 	<div class="col-xs-12 col-lg-12">
 		<div class="col-sm-6 col-md-12">
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<label>Email Address*</label>
 			</div>
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<input type="text" name='email' ship-required="8" class="shippingRequiredInput" value="{{$shipping->email}}" placeholder='Email' />
 			</div>
 		</div>
 		
 		<div class="col-sm-6 col-md-12">
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<label>Password <i style="font-size:10px">for returning visits</i></label>
 			</div>
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<input type="text" name='password' placeholder='Password' />
 			</div>
 		</div>
@@ -43,10 +43,10 @@
 
 
 		<div class="col-xs-12 col-md-12">
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<label>Phone</label>
 			</div>
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<input type="text" name='phone' value="{{$shipping->phone}}" placeholder='Phone Number' />
 			</div>
 		</div>
@@ -115,7 +115,7 @@
 			<input type="text" name='ship_zip' ship-required="5" class="shippingRequiredInput" value="{{$shipping->ship_zip}}" placeholder='Zip' />
 		</div>
 	</div>
-	</div>
+</div>
 <br><br>
 <div class="row" style="text-align:center">
 @if(session('checkoutAmt'))
@@ -131,7 +131,6 @@
 </div>
 </div>
 
-</center>
 <script>
 	var required = 7;
 	jQuery(document).ready(function(){
