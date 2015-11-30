@@ -133,9 +133,9 @@ class CheckoutsController extends Controller
 
             foreach(\App\Cart::where('customer_id', $cart_id)->get() as $purgeCarts)
             {    
-             $inventory = \App\Inventory::where('product_id', $purgeCarts->item)->pluck($purgeCarts->size);
+             $inventory = \App\Inventory::where('product_id', $purgeCarts->product_id)->pluck($purgeCarts->size);
              $newsize = $inventory - $purgeCarts->quantity;
-             \DB::table('inventories')->where('product_id', $purgeCarts->item)->update(array($purgeCarts->size => $newsize));
+             \DB::table('inventories')->where('product_id', $purgeCarts->product_id)->update(array($purgeCarts->size => $newsize));
             }
 
             
