@@ -11,36 +11,89 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
         <div class="col-sm-6 col-md-6" style="background-color:#000">
-          <div class="well well-sm en-big-well-button">
-            <label class="en-label-bl">Blackout Hat 29.99</label><br>
-            <img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/blackoutmockup.png">
-          </div>
+          <a href="{{route('products.show', '32')}}">
+            <div class="well well-sm en-big-well-button">
+              <label class="en-label-bl">Devaux Tee 23.99</label><br>
+              <img class="img-responsive" src="https://www.eternallynocturnal.com/images/newline/devaux.jpg">
+            </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-sm-12" style="background-color:#000">
-          <div class="well well-sm en-big-well-button">
-            <label class="en-label-bl">Darby Overload Tank 19.99</label><br>
-            <img class="img-responsive" style="background-color:#000" src="https://www.eternallynocturnal.com/store/public/images/products/OverloadTank.png">
-          </div>
+          <a href="{{route('products.show', '17')}}">
+            <div class="well well-sm en-big-well-button">
+              <label class="en-label-bl">Geo Owl Tee 19.99</label><br>
+              <img class="img-responsive" src="https://www.eternallynocturnal.com/images/newline/geomens.jpg">
+            </div>
+          </a>
         </div>
     </div>
 
       <div class="item">
         <div class="col-sm-6 col-md-6" style="background-color:#000">
-          <div class="well well-sm en-big-well-button">
-            <label class="en-label-bl">Blackout Hat 29.99</label><br>
-            <img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/blackoutmockup.png">
-          </div>
+          <a href="{{route('products.show', '34')}}">
+            <div class="well well-sm en-big-well-button">
+              <label class="en-label-bl">Native Owl ¾ 25.99</label><br>
+                <img class="img-responsive" src="https://www.eternallynocturnal.com/images/newline/nativeowl34.jpg">
+            </div>
+          </a>
         </div>
 
         <div class="col-md-6 col-sm-12" style="background-color:#000">
-          <div class="well well-sm en-big-well-button">
-            <label class="en-label-bl">Darby Overload Tank 19.99</label><br>
-            <img class="img-responsive" style="background-color:#000" src="https://www.eternallynocturnal.com/store/public/images/products/OverloadTank.png">
-          </div>
+          <a href="{{route('products.show', '35')}}">
+            <div class="well well-sm en-big-well-button">
+              <label class="en-label-bl">Native Owl Womens Swoop Neck 29.99</label><br>
+                <img class="img-responsive" src="https://www.eternallynocturnal.com/images/newline/nativefemalesweater.jpg">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="col-sm-6 col-md-6" style="background-color:#000">
+          <a href="{{route('products.show', '6')}}">
+            <div class="well well-sm en-big-well-button">
+              <label class="en-label-bl">Stay Awake to Create Baseball Tee 19.99</label><br>
+                <img class="img-responsive" src="https://www.eternallynocturnal.com/images/newline/satcbaseball.jpg">
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-sm-12" style="background-color:#000">
+          <a href="{{route('products.show', '37')}}">
+            <div class="well well-sm en-big-well-button">
+              <label class="en-label-bl">Plum Crossbones Beanie 17.99</label><br>
+                <img class="img-responsive" src="https://www.eternallynocturnal.com/images/newline/plumbeanie.jpg">
+            </div>
+          </a>
         </div>
       </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+Devaux & Geo Owl Tee
+
+Both Native Owl
+
+SATC Baseball Tee & New Beanies
+
+
+
+
+
+
+
+
 
   <!-- Controls -->
   <a class="left carousel-control" href="#products-carousel" role="button" data-slide="prev">

@@ -1,8 +1,8 @@
-<div id="products-carousel" class="carousel slide" data-ride="carousel">
+<div id="shows-carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#products-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#products-carousel" data-slide-to="1"></li>
+    <li data-target="#shows-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#shows-carousel" data-slide-to="1"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -27,11 +27,11 @@
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#products-carousel" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#shows-carousel" role="button" data-slide="prev">
     <i class="fa fa-chevron-left"></i>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#products-carousel" role="button" data-slide="next">
+  <a class="right carousel-control" href="#shows-carousel" role="button" data-slide="next">
     <i class="fa fa-chevron-right"></i>
     <span class="sr-only">Next</span>
   </a>
