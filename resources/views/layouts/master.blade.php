@@ -5,7 +5,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="http://localhost/noctus/public/final.css">
+    <link rel="stylesheet" href="http://159.203.77.45/final.css">
     <script src="http://159.203.77.45/js/bundle.js"></script>
         <title>#StayAwakeToCreate</title>
             
