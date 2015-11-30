@@ -11,7 +11,7 @@
 							<div style="background-color:#000;">
 								<img class="img-responsive" style="max-height:600px;" src="https://www.eternallynocturnal.com/store/public/images/products/{{$pro->main_image}}">
 							</div>	
-							<label class="en-label-bl" style="background-color:#aaa;width:100%;" > {{$pro->inventories->checkStock()}} {{$pro->name}} ${{$pro->price}}</label><br>
+							<label class="en-label-bl" style="background-color:#aaa;width:100%;">{{$pro->name}} ${{$pro->price}}</label><br>
 						</div>	
 					</div>
 				</a>
