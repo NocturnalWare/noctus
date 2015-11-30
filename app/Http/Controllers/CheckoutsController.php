@@ -117,7 +117,7 @@ class CheckoutsController extends Controller
      // Create the charge on Stripe's servers - this will charge the user's card
      try {
      $charge = Charge::create(array(
-       "amount" => \Session::get('checkoutAmt'), // amount in cents, again
+       "amount" => round(\Session::get('checkoutAmt')), // amount in cents, again
        "currency" => "usd",
        "source" => $token,
        "description" => \Session::get('cart_id'))
