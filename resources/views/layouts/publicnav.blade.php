@@ -51,7 +51,7 @@
         <li class="btn btn-sm nav-button-etnoc hidden-xs hidden">Shows</li>
         <li>
           <a style="background-color:#000;color:#fff" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Bands
+            Sponsored Bands
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">

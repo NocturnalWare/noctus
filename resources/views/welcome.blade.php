@@ -4,14 +4,17 @@
 		<div class="row">
 			<div class="col-md-8 col-sm-12 en-content-box">
 				<h3 class="en-blog-title" style="text-align:center">Our Mission</h3>
-					<p style="font-size:1.2em;text-align:center">
+					<p style="font-size:1.5em;text-align:center">
 						Here at Eternally Nocturnal we believe in dreams, we believe in passions, we believe in exploring creativity, and we believe that through such wonders, all people are drawn together.<br><br>
 
 We are more than a clothing brand. Here at Eternally Nocturnal, we offer the greatest connection between creative individuals; we understand what it takes to live the lifestyle of a free-thinking creative mind. <br><br>
 
 This company aims to empathize with the sleepless creative minds who will do whatever it takes to pursue the fruition of their deepest passions. <br><br>
 
-Together we will achieve the alternative lifestyle we collectively desire. We are Eternally Nocturnal. #StayAwakeToCreate<br><br>
+Together we will achieve the alternative lifestyle we collectively desire. We are Eternally Nocturnal. 
+<br><br>
+
+<span style="font-size:1.4em">#StayAwakeToCreate</span>
 					</p>
 			</div>
 			<div class="hidden-sm col-md-1" style="width:40px">&nbsp</div>
