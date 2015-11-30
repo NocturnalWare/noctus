@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-<div style="margin-top:5%;width:50%;margin-left:25%;color:#000;text-align:center" class="well col-sm-12">
+<div class="col-md-3">&nbsp</div>
+<div style="margin-top:140px;color:#000;text-align:center" class="well well-sm col-sm-12 col-md-6">
 <h1>Thank you!</h2>
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <h2>{{$errors->first()}}</h2>
-<div style="background-color:#000;margin-top:10%;">
+<div style="background-color:#000;margin-top:140px;">
 
 
 <!-- <form action="" method="">
