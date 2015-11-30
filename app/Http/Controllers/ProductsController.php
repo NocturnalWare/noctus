@@ -16,12 +16,12 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = \App\Product::all();
+        $products = \App\Product::orderBy('id', 'desc')->get();
         return view('products.index', compact('products'));
     }
 
     public function sortindex($category){
-        $products = \App\Product::where('category', $category)->with('inventories')->get();
+        $products = \App\Product::where('category', $category)->with('inventories')->orderBy('id', 'desc')->get();
         if($products){
             return view('products.index', compact('products'));
         }

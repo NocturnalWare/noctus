@@ -70,31 +70,6 @@
       </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-Devaux & Geo Owl Tee
-
-Both Native Owl
-
-SATC Baseball Tee & New Beanies
-
-
-
-
-
-
-
-
-
   <!-- Controls -->
   <a class="left carousel-control" href="#products-carousel" role="button" data-slide="prev">
     <i class="fa fa-chevron-left"></i>
