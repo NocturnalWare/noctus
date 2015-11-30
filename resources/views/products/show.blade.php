@@ -18,7 +18,7 @@
 					<option value="xsmall">X-Small ${{substr($product->prices->xsmall,0,-2)}}.{{substr($product->prices->xsmall,-2)}}</option>
 				@endif
 				@if($product->small == 1 && $product->inventories->small)
-					<option value="small">Small ${{substr($product->prices->small,0,-2)}}.{{substr($product->prices->xsmall,-2)}}</option>
+					<option value="small">Small ${{substr($product->prices->small,0,-2)}}.{{substr($product->prices->small,-2)}}</option>
 				@endif
 
 				@if($product->medium == "1" && $product->inventories->medium)

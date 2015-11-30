@@ -117,7 +117,7 @@ class CheckoutsController extends Controller
      // Create the charge on Stripe's servers - this will charge the user's card
      try {
      $charge = Charge::create(array(
-       "amount" => 50, // amount in cents, again
+       "amount" => \Session::get('checkoutAmt'), // amount in cents, again
        "currency" => "usd",
        "source" => $token,
        "description" => \Session::get('cart_id'))
@@ -131,12 +131,12 @@ class CheckoutsController extends Controller
             $markPaid->shipped_status = 'Not Shipped';
             $markPaid->save();
 
-            // foreach(\App\Cart::where('customer_id', $cart_id)->get() as $purgeCarts)
-            // {    
-             // $inventory = \App\Inventory::where('product_id', $purgeCarts->item)->pluck($purgeCarts->size);
-             // $newsize = $inventory - $purgeCarts->quantity;
-             // DB::table('inventories')->where('product_id', $purgeCarts->item)->update(array($purgeCarts->size => $newsize));
-            // }
+            foreach(\App\Cart::where('customer_id', $cart_id)->get() as $purgeCarts)
+            {    
+             $inventory = \App\Inventory::where('product_id', $purgeCarts->item)->pluck($purgeCarts->size);
+             $newsize = $inventory - $purgeCarts->quantity;
+             DB::table('inventories')->where('product_id', $purgeCarts->item)->update(array($purgeCarts->size => $newsize));
+            }
 
             
             \Mail::send('emails.Newsale', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){

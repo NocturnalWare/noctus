@@ -72,9 +72,9 @@
       <script
         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="{{env('STRIPE_PK')}}"
-        data-amount="10"
+        data-amount="${{substr(Session::get('checkoutAmt'),0,-2)}}.{{substr(Session::get('checkoutAmt'),-2)}}"
         data-name="Eternally Nocturnal"
-        data-description= "10"
+        data-description= "{{$checkoutAmt}}"
         data-image="https://www.eternallynocturnal.com/images/blackskull.jpg">
       </script>
     </form>
