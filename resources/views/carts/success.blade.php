@@ -14,13 +14,13 @@
 
 <div class="col-sm-12">
 	<div class="col-sm-12 col-md-4">
-		<a href="{{route('bands.show', 'storiesuntold')}}" ><img src="https://www.eternallynocturnal.com/images/storiesuntold.jpg" class="img-responsive"></a>
+		<a href="{{route('bands.show', 'storiesuntold')}}" ><img src="http://54.149.181.47/images/storiesuntold.jpg" class="img-responsive"></a>
 	</div>
 	<div class="col-sm-12 col-md-4">
-		<a href="{{route('bands.show', 'adventurer')}}" ><img src="https://www.eternallynocturnal.com/images/adventurer.png" class="img-responsive"></a>
+		<a href="{{route('bands.show', 'adventurer')}}" ><img src="http://54.149.181.47/images/adventurer.png" class="img-responsive"></a>
 	</div>
 	<div class="col-sm-12 col-md-4">
-		<a href="{{route('bands.show', 'theillustrator')}}" ><img src="https://www.eternallynocturnal.com/images/theillustrator.jpg" class="img-responsive"></a>
+		<a href="{{route('bands.show', 'theillustrator')}}" ><img src="http://54.149.181.47/images/theillustrator.jpg" class="img-responsive"></a>
 	</div>
 
 

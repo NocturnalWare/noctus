@@ -1,7 +1,7 @@
 
 <div class="row">
     <center>
-        <img src="https://www.eternallynocturnal.com/images/witeskull.png" class="img-responsive" />
+        <img src="http://54.149.181.47/images/witeskull.png" class="img-responsive" />
         <form method="POST" action="auth/login">
             {!! csrf_field() !!}
 
