@@ -19,7 +19,7 @@ body {
     height:100%;
     position:fixed;
     overflow-y: scroll;
-    z-index:2;
+    width:101%;
     background-color:none;
     padding:10px;
 }
