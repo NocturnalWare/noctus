@@ -2,6 +2,7 @@
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta property="og:image" content="https://www.eternallynocturnal.com/images/blackskull.jpg">
+    <link rel="shortcut icon" href="https://www.eternallynocturnal.com/favicon.ico" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap-theme.min.css">
