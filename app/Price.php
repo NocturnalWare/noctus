@@ -19,4 +19,8 @@ class Price extends Model
 			'onesize',
 	];
 	protected $table = 'prices';
+
+	public function prices(){
+		return $this->belongsTo('\App\Product', 'id', 'product_id');
+	}
 }

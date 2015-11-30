@@ -58,7 +58,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $product = \App\Product::where('id', $id)->with('inventories')->first();
+        $product = \App\Product::where('id', $id)->with('inventories', 'prices')->first();
 
         return view('products.show', compact('product'));
     }

@@ -7,38 +7,38 @@
 		<img class="img-responsive" src="https://www.eternallynocturnal.com/store/public/images/products/{{$product->main_image}}" />
 	</div>
 	<div class="well-etnoc col-xs-12 col-md-2">
-		{{$product->description}}<br>
+		{{$product->description}}<br><br>
 		<input type="hidden" value="{{$product->id}}" name="product" class="product" />
 
-		@if($product->onesize == 1)One Size Only
+		@if($product->onesize == 1)One Size Only ${{substr($product->prices->onesize,0,-2)}}.{{substr($product->prices->onesize,-2)}}
 			<input type="hidden" value="onesize" name="size" class="size" />
 			@else
-			<select class="size" name="size" style="color:#000000;max-width:50%">
+			<select class="size col-sm-12" name="size" style="color:#000000;">
 				@if($product->xsmall == 1 && $product->inventories->xsmall)
-					<option value="xsmall">X-Small</option>
+					<option value="xsmall">X-Small ${{substr($product->prices->xsmall,0,-2)}}.{{substr($product->prices->xsmall,-2)}}</option>
 				@endif
 				@if($product->small == 1 && $product->inventories->small)
-					<option value="small">Small</option>
+					<option value="small">Small ${{substr($product->prices->small,0,-2)}}.{{substr($product->prices->xsmall,-2)}}</option>
 				@endif
 
 				@if($product->medium == "1" && $product->inventories->medium)
-					<option value="medium">Medium</option>
+					<option value="medium">Medium ${{substr($product->prices->medium,0,-2)}}.{{substr($product->prices->medium,-2)}}</option>
 				@endif
 
 				@if($product->large == "1" && $product->inventories->large)
-					<option value="large">Large</option>
+					<option value="large">Large ${{substr($product->prices->large,0,-2)}}.{{substr($product->prices->large,-2)}}</option>
 				@endif
 
 				@if($product->xlarge == "1" && $product->inventories->xlarge)
-					<option value="xlarge">X-Large</option>
+					<option value="xlarge">X-Large ${{substr($product->prices->xlarge,0,-2)}}.{{substr($product->prices->xlarge,-2)}}</option>
 				@endif
 
 				@if($product->xxlarge == "1" && $product->inventories->xxlarge)
-					<option value="xxlarge">XX-Large</option>
+					<option value="xxlarge">XX-Large ${{substr($product->prices->xxlarge,0,-2)}}.{{substr($product->prices->xxlarge,-2)}}</option>
 				@endif
 
 				@if($product->xxxlarge == "1" && $product->inventories->xxxlarge)
-					<option value="xxxlarge">XXX-Large</option>
+					<option value="xxxlarge">XXX-Large ${{substr($product->prices->xxxlarge,0,-2)}}.{{substr($product->prices->xxxlarge,-2)}}</option>
 				@endif
 			</select>
 		@endif	
