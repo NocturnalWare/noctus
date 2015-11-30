@@ -39,7 +39,7 @@ class CartsController extends Controller
     {   
         $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
         $shipping = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
-        \Session::put('checkoutAmt', $request->input('checkoutAmt'));
+        \Session::put('checkoutAmt', $request->input('checkoutAmt')*.80);
         if(!isset($shipping)){
             $shipping = new \App\Shipping;
         }

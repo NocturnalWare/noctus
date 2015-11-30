@@ -60,7 +60,7 @@
         <label>Total including shipping</label>
       </div>
       <div class="col-sm-6 col-md-6">
-        ${{substr(Session::get('checkoutAmt'),0,-2)}}.{{substr(Session::get('checkoutAmt'),-2)}}
+        ${{number_format(Session::get('checkoutAmt')/100, 2)}}
       </div>
     </div>
 
@@ -74,7 +74,7 @@
         data-key="{{env('STRIPE_PK')}}"
         data-amount="{{$checkoutAmt}}"
         data-name="Eternally Nocturnal"
-        data-description= "${{substr(Session::get('checkoutAmt'),0,-2)}}.{{substr(Session::get('checkoutAmt'),-2)}}"
+        data-description= "${{number_format(Session::get('checkoutAmt')/100, 2)}}"
         data-image="https://www.eternallynocturnal.com/images/blackskull.jpg">
       </script>
     </form>
