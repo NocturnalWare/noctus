@@ -59,8 +59,7 @@
 <input type="hidden" name="checkoutAmt" value="{{$pricetag}}">
 <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-<button type="submit" class="btn btn-sm btn-primary">${{number_format(($pricetag*.80)/100, 2)}}<br>Check Out</button>
-<h3>Total Includes Cyber Monday Deal!</h3>
+<button type="submit" class="btn btn-sm btn-primary">${{number_format(($pricetag)/100, 2)}}<br>Check Out</button>
 </form>
 
 <br><br>
