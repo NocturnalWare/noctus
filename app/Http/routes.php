@@ -22,13 +22,13 @@ Route::get('/home', function () {
 Route::post('/sendFeedback', array('as' => 'sendFeedback', 'uses' => 'ProductManagerController@sendFeedback'));
 
 // Authentication routes...
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::get('auth/login', array('as' => 'getLoginPage', 'uses' => 'Auth\AuthController@getLogin'));
+Route::post('auth/login', array('as' => 'login', 'uses' => 'Auth\AuthController@postLogin'));
+Route::get('auth/logout', array('as' => 'logout', 'uses' => 'Auth\AuthController@getLogout'));
 
 // Registration routes...
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+// Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::resource('slack', 'SlackController');
 
@@ -36,12 +36,6 @@ Route::resource('products', 'ProductsController');
 Route::get('products/sort/{category}', array('as' => 'productsort', 'uses' => 'ProductsController@sortindex'));
 
 
-Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
-Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
-Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
-Route::get('ordermanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
-Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
-Route::get('shippingmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 
 Route::post('/cart/checkCart', array('as' => 'checkCart', 'uses' => 'CartsController@checkCart'));
 Route::post('/cart/addToCart', array('as' => 'addToCart', 'uses' => 'CartsController@addToCart'));
@@ -58,4 +52,15 @@ Route::get('/alreadyPaid', array('as' => 'alreadyPaid', 'uses' => 'CheckoutsCont
 Route::resource('cart', 'CartsController');
 Route::resource('bands', 'BandsController');
 
+Route::group(['middleware' => 'auth'], function () {
 
+Route::resource('inventory', 'InventoryController');
+Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
+Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
+Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+Route::get('ordermanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+Route::get('shippingmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+
+
+});

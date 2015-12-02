@@ -1,8 +1,8 @@
 
-<div class="row">
+<div class="row" @if(isset($redirected))style="background-color:#000"@endif>
     <center>
         <img src="http://54.149.181.47/images/witeskull.png" class="img-responsive" />
-        <form method="POST" action="auth/login">
+        <form method="POST" action="{{route('login')}}">
             {!! csrf_field() !!}
 
             <div class="col-sm-12">
