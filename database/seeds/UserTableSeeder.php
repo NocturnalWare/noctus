@@ -28,9 +28,14 @@ class UserTableSeeder extends Seeder
                     'password'    => \Hash::make('Password123'),
                 ],                
                 [
-                	'name' => 'Miles Fowler',
+                    'name' => 'Miles Fowler',
                     'email'       => 'miles@eternallynocturnal.com',
                     'password'    => \Hash::make('Password123'),
+                ],              
+                [
+                	'name' => 'Inventory',
+                    'email'       => 'inventory@eternallynocturnal.com',
+                    'password'    => \Hash::make('halloween2015'),
                 ],
         );
 

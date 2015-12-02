@@ -1,5 +1,5 @@
 
-<div class="row" @if(isset($redirected))style="background-color:#000"@endif>
+<div class="row" style="@if(isset($redirected))background-color:#000;@endif color:#000">
     <center>
         <img src="http://54.149.181.47/images/witeskull.png" class="img-responsive" />
         <form method="POST" action="{{route('login')}}">
@@ -25,7 +25,7 @@
 
             <div class="col-sm-12">
                 <input type="checkbox" name="remember"> 
-                <span style="color:#fff">Remember Me</span>
+                <span>Remember Me</span>
             </div>
 
             <div style="margin-top:20px;">
