@@ -1,9 +1,9 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="video-carousel" class="carousel slide" data-interval="false" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#video-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#video-carousel" data-slide-to="1"></li>
+    <li data-target="#video-carousel" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -36,11 +36,11 @@
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#video-carousel" role="button" data-slide="prev">
     <i class="fa fa-chevron-left"></i>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+  <a class="right carousel-control" href="#video-carousel" role="button" data-slide="next">
     <i class="fa fa-chevron-right"></i>
     <span class="sr-only">Next</span>
   </a>
