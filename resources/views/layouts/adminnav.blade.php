@@ -39,7 +39,7 @@
           </ul>
         </li>
         <li>
-          <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" href="../../../noctus/public/auth/logout">
+          <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" href="{{route('logout')}}">
               <b>Logout</b>
           </a>
         </li>
