@@ -133,6 +133,8 @@ class CheckoutsController extends Controller
             $markPaid->payment_status = 'Paid';
             $markPaid->shipped_status = 'Not Shipped';
             $markPaid->save();
+            
+            $slacker->sendSaleMessage();
 
             $purge = [];
             foreach(\App\Cart::where('customer_id', $cart_id)->get() as $purgeCarts)
@@ -154,10 +156,10 @@ class CheckoutsController extends Controller
 
             \App\Sale::create(array('customer_id' => $markPaid->email, 'cart_id' => \Session::get('cart_id')));
 
+
             \Session::forget('cart_id');
             \Session::forget('checkoutAmt');
 
-            $slacker->sendSaleMessage();
 
             return redirect()->route('transSuccess');
     }
