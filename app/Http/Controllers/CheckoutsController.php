@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use \App\Slack\SlackHandler;
+
 use \Stripe\Stripe;
 use \Stripe\Charge;
 use \Stripe\Error;
@@ -98,7 +100,7 @@ class CheckoutsController extends Controller
     }
 
 
-    public function completePayment(Request $request)
+    public function completePayment(Request $request, SlackHandler $slacker)
     {
      // Set your secret key: remember to change this to your live secret key in production
      // See your keys here https://dashboard.stripe.com/account/apikeys
@@ -115,42 +117,39 @@ class CheckoutsController extends Controller
           return redirect()->route('alreadyPaid');
          }
 
-         $grandtotal = '$'.\Session::get('checkoutAmt')/100;
-     // Create the charge on Stripe's servers - this will charge the user's card
-     try {
-     $charge = Charge::create(array(
-       "amount" => round(\Session::get('checkoutAmt')), // amount in cents, again
-       "currency" => "usd",
-       "source" => $token,
-       "description" => \Session::get('cart_id'))
-     );
-    } catch(\Stripe\Error\Card $e) {
-      // The card has been declined
-    }
+         // Create the charge on Stripe's servers - this will charge the user's card
+         try{
+            $charge = Charge::create(array(
+               "amount" => round(\Session::get('checkoutAmt')), // amount in cents, again
+               "currency" => "usd",
+               "source" => $token,
+               "description" => \Session::get('cart_id'))
+            );
+        }catch(\Stripe\Error\Card $e) {
+              // The card has been declined
+            }
             $cart_id = \Session::get('cart_id');
             $markPaid = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
             $markPaid->payment_status = 'Paid';
             $markPaid->shipped_status = 'Not Shipped';
             $markPaid->save();
 
-            $grandquantity = 0;
+            $purge = [];
             foreach(\App\Cart::where('customer_id', $cart_id)->get() as $purgeCarts)
             {    
-             $inventory = \App\Inventory::where('product_id', $purgeCarts->product_id)->pluck($purgeCarts->size);
-             $newsize = $inventory - $purgeCarts->quantity;
-             $grandquantity += $purgeCarts->quantity;
-             \DB::table('inventories')->where('product_id', $purgeCarts->product_id)->update(array($purgeCarts->size => $newsize));
+            $purge[] = $purgeCarts;
+            $inventory = \App\Inventory::where('product_id', $purgeCarts->product_id)->pluck($purgeCarts->size);
+            $newsize = $inventory - $purgeCarts->quantity;
+            \DB::table('inventories')->where('product_id', $purgeCarts->product_id)->update(array($purgeCarts->size => $newsize));
             }
 
-            \Slack::send("NEW ONLINE SALE: $grandtotal, $grandquantity items.");
-
             \Mail::send('emails.Newsale', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
-             $checkoutAmt = \Session::get('checkoutAmt');
-             $message->to(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('email'))->subject("Your Eternally Nocturnal Order");
+            $checkoutAmt = \Session::get('checkoutAmt');
+            $message->to(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('email'))->subject("Your Eternally Nocturnal Order");
             });
             \Mail::send('emails.Newsaleadmin', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
-             $checkoutAmt = \Session::get('checkoutAmt');
-             $message->to('billing@eternallynocturnal.com')->subject("NEW SALE $".substr($checkoutAmt,0,-2).".".substr($checkoutAmt,-2));
+            $checkoutAmt = \Session::get('checkoutAmt');
+            $message->to('billing@eternallynocturnal.com')->subject("NEW SALE $".substr($checkoutAmt,0,-2).".".substr($checkoutAmt,-2));
             });
 
             \App\Sale::create(array('customer_id' => $markPaid->email, 'cart_id' => \Session::get('cart_id')));
@@ -158,7 +157,8 @@ class CheckoutsController extends Controller
             \Session::forget('cart_id');
             \Session::forget('checkoutAmt');
 
+            $slacker->sendSaleMessage();
+
             return redirect()->route('transSuccess');
-        }
-    
+    }
 }
