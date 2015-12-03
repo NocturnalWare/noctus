@@ -1,30 +1,41 @@
-<?php 
+<?php
 
-namespace App\Slack;
+namespace App\Cart\Handlers;
 
-use App\Cart;
+use \App\Slack\SlackHandler;
 
-class SlackHandler
+class CheckoutHandler
 {
+	private $slacker;
+	private $payment;
+	private $shipping;
 
-	public function sendMessage($channel, $data, $message){
-		\Slack::to($channel)->attach($data)->send($message);
+	public function __construct(SlackHandler $slack, PaymentHandler $payment, ShippingHandler $shipping){
+		$this->slacker = $slack;
+		$this->payment = $payment;
+		$this->shipping = $shipping;
 	}
 
-    public function sendSaleMessage(){
-    	$cart = $this->parseSale();
-    	\Slack::to('#websales')->attach($cart)->send('New WEB Sale!');
+	public function findShipping($id){
+		return $this->shipping->find($id);
+	}
 
+	public function checkPayment(){
+		if(!\Session::get('cart_id')){
+          	return redirect()->route('alreadyPaid');
+        }
+
+        if($this->shipping->where('cart_id', \Session::get('cart_id'))->pluck('payment_status') == 'Paid'){
+         	return redirect()->route('alreadyPaid');
+        }
+	}
+
+	public function sendSaleMessage(){
+    	$this->slacker->sendMessage('#thunderdome', $this->parseSale(), 'New WEB Sale!');
+    	
     	sleep(2);
 
-    	$shipping = $this->parseShipping();
-    	\Slack::to('#websales')->attach($shipping)->send();
-    }
-
-    public function testSaleMessage(){
-    	$cart = $this->parseSale();
-    	$shipping = $this->parseShipping();
-    	return [$cart, $shipping];
+    	$this->slacker->sendMessage('#thunderdome', $this->parseShipping(), '');
     }
 
     public function parseSale(){
@@ -49,7 +60,6 @@ class SlackHandler
         return $slackcart;
     }
 
-
     public function parseShipping(){
         $total = number_format(\Session::get('checkoutAmt')/100, 2);
     	$shipping = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
@@ -69,4 +79,8 @@ class SlackHandler
 
         return $shippingmessage;
     }
+
+
+
+
 }

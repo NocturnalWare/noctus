@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use \App\Slack\SlackHandler;
+use \App\Inventory\Inventory;
 
 use \Stripe\Stripe;
 use \Stripe\Charge;
@@ -38,9 +39,9 @@ class CheckoutsController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create(Inventory $inventory)
     {
-        //
+        dd($inventory);
     }
 
     /**
