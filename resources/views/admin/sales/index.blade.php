@@ -10,7 +10,7 @@
 						<a href="mailto:{{$sale->customer_id}}">
 							<span class="col-sm-6">{{$sale->customer_id}}</span>
 						</a>
-						<span class="col-sm-6">{{\Carbon::parse($sale->created_at)->format('m/d/Y g:i A')}}</span>
+						<span class="col-sm-6">{{\Carbon::parse($sale->created_at)->subHours(5)->format('m/d/Y g:i A')}}</span>
 					</h4>
 				</div>
 					<div class="row" style="margin:25px">
