@@ -68,8 +68,14 @@
 
         </li>
         <li>
+          @if(\Auth::check())
+            <a href="{{route('inventory.index')}}" style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg">
+                <b>Manage</b>
+            </a>
+          @else
           <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Login">
-              <b>Login</b>
+                <b>Login</b>
+              @endif
           </a>
         </li>
       </ul>

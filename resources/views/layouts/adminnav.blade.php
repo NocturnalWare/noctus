@@ -22,6 +22,11 @@
       </ul>
       <ul class="nav navbar-nav navbar-right" style="text-align:center;padding-top:10px;">
         <li>
+          <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" href="{{route('logout')}}">
+              <b>Logout</b>
+          </a>
+        </li>
+        <li>
           <a style="background-color:#000;color:#fff" id="dLabel" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Manage
             <span class="caret"></span>
@@ -29,19 +34,15 @@
           <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">
             <li></li>
             <li class="btn btn-lg">Products</li>
+            <a class="btn btn-lg" href="{{route('inventory.index')}}">Inventory</a>
             <li class="btn btn-lg">Contacts</li>
             <li class="btn btn-lg">Venues</li>
             <li class="btn btn-lg">Orders</li>
             <li class="btn btn-lg">Bands</li>
-            <li class="btn btn-lg">Shipping</li>
+            <a class="btn btn-lg" href="{{route('shippingManager')}}">Shipping</a>
             <li class="btn btn-lg">Shows</li>
               <a href="{{route('products.index')}}" style="color:#fff"><li class="btn btn-lg">Go to Storefront</li></a>
           </ul>
-        </li>
-        <li>
-          <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" href="{{route('logout')}}">
-              <b>Logout</b>
-          </a>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

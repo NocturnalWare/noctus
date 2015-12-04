@@ -19,6 +19,7 @@ Route::get('/home', function () {
     return view('okpage');
 });
 
+
 Route::post('/sendFeedback', array('as' => 'sendFeedback', 'uses' => 'ProductManagerController@sendFeedback'));
 
 // Authentication routes...
@@ -53,14 +54,12 @@ Route::resource('cart', 'CartsController');
 Route::resource('bands', 'BandsController');
 
 Route::group(['middleware' => 'auth'], function () {
-
-Route::resource('inventory', 'InventoryController');
-Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
-Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
-Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
-Route::get('ordermanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
-Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
-Route::get('shippingmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
-
-
+	Route::resource('salesmanager', 'Admin\SalesManagerController');
+	Route::resource('inventory', 'InventoryController');
+	Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
+	Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
+	Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+	Route::get('ordermanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+	Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
+	Route::get('shippingmanager/index', array('as' => 'shippingManager', 'uses' => 'Admin\SalesManagerController@index'));
 });

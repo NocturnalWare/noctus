@@ -19,4 +19,8 @@ class Cart extends Model
 	public function checkoutPrice(){
 		return $this->quantity * \App\Price::where('product_id', $this->product_id)->pluck($this->size);
 	}
+
+	public function product(){
+		return $this->hasOne('\App\Product', 'id', 'product_id');
+	}
 }

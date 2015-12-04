@@ -35,4 +35,8 @@ class Shipping extends Model
 			
 	];
 	protected $table = 'shippings';
+
+    public function shippingBySale(){
+    	return $this->belongsTo('\App\Sale', 'customer_id', 'email');
+    }
 }
