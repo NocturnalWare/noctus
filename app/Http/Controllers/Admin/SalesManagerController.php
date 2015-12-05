@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use App\Admin\Handlers\SalesManager;
+use App\Slack\SlackHandler;
+use App\Shipping\Handlers\ShippingHandler;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -27,9 +29,9 @@ class SalesManagerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(ShippingHandler $ship)
     {
-        //
+        return $ship->buildLabel();
     }
 
     /**
@@ -49,9 +51,20 @@ class SalesManagerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, ShippingHandler $ship)
     {
-        //
+        return $ship->buildLabel($id);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function trackPackage($id, ShippingHandler $ship)
+    {
+        return $ship->trackPackage($id);
     }
 
     /**

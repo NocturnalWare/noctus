@@ -19,6 +19,10 @@ class Sale extends Model
     }
 
     public function getShippingAddress(){
-    	return \App\Shipping::where('email', $this->customer_id)->first();
+    	return \App\Shipping::where('cart_id', $this->cart_id)->first();
+    }
+
+    public function shippingLabel(){
+    	return $this->hasOne('\App\shippingLabel', 'cart_id', 'cart_id');
     }
 }

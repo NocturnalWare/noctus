@@ -10,7 +10,7 @@
 						<a href="mailto:{{$sale->customer_id}}">
 							<span class="col-sm-6">{{$sale->customer_id}}</span>
 						</a>
-						<span class="col-sm-6">{{\Carbon::parse($sale->created_at)->subHours(5)->format('m/d/Y g:i A')}}</span>
+						<span class="col-sm-6">Ordered at {{\Carbon::parse($sale->created_at)->subHours(5)->format('m/d/Y g:i A')}}</span>
 					</h4>
 				</div>
 					<div class="row" style="margin:25px">
@@ -48,10 +48,28 @@
 					</div>
 				@endforeach
 
-				<span class="pull-right" style="margin-top:25px">
+				<div class="row pull-right" style="margin-top:25px">
 					Payment Total:
 					${{number_format($sale->getShippingAddress()->cart_amt/100, 2)}}
-				</span>
+				</div>
+
+					<div class="row"><br><br><br>
+				@if(!$sale->shippingLabel)
+						<a href="{{route('salesmanager.show', $sale->cart_id)}}">
+							<span class="btn btn-default col-md-6">Buy Shipping Label</span>
+						</a>
+				@else
+						<a class="col-md-6 btn btn-default" href="{{$sale->shippingLabel->label_url}}" target="_blank">View Shipping Label</a><br><br>
+						@if($sale->getShippingAddress()->shipped_status == 'DELIVERED')
+							<span class="col-sm-6">
+								Delievered
+								{{\Carbon::parse($sale->getShippingAddress()->updated_at)->subHours(5)->format('m/d/Y g:i A')}}
+							</span>
+						@else
+							<a class="col-md-6 btn btn-default" href="{{route('trackPackage', $sale->cart_id)}}">Tracking</a>
+						@endif
+				@endif
+					</div>
 			</div>
 		</div>
 	@endforeach
