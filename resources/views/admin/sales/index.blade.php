@@ -59,14 +59,14 @@
 							<span class="btn btn-default col-md-6">Buy Shipping Label</span>
 						</a>
 				@else
-						<a class="col-md-6 btn btn-default" href="{{$sale->shippingLabel->label_url}}" targe="_blank">View Shipping Label</a><br><br>
+						<a class="col-md-6 btn btn-default" href="{{$sale->shippingLabel->label_url}}" target="_blank">View Shipping Label</a><br><br>
 						@if($sale->getShippingAddress()->shipped_status == 'DELIVERED')
 							<span class="col-sm-6">
 								Delievered
 								{{\Carbon::parse($sale->getShippingAddress()->updated_at)->subHours(5)->format('m/d/Y g:i A')}}
 							</span>
 						@else
-							<a class="col-md-6 btn btn-default" href="{{route('trackPackage', $sale->cart_id)}}" targe="_blank">Tracking</a>
+							<a class="col-md-6 btn btn-default" href="{{route('trackPackage', $sale->cart_id)}}">Tracking</a>
 						@endif
 				@endif
 					</div>
