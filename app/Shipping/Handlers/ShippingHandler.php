@@ -4,17 +4,17 @@ namespace App\Shipping\Handlers;
 
 use App\Cart;
 use App\Shipping;
-use App\ProductShipping;
+use App\ShippingLabel;
 use App\Slack\SlackHandler;
 use GuzzleHttp\Exception\ClientException;
 use EasyPost\EasyPost;
 
-class ShippingHandler extends ShippingLabel
+class ShippingHandler
 {
     private $slacker;
 
     public function __construct(){
-        parent::__construct();
+        EasyPost::setApiKey(env('EASYPOST'));
         $this->slacker = new SlackHandler;
     }
 
@@ -30,9 +30,11 @@ class ShippingHandler extends ShippingLabel
         return Shipping::where('cart_id', $id)->first();
     }
 
-    public function buildLabel($id){
-        EasyPost::setApiKey(env('EASYPOST'));
+    public function showLabel($url){
+        return view('shipping.showlabel', compact('url'));
+    }
 
+    public function buildLabel($id){
         $shipping = $this->getShipping($id);
         $to_address = \EasyPost\Address::create(
             array(
@@ -71,11 +73,36 @@ class ShippingHandler extends ShippingLabel
 
         $shipment->buy($shipment->lowest_rate());
 
-        $this->create(['label_url' => 'label_url'])
+        ShippingLabel::create([
+            'cart_id' => $id,
+            'easypost_id' => $shipment->postage_label->id,
+            'tracking_code' => $shipment->tracking_code,
+            'easypost_tracking' => $shipment->tracker->id,
+            'label_url' => $shipment->postage_label->label_url,
+            'created' => $shipment->postage_label->created_at,
+            'rate' => $shipment->selected_rate->rate,
+            'carrier' => $shipment->selected_rate->carrier,
+            'shipment_id' => $shipment->selected_rate->shipment_id,
+        ]);
+
+        Shipping::where('cart_id', $id)->update(['shipped_status' => 'SHIPPED', 'tracking_number' => $shipment->tracking_code]);
 
         $link = $shipment->postage_label->label_url;
 
         $this->slacker->sendShippingLabel($link);
+
+        return redirect()->route('salesmanager.index');
     }   
+
+    public function trackPackage($id){
+        $track = ShippingLabel::where('cart_id', $id)->first();
+
+        $check = \EasyPost\Tracker::retrieve($track->easypost_tracking);
+        if($check->status == 'delivered'){
+            Shipping::where('cart_id', $id)->update(['shipped_status' => 'DELIVERED', 'tracking_number' => $check->]);
+        }
+        //update(['shipped_status' => 'SHIPPED', 'tracking_number' => $shipment->tracking_code]);
+        return $check;
+    }
 
 }

@@ -1,1 +1,1 @@
-<img src="{{$link}}" />
+<img src="{{$url}}" />

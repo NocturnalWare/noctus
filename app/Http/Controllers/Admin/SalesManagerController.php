@@ -51,9 +51,20 @@ class SalesManagerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, ShippingHandler $ship)
     {
-        //
+        return $ship->buildLabel($id);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function trackPackage($id, ShippingHandler $ship)
+    {
+        return $ship->trackPackage($id);
     }
 
     /**

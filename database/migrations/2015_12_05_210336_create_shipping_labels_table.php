@@ -10,13 +10,11 @@ class CreateShippingLabelsTable extends Migration
         Schema::create('shipping_labels', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('sale_id');
+            $table->string('cart_id');
             $table->string('easypost_id');
             $table->string('tracking_code');
+            $table->string('easypost_tracking');
             $table->string('label_url');
-            $table->string('label_pdf_url');
-            $table->string('label_epl2_url');
-            $table->string('label_zpl_url');
             $table->datetime('created');
             $table->string('rate');
             $table->string('carrier');

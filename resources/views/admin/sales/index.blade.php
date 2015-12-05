@@ -9,6 +9,18 @@
 					<h4 style="text-align:center;">
 						<a href="mailto:{{$sale->customer_id}}">
 							<span class="col-sm-6">{{$sale->customer_id}}</span>
+							@if(!$sale->shippingLabel)
+							<a href="{{route('salesmanager.show', $sale->cart_id)}}">
+								<span class="col-sm-6">{{$sale->cart_id}}</span>
+							</a>
+							@else
+								<a class="btn btn-default" href="{{$sale->shippingLabel->label_url}}" targe="_blank">View Label</a>
+									@if($sale->getShippingAddress()->shipped_status == 'DELIVERED')
+									DELIVERED
+									@else
+										<a class="btn btn-default" href="{{route('trackPackage', $sale->cart_id)}}" targe="_blank">Tracking</a>
+									@endif
+							@endif
 						</a>
 						<span class="col-sm-6">{{\Carbon::parse($sale->created_at)->subHours(5)->format('m/d/Y g:i A')}}</span>
 					</h4>
