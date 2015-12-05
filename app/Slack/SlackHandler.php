@@ -7,15 +7,26 @@ use GuzzleHttp\Exception\ClientException;
 
 class SlackHandler
 {
-
-    public function sendSaleMessage(){
+    public function sendSaleMessage($link){
     	$cart = $this->parseSale();
-    	\Slack::to('#websales')->attach($cart)->send('New WEB Sale!');
+        if(env('APP_ENV') == 'local'){
+           \Slack::to('#thunderdome')->attach($cart)->send('New WEB Sale!'); 
+        }else{
+           \Slack::to('#websales')->attach($cart)->send('New WEB Sale!'); 
+        }
 
-    	sleep(2);
+        sleep(2);
 
-    	$shipping = $this->parseShipping();
-    	\Slack::to('#websales')->attach($shipping)->send();
+        $shipping = $this->parseShipping();
+        if(env('APP_ENV') == 'local'){
+           \Slack::to('#thunderdome')->attach($shipping)->send('New WEB Sale!'); 
+        }else{
+           \Slack::to('#websales')->attach($shipping)->send();
+        }
+
+        sleep(2);
+
+        $this->sendShippingLabel($link);
     }
 
     public function parseSale(){
@@ -40,7 +51,6 @@ class SlackHandler
         return $slackcart;
     }
 
-
     public function parseShipping(){
         $total = number_format(\Session::get('checkoutAmt')/100, 2);
     	$shipping = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
@@ -59,5 +69,9 @@ class SlackHandler
             ]; 
 
         return $shippingmessage;
+    }
+
+    public function sendShippingLabel($shipping){
+        \Slack::to('#thunderdome')->send("USPS Label:\n $shipping");
     }
 }

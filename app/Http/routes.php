@@ -62,4 +62,5 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('ordermanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('shippingmanager/index', array('as' => 'shippingManager', 'uses' => 'Admin\SalesManagerController@index'));
+	Route::resource('shippingmanager', 'Admin\SalesManagerController');
 });

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use App\Admin\Handlers\SalesManager;
+use App\Slack\SlackHandler;
+use App\Shipping\Handlers\ShippingHandler;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -27,9 +29,9 @@ class SalesManagerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(ShippingHandler $ship)
     {
-        //
+        return $ship->buildLabel();
     }
 
     /**

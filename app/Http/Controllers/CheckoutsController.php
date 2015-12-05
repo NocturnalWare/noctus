@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use \App\Slack\SlackHandler;
+use \App\Shipping\Handlers\ShippingHandler;
 
 use \Stripe\Stripe;
 use \Stripe\Charge;
 use \Stripe\Error;
+
 
 
 use App\Http\Requests;
@@ -100,8 +102,10 @@ class CheckoutsController extends Controller
     }
 
 
-    public function completePayment(Request $request, SlackHandler $slacker)
+    public function completePayment(Request $request, ShippingHandler $slacker)
     {
+
+            dd($slacker->sendSaleMessage(\Session::get('cart_id')));
      // Set your secret key: remember to change this to your live secret key in production
      // See your keys here https://dashboard.stripe.com/account/apikeys
          Stripe::setApiKey(env('STRIPE_SK'));
@@ -154,7 +158,10 @@ class CheckoutsController extends Controller
             $message->to('billing@eternallynocturnal.com')->subject("NEW SALE $".substr($checkoutAmt,0,-2).".".substr($checkoutAmt,-2));
             });
 
+
+
             \App\Sale::create(array('customer_id' => $markPaid->email, 'cart_id' => \Session::get('cart_id')));
+
 
 
             \Session::forget('cart_id');
