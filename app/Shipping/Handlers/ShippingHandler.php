@@ -4,17 +4,18 @@ namespace App\Shipping\Handlers;
 
 use App\Cart;
 use App\Shipping;
+use App\ProductShipping;
 use App\Slack\SlackHandler;
 use GuzzleHttp\Exception\ClientException;
 use EasyPost\EasyPost;
 
-class ShippingHandler
+class ShippingHandler extends ShippingLabel
 {
     private $slacker;
 
     public function __construct(){
+        parent::__construct();
         $this->slacker = new SlackHandler;
-        $this->payment = new PaymentHandler;
     }
 
     public function buildSale(){
@@ -22,17 +23,17 @@ class ShippingHandler
     }
 
     public function sendSaleMessage(){
-        return $this->slacker->sendSaleMessage($this->buildLabel());
+        return $this->slacker->sendSaleMessage();
     }
 
-    public function getShipping(){
-        return Shipping::where('cart_id', \Session::get('cart_id'))->first();
+    public function getShipping($id){
+        return Shipping::where('cart_id', $id)->first();
     }
 
-    public function buildLabel(){
+    public function buildLabel($id){
         EasyPost::setApiKey(env('EASYPOST'));
 
-        $shipping = $this->getShipping();
+        $shipping = $this->getShipping($id);
         $to_address = \EasyPost\Address::create(
             array(
                 "name"    => "$shipping->ship_f_name $shipping->ship_l_name",
@@ -57,7 +58,7 @@ class ShippingHandler
         $parcel = \EasyPost\Parcel::create(
             array(
                 "predefined_package" => "SmallFlatRateBox",
-                "weight" => 1.0
+                "weight" => 16.0
             )
         );
         $shipment = \EasyPost\Shipment::create(
@@ -70,13 +71,11 @@ class ShippingHandler
 
         $shipment->buy($shipment->lowest_rate());
 
-        $shipment->insure(array('amount' => 100));
+        $this->create(['label_url' => 'label_url'])
 
         $link = $shipment->postage_label->label_url;
-        return $link;
-        $this->slacker->sendShippingLabel($link);
 
-        // return view('shipping.showlabel', compact('link'));
+        $this->slacker->sendShippingLabel($link);
     }   
 
 }
