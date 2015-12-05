@@ -99,10 +99,12 @@ class ShippingHandler
 
         $check = \EasyPost\Tracker::retrieve($track->easypost_tracking);
         if($check->status == 'delivered'){
-            Shipping::where('cart_id', $id)->update(['shipped_status' => 'DELIVERED', 'tracking_number' => $check->]);
+            Shipping::where('cart_id', $id)->update(['shipped_status' => 'DELIVERED', 'tracking_number' => $check->updated_at]);
+            return redirect()->route('salesmanager.index');
         }
-        //update(['shipped_status' => 'SHIPPED', 'tracking_number' => $shipment->tracking_code]);
-        return $check;
+
+        Shipping::where('cart_id', $id)->update(['shipped_status' => 'SHIPPED', 'tracking_number' => $check->tracking_code]);
+        return view('shipping.status', compact('check'));
     }
 
 }
