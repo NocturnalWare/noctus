@@ -102,10 +102,9 @@ class CheckoutsController extends Controller
     }
 
 
-    public function completePayment(Request $request, ShippingHandler $slacker)
+    public function completePayment(Request $request, SlackHandler $slacker)
     {
 
-            dd($slacker->sendSaleMessage(\Session::get('cart_id')));
      // Set your secret key: remember to change this to your live secret key in production
      // See your keys here https://dashboard.stripe.com/account/apikeys
          Stripe::setApiKey(env('STRIPE_SK'));

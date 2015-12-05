@@ -68,6 +68,10 @@ class SlackHandler
     }
 
     public function sendShippingLabel($shipping){
-        \Slack::to('#thunderdome')->send("USPS Label:\n $shipping");
+        if(env('APP_ENV') == 'local'){
+            \Slack::to('#thunderdome')->send("USPS Label:\n $shipping");
+        }else{
+            \Slack::to('#websales')->send("USPS Label:\n $shipping");
+        }
     }
 }
