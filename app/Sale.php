@@ -23,6 +23,6 @@ class Sale extends Model
     }
 
     public function shippingLabel(){
-    	return $this->hasOne('\App\shippingLabel', 'cart_id', 'cart_id');
+    	return $this->hasOne('\App\ShippingLabel', 'cart_id', 'cart_id');
     }
 }
