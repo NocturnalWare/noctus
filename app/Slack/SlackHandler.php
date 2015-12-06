@@ -3,13 +3,10 @@
 namespace App\Slack;
 
 use App\Cart;
+use GuzzleHttp\Exception\ClientException;
 
 class SlackHandler
 {
-
-	public function sendMessage($channel, $data, $message){
-		\Slack::to($channel)->attach($data)->send($message);
-	}
 
     public function sendSaleMessage(){
     	$cart = $this->parseSale();
@@ -19,12 +16,6 @@ class SlackHandler
 
     	$shipping = $this->parseShipping();
     	\Slack::to('#websales')->attach($shipping)->send();
-    }
-
-    public function testSaleMessage(){
-    	$cart = $this->parseSale();
-    	$shipping = $this->parseShipping();
-    	return [$cart, $shipping];
     }
 
     public function parseSale(){
