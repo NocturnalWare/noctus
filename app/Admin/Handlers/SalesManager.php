@@ -13,6 +13,6 @@ class SalesManager
 	}
 
 	public function allSales(){
-		return $this->sale->with('cartsBySale', 'cartsBySale.product', 'shippingBySale', 'shippingLabel')->where('id', '>', '29')->orderBy('id', 'desc')->get();
+		return $this->sale->with('cartsBySale', 'cartsBySale.product', 'shippingBySale', 'shippingLabel')->where('id', '>', '19')->orderBy('id', 'desc')->get();
 	}
 }
