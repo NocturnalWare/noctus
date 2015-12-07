@@ -33,9 +33,6 @@ class ImageHandler
         		unlink(public_path().'/images/'.$image);
 			break;
 		}
-
-
-        return view('imagemanager.index', compact('disc'));
 	}
 
 	public function uploadProductImage($input){
