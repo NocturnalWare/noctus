@@ -35,7 +35,7 @@ class ImageHandler
 		}
 
 
-        return view('supahtest', compact('disc'));
+        return view('imagemanager.index', compact('disc'));
 	}
 
 	public function uploadProductImage($input){
