@@ -145,7 +145,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         'Maknz\Slack\SlackServiceProvider',
-        'Intervention\Image\ImageServiceProvider',
     ],
 
     /*
@@ -196,7 +195,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Slack'     => 'Maknz\Slack\Facades\Slack',
-        'Image' => 'Intervention\Image\Facades\Image',
     ],
 
 ];
