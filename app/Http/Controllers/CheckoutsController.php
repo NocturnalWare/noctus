@@ -148,14 +148,25 @@ class CheckoutsController extends Controller
             \DB::table('inventories')->where('product_id', $purgeCarts->product_id)->update(array($purgeCarts->size => $newsize));
             }
 
-            \Mail::send('emails.Newsale', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
-            $checkoutAmt = \Session::get('checkoutAmt');
-            $message->to(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('email'))->subject("Your Eternally Nocturnal Order");
-            });
-            \Mail::send('emails.Newsaleadmin', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
-            $checkoutAmt = \Session::get('checkoutAmt');
-            $message->to('billing@eternallynocturnal.com')->subject("NEW SALE $".substr($checkoutAmt,0,-2).".".substr($checkoutAmt,-2));
-            });
+            if(env('APP_ENV') == 'local'){
+                \Mail::send('emails.productshipped', array('cart' => \App\Cart::where('customer_id', $cart_id)->get(), 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
+                    $message->to(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('email'))->subject("Your Eternally Nocturnal Order");
+                });
+
+                \Mail::send('emails.Newsaleadmin', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
+                    $checkoutAmt = \Session::get('checkoutAmt');
+                    $message->to('joe@eternallynocturnal.com')->subject("NEW SALE $".substr($checkoutAmt,0,-2).".".substr($checkoutAmt,-2));
+                });   
+            }else{   
+                \Mail::send('emails.productshipped', array('cart' => \App\Cart::where('cart_id', $cart_id)->get(), 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
+                    $message->to(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('email'))->subject("Your Eternally Nocturnal Order");
+                });
+
+                \Mail::send('emails.Newsaleadmin', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
+                    $checkoutAmt = \Session::get('checkoutAmt');
+                    $message->to('billing@eternallynocturnal.com')->subject("NEW SALE $".substr($checkoutAmt,0,-2).".".substr($checkoutAmt,-2));
+                });
+            }
 
 
 

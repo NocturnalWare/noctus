@@ -50,10 +50,10 @@ class ShippingHandler
         $from_address = \EasyPost\Address::create(
             array(
                 "company" => "Eternally Nocturnal",
-                "street1" => "31211 Westfield",
+                "street1" => "31121 Westfield",
                 "city"    => "Livonia",
                 "state"   => "MI",
-                "zip"     => "48240",
+                "zip"     => "48150",
                 "phone"   => "313-515-5094"
             )
         );
