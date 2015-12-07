@@ -21,16 +21,16 @@ class ImageHandler
 			case 'thumb':
 		        $disc->put(
 		            "$name",
-		            file_get_contents('C:/xampp/htdocs/noctus/public/thumbs/'.$image)
+		            file_get_contents(public_path().'/thumbs/'.$image)
 		        );
-        		unlink('C:/xampp/htdocs/noctus/public/thumbs/'.$image);
+        		unlink(public_path().'/thumbs/'.$image);
 			break;
 			case 'image':
 		        $disc->put(
 		            "$name",
-		            file_get_contents('C:/xampp/htdocs/noctus/public/images/'.$image)
+		            file_get_contents(public_path().'/images/'.$image)
 		        );
-        		unlink('C:/xampp/htdocs/noctus/public/images/'.$image);
+        		unlink(public_path().'/images/'.$image);
 			break;
 		}
 
