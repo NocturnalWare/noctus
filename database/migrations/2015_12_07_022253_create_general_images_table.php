@@ -12,7 +12,18 @@ class CreateGeneralImagesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('general_images', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer('sort_order');
+            $table->integer('active');
+            $table->string('type');
+            $table->string('name');
+            $table->text('description');
+            $table->string('photographer');
+            $table->string('url');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +33,6 @@ class CreateGeneralImagesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('general_images');
     }
 }
