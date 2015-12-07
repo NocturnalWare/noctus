@@ -74,13 +74,13 @@ class ImageHandler
 	}
 
 	public function makeThumbnail($input, $name){
-		$image = \Image::make($input->file)->encode('jpg')->save('../public/images/'.$name);
+		$image = \Image::make($input->file)->encode('jpg')->save(public_path().'/images/'.$name);
 		$image;
 		$url = '/general/images/'.$name;
 		$this->awsUploader('image', $input, $url, $name);
 
 		$image = \Image::make($input->file)->encode('jpg')->resize(300, 200);
-		$image->save('../public/thumbs/'.$name);
+		$image->save(public_path().'/thumbs/'.$name);
 		$url = '/general/thumbnails/'.$name;
 		$this->awsUploader('thumb', $input, $url, $name);
 	}
