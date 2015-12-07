@@ -15,11 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('okpage');
-});
-
-
 Route::post('/sendFeedback', array('as' => 'sendFeedback', 'uses' => 'ProductManagerController@sendFeedback'));
 
 // Authentication routes...
@@ -63,5 +58,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('shippingmanager/index', array('as' => 'shippingManager', 'uses' => 'Admin\SalesManagerController@index'));
 	Route::resource('shippingmanager', 'Admin\SalesManagerController');
+	Route::resource('images', 'Admin\ImageController');
 	Route::get('shipping/track/{id}', array('as' => 'trackPackage', 'uses' => 'Admin\SalesManagerController@trackPackage'));
 });

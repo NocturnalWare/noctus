@@ -10,7 +10,9 @@
         "laravel/framework": "5.1.*",
         "guzzlehttp/guzzle": "6.0.*",
         "maknz/slack": "~1.7",
-        "easypost/easypost-php": "dev-master"
+        "intervention/image": "dev-master",
+        "easypost/easypost-php": "dev-master",
+        "league/flysystem-aws-s3-v3": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
