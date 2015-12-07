@@ -73,7 +73,7 @@ class ImageHandler
 
 		// $this->awsUploader($input, $data['url'], $newimagename);
 
-		return redirect()->route('salesmanager.create');
+		return redirect()->route('imagemanager.index');
 	}
 
 	public function makeThumbnail($input, $name){

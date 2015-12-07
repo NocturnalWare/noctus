@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+
+use App\Images\Handlers\ImageHandler;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -14,9 +16,10 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ImageHandler $image)
     {
-        //
+        $images = $image->allImages();
+        return view('images.index', compact('images'));;
     }
 
     /**
@@ -26,7 +29,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view('images.create');
     }
 
     /**
@@ -35,9 +38,9 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, ImageHandler $handler)
     {
-        //
+        return $handler->uploadGeneralImage($request);
     }
 
     /**
