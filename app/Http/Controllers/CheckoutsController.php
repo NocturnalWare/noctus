@@ -158,7 +158,7 @@ class CheckoutsController extends Controller
                     $message->to('joe@eternallynocturnal.com')->subject("NEW SALE $".substr($checkoutAmt,0,-2).".".substr($checkoutAmt,-2));
                 });   
             }else{   
-                \Mail::send('emails.productshipped', array('cart' => \App\Cart::where('cart_id', $cart_id)->get(), 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
+                \Mail::send('emails.productshipped', array('cart' => \App\Cart::where('customer_id', $cart_id)->get(), 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
                     $message->to(\App\Shipping::where('cart_id', \Session::get('cart_id'))->pluck('email'))->subject("Your Eternally Nocturnal Order");
                 });
 
@@ -170,7 +170,7 @@ class CheckoutsController extends Controller
 
 
 
-            \App\Sale::create(array('customer_id' => $markPaid->email, 'cart_id' => \Session::get('cart_id')));
+            \App\Sale::create(array('customer_id' => $markPaid->email, 'customer_id' => \Session::get('cart_id')));
 
 
 
