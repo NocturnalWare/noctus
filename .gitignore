@@ -47,3 +47,4 @@ Homestead.yaml
 Homestead.json
 .env
 .env.backup
+resources/views/supahtest.blade.php

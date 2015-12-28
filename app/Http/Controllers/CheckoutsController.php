@@ -101,7 +101,6 @@ class CheckoutsController extends Controller
         //
     }
 
-
     public function completePayment(Request $request, SlackHandler $slacker)
     {
 
@@ -170,7 +169,7 @@ class CheckoutsController extends Controller
 
 
 
-            \App\Sale::create(array('customer_id' => $markPaid->email, 'cart_id' => \Session::get('cart_id')));
+            \App\Sale::create(array('customer_id' => $markPaid->email, 'customer_id' => \Session::get('cart_id')));
 
 
 
