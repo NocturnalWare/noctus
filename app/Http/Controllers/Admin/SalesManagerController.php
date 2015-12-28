@@ -31,6 +31,9 @@ class SalesManagerController extends Controller
      */
     public function create()
     {
+
+                   
+        
 // \App\Cart::where('customer_id', 'ChWvZc3Mm6GtY7EJCvKnr4XZqllJQZ8w033KRTVEUKOYj1kCR7')->get() 
 
             // \Mail::send('emails.Newsale', array('cart' => $cart_id, 'customer' => \App\Shipping::where('cart_id', $cart_id)->first()), function($message){
@@ -65,9 +68,9 @@ class SalesManagerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, ShippingHandler $ship)
+    public function show($id, $size, ShippingHandler $ship)
     {
-        return $ship->buildLabel($id);
+        return $ship->buildLabel($id, $size);
     }
 
     /**

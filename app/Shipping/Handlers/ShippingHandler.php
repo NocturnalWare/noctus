@@ -34,7 +34,7 @@ class ShippingHandler
         return view('shipping.showlabel', compact('url'));
     }
 
-    public function buildLabel($id){
+    public function buildLabel($id, $size){
         $shipping = $this->getShipping($id);
         $to_address = \EasyPost\Address::create(
             array(
@@ -59,7 +59,7 @@ class ShippingHandler
         );
         $parcel = \EasyPost\Parcel::create(
             array(
-                "predefined_package" => "SmallFlatRateBox",
+                "predefined_package" => $size,
                 "weight" => 16.0
             )
         );

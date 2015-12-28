@@ -50,6 +50,7 @@ Route::resource('bands', 'BandsController');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('salesmanager', 'Admin\SalesManagerController');
+	Route::get('shipping/buildLabel/{id}/{size}', array('as' => 'buildLabel', 'uses' => 'Admin\SalesManagerController@show'));
 	Route::resource('inventory', 'InventoryController');
 	Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));

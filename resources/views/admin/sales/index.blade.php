@@ -55,8 +55,14 @@
 
 					<div class="row"><br><br><br>
 				@if(!$sale->shippingLabel)
-						<a href="{{route('salesmanager.show', $sale->cart_id)}}">
-							<span class="btn btn-default col-md-6">Buy Shipping Label</span>
+						<a class="col-sm-12" href="{{route('buildLabel', $sale->cart_id)}}/SmallFlatRateBox">
+							<span class="btn btn-default col-md-6">Buy Small Shipping Label</span>
+						</a>
+						<a  class="col-sm-12" href="{{route('buildLabel', $sale->cart_id)}}/MediumFlatRateBox">
+							<span class="btn btn-default col-md-6">Buy Medium Shipping Label</span>
+						</a>
+						<a  class="col-sm-12" href="{{route('buildLabel', $sale->cart_id)}}/LargeFlatRateBox">
+							<span class="btn btn-default col-md-6">Buy Large Shipping Label</span>
 						</a>
 				@else
 						<a class="col-md-6 btn btn-default" href="{{$sale->shippingLabel->label_url}}" target="_blank">View Shipping Label</a><br><br>
