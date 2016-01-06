@@ -1,8 +1,10 @@
 <div id="shows-carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+  <ol class="carousel-indicators" style="margin-top:202px;">
     <li data-target="#shows-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#shows-carousel" data-slide-to="1"></li>
+    <li data-target="#shows-carousel" data-slide-to="2"></li>
+    <li data-target="#shows-carousel" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -10,17 +12,36 @@
     <div class="item active">
       <center>
         <div class="col-sm-12">
-          Toys For Tots
-          <a href="https://www.facebook.com/events/1509324312698895/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;" src="http://54.149.181.47/images/toysfortots.jpg"></a>
+          Winter Showcase
+          <a href="https://www.facebook.com/events/1662778867304863/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/wintershowcase.jpg"></a>
         </div>
       </center>
     </div>
 
     <div class="item">
-      A Not So Silent Night
+      Beard Day Party
       <div class="col-sm-12">
         <center>
-          <a href="https://www.facebook.com/events/1700093976886189/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;" src="http://54.149.181.47/images/silentnight.jpg"></a>
+          <a href="https://www.facebook.com/events/405393122992628/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/beard.jpg"></a>
+        </center>
+      </div>
+    </div>
+    
+
+    <div class="item">
+      Twas The Night Before Valentine's Day
+      <div class="col-sm-12">
+        <center>
+          <a href="https://www.facebook.com/events/1615891782005933/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/valentines.jpg"></a>
+        </center>
+      </div>
+    </div>
+
+    <div class="item">
+      Cthulhu Entertainment Pizza Show 
+      <div class="col-sm-12">
+        <center>
+          <a href="https://www.facebook.com/events/610303422442850/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/pizzashow.jpg"></a>
         </center>
       </div>
     </div>
