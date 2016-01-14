@@ -59,7 +59,7 @@
 			<label>First Name*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_f_name' ship-required="3" class="shippingRequiredInput" value="{{$shipping->ship_f_name}}" placeholder='First Name' />
+			<input type="text" name='ship_f_name' ship-required="1" class="shippingRequiredInput" value="{{$shipping->ship_f_name}}" placeholder='First Name' />
 		</div>
 	</div>
 	<div class="col-xs-12 col-md-12">
@@ -67,7 +67,7 @@
 			<label>Last Name*</label>
 		</div>
 		<div class="col-md-6">
-			<input type="text" name='ship_l_name' ship-required="3" class="shippingRequiredInput" value="{{$shipping->ship_l_name}}" placeholder='Last Name' />
+			<input type="text" name='ship_l_name' ship-required="1" class="shippingRequiredInput" value="{{$shipping->ship_l_name}}" placeholder='Last Name' />
 		</div>
 	</div>
 
