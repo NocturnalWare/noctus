@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('content')
+<meta property="og:image" content="http://54.149.181.47/images/blackskull.jpg">
 
 <div class="window1">
 		<div class="row">

@@ -1,7 +1,21 @@
 @extends('layouts.master')
 
 @section('content')
+<meta property="og:image"              content="http://54.149.181.47/etnoc/{{$product->main_image}}" />
+
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <center>
+									
 	<legend style="margin-top:70px;text-align:center;color:#fff" class="product-header-etnoc">{{$product->name}}</legend>
 	<div class="col-xs-12 col-md-7">
 		<img class="img-responsive" src="http://54.149.181.47/etnoc/{{$product->main_image}}" />
@@ -47,7 +61,9 @@
 			<br>
 			<button id="cart" type="button" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button><br><br>
 			<a href="{{route('cart.index')}}" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-shopping-cart"></i> View Cart</a>
-
+@if(Auth::check())
+									<div class="fb-share-button" data-href="http://store.eternallynocturnal.com/products/{{$product->id}}" data-layout="button"></div>
+								@endif
 	</div>
 </center>
 	<div class="col-md-3"></div>

@@ -1,7 +1,6 @@
 <head>
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <meta property="og:image" content="http://54.149.181.47/images/blackskull.jpg">
     <link rel="shortcut icon" href="http://159.203.77.45/favicon.ico" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap.min.css">
@@ -28,6 +27,14 @@
 <!-- <div id='stars3'></div> -->
 @include('layouts.publicnav')
 <div class="div-sm-12" style="margin-top:20px;">
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 @yield('content')
 </body>
 
