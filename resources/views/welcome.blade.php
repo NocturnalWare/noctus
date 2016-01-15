@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('content')
+
 <div class="window1">
 		<div class="row">
 			<div class="col-md-8 col-sm-12 en-content-box">

@@ -101,6 +101,18 @@ class CheckoutsController extends Controller
         //
     }
 
+    private function calculateShipping($quantity){
+
+    }
+
+    private function checkoutAmt($cart_id){
+        $total = 0;
+        $shipping = 0;
+        foreach(\App\Cart::where('customer_id', $cart_id)->get() as $cart){
+
+        }
+    }
+
     public function completePayment(Request $request, SlackHandler $slacker)
     {
 
@@ -119,6 +131,9 @@ class CheckoutsController extends Controller
           return redirect()->route('alreadyPaid');
          }
 
+         // $charge = 0;
+
+         // $cart->checkoutPrice()
          // Create the charge on Stripe's servers - this will charge the user's card
          try{
             $charge = Charge::create(array(
