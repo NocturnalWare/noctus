@@ -33,7 +33,7 @@
           </a>
           <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">
             <li></li>
-            <li class="btn btn-lg">Products</li>
+            <a class="btn btn-lg" href="{{route('productmanager.index')}}">Products</a>
             <a class="btn btn-lg" href="{{route('inventory.index')}}">Inventory</a>
             <li class="btn btn-lg">Contacts</li>
             <li class="btn btn-lg">Venues</li>
