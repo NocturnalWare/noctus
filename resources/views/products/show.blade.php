@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('facebook-tags')
           <meta property="og:image" content="http://54.149.181.47/etnoc/{{$product->main_image}}" />
-
 @stop
 @section('content')
 
