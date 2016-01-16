@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<?php $pricetag = 0;?>
 	@foreach($carts as $cart)
 		
 		<div class="row" style="margin-top:70px;margin-left:40px;width:80%;border:1px #ffffff solid;border-radius:35px;border-left:transparent;border-right:transparent;padding:15px;">
@@ -36,25 +35,13 @@
 				
 		</div>
 
-			<?php $pricetag = $pricetag + $cart->checkoutPrice();?>
 
 	@endforeach
-
 @if($pricetag > 0)
 <div class="col-xs-9" style="text-align:right;">
-<div style="color:#f0f0f0;font-size:16px">Item total: ${{substr($pricetag,0,-2)}}.{{substr($pricetag,-2)}}</div>
+<div style="color:#f0f0f0;font-size:16px">Item total: ${{substr($pricetag-$shipping,0,-2)}}.{{substr($pricetag-$shipping,-2)}}</div>
 
-<?php 
-	$shipcounter = $carts->sum('quantity');
-	if($shipcounter > 1){
-		$shipcost = round((($shipcounter / 2) * 599),0);
-	}else{
-		$shipcost = 599;
-	}
-	$pricetag = $pricetag + $shipcost;
-?>
-
-<div style="color:#f0f0f0;font-size:16px">Shipping total: ${{substr($shipcost,0,-2)}}.{{substr($shipcost,-2)}}</div>
+<div style="color:#f0f0f0;font-size:16px">Shipping total: ${{substr($shipping,0,-2)}}.{{substr($shipping,-2)}}</div>
 <form action="{{route('createShipping')}}" method="post">
 <input type="hidden" name="checkoutAmt" value="{{$pricetag}}">
 <input type="hidden" name="_token" value="{{csrf_token()}}">

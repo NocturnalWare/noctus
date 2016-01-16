@@ -4,22 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Cart\Handlers\CartHandler;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class CartsController extends Controller
 {
-  /**
+    private $handler;
+
+    public function __construct(CartHandler $carthandler){
+        $this->handler = $carthandler;
+    }
+
+    /**
      * Display a listing of carts
      *
      * @return Response
      */
     public function index()
     {
-        // \Session::flush();
         if(\Session::get('cart_id')){
-            $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
-            return view('carts.index', compact('carts'));
+            $carts = $this->handler->cart;
+            $pricetag = $this->handler->checkoutAmt();
+            $shipping = $this->handler->calculateShipping();
+            return view('carts.index', compact('carts', 'pricetag', 'shipping'));
         }
         else{
             return redirect()->back();
@@ -37,9 +46,9 @@ class CartsController extends Controller
 
     public function createShippingForm(Request $request)
     {   
-        $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
+        $carts = $this->handler->cart;
         $shipping = \App\Shipping::where('cart_id', \Session::get('cart_id'))->first();
-        \Session::put('checkoutAmt', $request->input('checkoutAmt'));
+        \Session::put('checkoutAmt', $this->handler->checkoutAmt());
         if(!isset($shipping)){
             $shipping = new \App\Shipping;
         }
@@ -174,7 +183,7 @@ class CartsController extends Controller
             $cart->ship_city = $request->input('ship_city');
             $cart->ship_state = $request->input('ship_state');
             $cart->ship_zip = $request->input('ship_zip');
-            $cart->cart_amt = \Session::get('checkoutAmt');
+            $cart->cart_amt = $this->handler->checkoutAmt();
             $cart->save();
             
             return $this->makeCCPayment();

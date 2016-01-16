@@ -11,7 +11,7 @@ use \Stripe\Stripe;
 use \Stripe\Charge;
 use \Stripe\Error;
 
-
+use App\Cart\Handlers\CartHandler;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -101,16 +101,12 @@ class CheckoutsController extends Controller
         //
     }
 
-    private function calculateShipping($quantity){
-
+    public function getCheckoutPrice(){
+        return $this->checkoutAmt(new CartHandler);
     }
 
-    private function checkoutAmt($cart_id){
-        $total = 0;
-        $shipping = 0;
-        foreach(\App\Cart::where('customer_id', $cart_id)->get() as $cart){
-
-        }
+    private function checkoutAmt(CartHandler $handler){
+        return $handler->checkoutAmt();
     }
 
     public function completePayment(Request $request, SlackHandler $slacker)
@@ -137,7 +133,7 @@ class CheckoutsController extends Controller
          // Create the charge on Stripe's servers - this will charge the user's card
          try{
             $charge = Charge::create(array(
-               "amount" => round(\Session::get('checkoutAmt')), // amount in cents, again
+               "amount" => round($this->getCheckoutPrice()), // amount in cents, again
                "currency" => "usd",
                "source" => $token,
                "description" => \Session::get('cart_id'))
