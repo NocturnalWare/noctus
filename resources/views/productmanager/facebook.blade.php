@@ -1,13 +1,17 @@
-@extends('layouts.backend')
+@extends('layouts.master')
 
 
 
 @section('content')
 
-		<img class="col-sm-12 col-md-3 img-responsive" src="http://54.149.181.47/etnoc/{{$product->main_image}}">
 
-	<i class="fa fa-facebook-official" style="font-size:2em"></i> Main Image
+	<i class="fa fa-facebook-official" style="font-size:2em"></i>
 	<div class="well" style="color:#000">
+		<i class="fa fa-facebook-official"></i> Shared Image for {{$product->name}}
+	<div class="row">
+	<img class="col-sm-12 col-md-3 img-responsive" src="http://54.149.181.47/etnoc/{{$product->main_image}}">
+	</div>
+		<form class="hidden">
 		<input type="hidden" name="_token" value="{{csrf_token()}}" />
 		<input type="hidden" name="type" value="show" />
 		<input type="file" name="file" />
@@ -20,5 +24,5 @@
 
 		</form>
 
-
+</div>
 @stop

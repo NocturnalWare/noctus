@@ -36,6 +36,9 @@
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
 @include('layouts.publicnav')
+@if(Auth::check())
+  @include('layouts.adminnav')
+@endif
 <div class="div-sm-12" style="margin-top:20px;">
   <div id="fb-root"></div>
 
