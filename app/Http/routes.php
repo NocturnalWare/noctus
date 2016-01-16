@@ -52,12 +52,15 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('salesmanager', 'Admin\SalesManagerController');
 	Route::get('shipping/buildLabel/{id}/{size}', array('as' => 'buildLabel', 'uses' => 'Admin\SalesManagerController@show'));
 	Route::resource('inventory', 'InventoryController');
-	Route::get('productmanager/index', array('as' => 'productManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('ordermanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('bandmanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
 	Route::get('shippingmanager/index', array('as' => 'shippingManager', 'uses' => 'Admin\SalesManagerController@index'));
+	Route::resource('productmanager', 'ProductManagerController');
+	Route::group(['prefix' => 'productmanager/tools'], function(){
+		Route::get('facebook/{id?}', ['as' => 'facebook', 'uses' => 'ProductManagerController@facebook']);
+	});
 	Route::resource('shippingmanager', 'Admin\SalesManagerController');
 	Route::resource('imagemanager', 'Admin\ImageController');
 	Route::get('shipping/track/{id}', array('as' => 'trackPackage', 'uses' => 'Admin\SalesManagerController@trackPackage'));

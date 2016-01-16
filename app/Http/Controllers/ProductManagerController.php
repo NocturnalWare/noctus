@@ -16,8 +16,9 @@ class ProductManagerController extends Controller
      */
     public function index()
     {
-        //
-        return view('productmanager.index');
+        $products = \App\Product::all();
+        $categories = \App\ProductCategory::all();
+        return view('productmanager.index', compact('products', 'categories'));
     }
 
     public function sendFeedback(Request $request){
@@ -48,6 +49,11 @@ class ProductManagerController extends Controller
         //
     }
 
+    public function facebook($id = '1'){
+        $product = \App\Product::where('id', $id)->with('inventories', 'prices')->first();
+        return view('productmanager.facebook', compact('product'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -67,7 +73,8 @@ class ProductManagerController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = \App\Product::where('id', $id)->with('inventories', 'prices')->first();
+        return view('productmanager.show', compact('product'));
     }
 
     /**
