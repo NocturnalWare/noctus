@@ -1,6 +1,9 @@
 @extends('layouts.master')
+@section('facebook-tags')
+	<meta property="og:image" content="http://54.149.181.47/images/blackskull.jpg">
+@stop
+
 @section('content')
-<meta property="og:image" content="http://54.149.181.47/images/blackskull.jpg">
 
 <div class="window1">
 		<div class="row">

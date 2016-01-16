@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://159.203.77.45/final.css">
     <script src="http://159.203.77.45/js/bundle.js"></script>
         <title>#StayAwakeToCreate</title>
+@yield('facebook-tags')
             
     </head>
 
