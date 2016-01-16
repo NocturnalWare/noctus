@@ -69,14 +69,14 @@
         </li>
         <li>
           @if(\Auth::check())
-            <a href="{{route('inventory.index')}}" style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg">
-                <b>Manage</b>
-            </a>
+          @if(Auth::check())
+            @include('layouts.adminnav')
+          @endif
           @else
           <a style="background-color:#000;color:#fff" type="button" class="dropdown nav-button-etnoc btn btn-lg" data-toggle="modal" data-target="#Login">
                 <b>Login</b>
-              @endif
           </a>
+          @endif
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

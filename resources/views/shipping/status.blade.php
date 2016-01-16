@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.master')
 
 @section('content')
 <div style="background-color:#000;margin-top:140px;">

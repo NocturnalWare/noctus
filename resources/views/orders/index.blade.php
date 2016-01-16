@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.master')
 @section('content')
 
 <div id="orderManager">

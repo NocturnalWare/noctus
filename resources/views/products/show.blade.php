@@ -12,11 +12,8 @@
 	<div class="col-xs-12 col-md-7">
 		<img class="img-responsive" src="http://54.149.181.47/etnoc/{{$product->main_image}}" />
 	</div>
-	<div class="well-etnoc col-xs-12 col-md-2">
+	<div class="well col-xs-12 col-md-2" style="color:#000;">
 		{{$product->description}}
-			<div class="col-sm-12 btn">
-				<div class="fb-share-button" data-href="http://store.eternallynocturnal.com/products/{{$product->id}}" data-layout="button"></div>
-			</div>
 		<br><br>
 		<input type="hidden" value="{{$product->id}}" name="product" class="product" />
 
@@ -57,6 +54,19 @@
 			<br>
 			<button id="cart" type="button" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button><br><br>
 			<a href="{{route('cart.index')}}" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-shopping-cart"></i> View Cart</a>
+			<div class="col-sm-12 btn" style="color:transparent">
+				<div class="fb-like" 
+					data-href="http://store.eternallynocturnal.com/products/{{$product->id}}"
+					data-layout="standard" 
+					data-action="like" 
+					data-show-faces="true">
+				</div>
+			</div>
+			<div class="col-sm-12 btn">
+				<div>
+					<div class="fb-share-button" data-href="http://store.eternallynocturnal.com/products/{{$product->id}}" data-layout="button"></div>
+				</div>
+			</div>
 	</div>
 </center>
 	<div class="col-md-3"></div>
