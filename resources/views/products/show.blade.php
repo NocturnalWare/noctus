@@ -55,17 +55,18 @@
 			<br>
 			<button id="cart" type="button" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button><br><br>
 			<a href="{{route('cart.index')}}" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-shopping-cart"></i> View Cart</a>
-			<div class="col-sm-12 btn" style="color:transparent">
-				<div class="fb-like" 
-					data-href="http://store.eternallynocturnal.com/products/{{$product->id}}"
-					data-layout="standard" 
-					data-action="like" 
-					data-show-faces="true">
+			<div class="row">
+				<div class="col-sm-6 btn" style="color:transparent">
+					<div class="fb-like" 
+						data-href="http://store.eternallynocturnal.com/products/{{$product->id}}"
+						data-layout="button_count" 
+						data-action="like">
+					</div>
 				</div>
-			</div>
-			<div class="col-sm-12 btn">
-				<div>
-					<div class="fb-share-button" data-href="http://store.eternallynocturnal.com/products/{{$product->id}}" data-layout="button"></div>
+				<div class="col-sm-6 btn">
+					<div>
+						<div class="fb-share-button" data-href="http://store.eternallynocturnal.com/products/{{$product->id}}" data-layout="button"></div>
+					</div>
 				</div>
 			</div>
 	</div>
