@@ -95,7 +95,7 @@
 				});
 				if(data > ''){
 					jQuery('#showCartIcon').removeClass('hidden');
-					jQuery('#hideCartIcon').addClass('hidden');
+					jQuery('#hideCartIcon').addClass('hidden');					
 				}
                return;
             }
@@ -116,8 +116,9 @@
         data: $post,
         cache: false,
         success: function(data){
-           checkCart();
-           return;
+			jQuery('.ajaxCart').html(data);
+           	checkCart();
+           	return;
         }
         });
         return false;

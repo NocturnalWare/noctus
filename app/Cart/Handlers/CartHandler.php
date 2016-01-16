@@ -13,12 +13,17 @@
 		}
 
 		public function checkoutAmt(){
-	        $total = 0;
+	        $subtotal = 0;
+
 	        foreach($this->cart as $cart){
-	            $total += $cart->checkoutPrice();
+	            $subtotal += $cart->checkoutPrice();
 	        }
 
-	        return $total+$this->calculateShipping();
+	        $total = $subtotal + $this->calculateShipping();
+
+	        \Session::put('checkoutAmt', $total);
+
+	        return $total;
 		}
 
 		public function calculateShipping(){
@@ -30,12 +35,12 @@
 	        }
 	    }
 
-	    private function countItems(){
+	    public function countItems(){
 	    	$quantity = 0;
 	        foreach($this->cart as $cart){
 	        	$quantity += $cart->quantity;
 	        }
-
+	        \Session::put('cart_quantity', $quantity);
 	        return $quantity;
 	    }
 	}

@@ -24,13 +24,21 @@
         @if(\Session::get('cart_id'))
         <li id="hideCartIcon">
           <a href="{{route('cart.index')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
-              <b>Cart</b>
+              <b>Cart
+                @if(\Session::get('cart_quantity'))
+                  <span class="badge" style="background-color:#fff;color:#000">{{\Session::get('cart_quantity')}}</span>
+                @endif
+              </b>
           </a>
         </li>
         @endif
           <li id='showCartIcon' class="hidden">
           <a href="{{route('cart.index')}}" style="background-color:#000;color:#fff;" class="nav-button-etnoc btn btn-lg">
-              <b>Cart</b>
+              <b>Cart
+                @if(\Session::get('cart_quantity'))
+                  <span class="badge ajaxCart" style="background-color:#fff;color:#000">{{\Session::get('cart_quantity')}}</span>
+                @endif
+              </b>
           </a>
         </li>
         <li>
@@ -41,7 +49,7 @@
           <ul class="dropdown-menu" style="border-bottom:1px solid #fff;text-align:center;background-color:#000;color:#fff" aria-labelledby="dLabel">
             <a href="{{route('products.index')}}" style="color:#fff"><li class="btn btn-lg">Everything</li></a>
             @foreach(\App\ProductCategory::all() as $shop)
-              <a href="{{route('productsort', $shop->name)}}" style="color:#fff"><li class="btn btn-lg">{{$shop->name}}</li></a>
+              <a href="{{route('productsort', $shop->name)}}" class="col-sm-12" style="color:#fff"><li class="btn btn-lg">{{$shop->name}}</li></a>
               <br>
             @endforeach
           </ul>

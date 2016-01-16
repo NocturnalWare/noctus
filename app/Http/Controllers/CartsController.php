@@ -81,7 +81,8 @@ class CartsController extends Controller
     public function show($id)
     {
         if(\Session::get('cart_id')){
-            $carts = \App\Cart::where('customer_id', \Session::get('cart_id'))->get();
+            $carts = $this->handler->cart;
+            $this->handler->countItems();
             return view('carts.index', compact('cart'));
         }
     }
@@ -158,6 +159,10 @@ class CartsController extends Controller
             $cart->size = $size;
             $cart->quantity = $quantit+1;
             $cart->save();
+            //recalculate the cart
+            $this->handler->checkoutAmt();
+            return $this->handler->countItems()+1;
+
         }else{
             $cart = \App\Cart::create([
                 'customer_id' => $customer_id,
@@ -165,7 +170,7 @@ class CartsController extends Controller
                 'product_id' => $item,
                 'quantity' => 1,
             ]);
-        return('sucksess');
+        return $this->handler->countItems()+1;
         }
     }
 
