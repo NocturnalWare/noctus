@@ -15,7 +15,10 @@
 }(document, 'script', 'facebook-jssdk'));</script>
     <script src="http://159.203.77.45/js/bundle.js"></script>
         <title>#StayAwakeToCreate</title>
-        
+        @if(isset($product))
+          <meta property="og:image" content="http://54.149.181.47/etnoc/{{$product->main_image}}" />
+        @endif
+
 @yield('facebook-tags')
             
     </head>
