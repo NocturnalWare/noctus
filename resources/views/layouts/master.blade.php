@@ -15,6 +15,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
     <script src="http://159.203.77.45/js/bundle.js"></script>
         <title>#StayAwakeToCreate</title>
+        
 @yield('facebook-tags')
             
     </head>

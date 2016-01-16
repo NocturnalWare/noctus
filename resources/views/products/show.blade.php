@@ -4,16 +4,6 @@
 <meta property="og:image"              content="http://54.149.181.47/etnoc/{{$product->main_image}}" />
 
 
-
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <center>
 									
 	<legend style="margin-top:70px;text-align:center;color:#fff" class="product-header-etnoc">{{$product->name}}</legend>
