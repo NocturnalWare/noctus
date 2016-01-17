@@ -30,7 +30,7 @@
 						</form>
 				</div>
 				<div class="col-xs-12 col-md-6"> 
-					<div style="border-radius:10px;background-color:#fff;height:600px;">
+					<div style="border-radius:10px;background-color:#fff;">
 						<ul class="nav nav-tabs">
 						  <li class="col-xs-6" role="presentation" class="active"><a href="#sizes" class="btn" aria-controls="settings" role="tab" data-toggle="tab">Size & Price</a></li>
 						  <li class="col-xs-6" role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Inventory</a></li>
