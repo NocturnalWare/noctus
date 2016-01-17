@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+});
+
 Route::post('/sendFeedback', array('as' => 'sendFeedback', 'uses' => 'ProductManagerController@sendFeedback'));
 
 // Authentication routes...

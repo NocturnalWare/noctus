@@ -10,6 +10,7 @@
 		<i class="fa fa-facebook-official"></i> Shared Image for {{$product->name}}
 	<div class="row">
 	<img class="col-sm-12 col-md-3 img-responsive" src="http://54.149.181.47/etnoc/{{$product->main_image}}">
+	
 	</div>
 		<form class="hidden">
 		<input type="hidden" name="_token" value="{{csrf_token()}}" />

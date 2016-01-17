@@ -12,7 +12,16 @@ class CreateFacebookShareImagesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('facebook_share_images', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer('product_id');
+            $table->integer('main_image');
+            $table->string('title');
+            $table->text('description');
+            $table->string('photographer');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +31,6 @@ class CreateFacebookShareImagesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('facebook_share_images');
     }
 }

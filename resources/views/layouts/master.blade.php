@@ -5,7 +5,7 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="http://159.203.77.45/final.css">
+  <link rel="stylesheet" href="http://store.eternallynocturnal.com/final.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
   <script>
     (function(d, s, id) {

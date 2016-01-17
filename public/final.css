@@ -4,8 +4,15 @@ html, body {
 
 body {
   height: 100%;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: #ffffff;
+}
+
+.productmanager{
+  background: -moz-linear-gradient(left, rgba(22,132,200,0) 7%, rgba(22,132,200,0.31) 36%, rgba(12,58,102,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(22,132,200,0) 7%,rgba(22,132,200,0.31) 36%,rgba(12,58,102,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(22,132,200,0) 7%,rgba(22,132,200,0.31) 36%,rgba(12,58,102,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001684c8', endColorstr='#0c3a66',GradientType=1 );
 }
 
 .window1{

@@ -16,7 +16,7 @@ class ProductManagerController extends Controller
      */
     public function index()
     {
-        $products = \App\Product::all();
+        $products = \App\Product::with('prices', 'inventories')->get();
         $categories = \App\ProductCategory::all();
         return view('productmanager.index', compact('products', 'categories'));
     }
