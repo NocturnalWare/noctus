@@ -17,8 +17,7 @@ class ProductManagerController extends Controller
     public function index()
     {
         $products = \App\Product::with('prices', 'inventories')->get();
-        $categories = \App\ProductCategory::all();
-        return view('productmanager.index', compact('products', 'categories'));
+        return view('productmanager.index', compact('products'));
     }
 
     public function sendFeedback(Request $request){
@@ -73,8 +72,9 @@ class ProductManagerController extends Controller
      */
     public function show($id)
     {
+        $categories = \App\ProductCategory::all();
         $product = \App\Product::where('id', $id)->with('inventories', 'prices')->first();
-        return view('productmanager.show', compact('product'));
+        return view('productmanager.show', compact('product', 'categories'));
     }
 
     /**
