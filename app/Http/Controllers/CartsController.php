@@ -132,6 +132,15 @@ class CartsController extends Controller
 
     public function addToCart(Request $request)
     {   
+
+        $size = $request->input('size');
+        $item = $request->input('product');
+
+        if(!$this->handler->checkInventory($item, $size)){
+            $this->handler->checkoutAmt();
+            return ['failure' => 'Sorry! This is out of stock now! :('];
+        }
+
         // Session::forget('cart_id');
         if(\Session::get('cart_id')){
             $customer_id = \Session::get('cart_id');
@@ -140,8 +149,7 @@ class CartsController extends Controller
             \Session::put('cart_id', $customer_id);
         }
         // $item = Input::get('product_id');
-        $size = $request->input('size');
-        $item = $request->input('product');
+
         if(\App\Cart::where('customer_id', $customer_id)
             ->where('product_id', $item)
             ->where('size', $size)

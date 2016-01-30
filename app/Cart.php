@@ -23,4 +23,10 @@ class Cart extends Model
 	public function product(){
 		return $this->hasOne('\App\Product', 'id', 'product_id');
 	}
+
+	public function isTicket(){
+		if($this->product->category == 'Ticket'){
+			return true;
+		}
+	}
 }

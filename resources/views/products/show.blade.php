@@ -115,7 +115,12 @@
         url: url,
         data: $post,
         cache: false,
-        success: function(data){
+        success: function(data){            	
+
+            	if(data['failure']){
+            		return jQuery('#checkCart').append(data['failure']+'<br>');
+            	}
+
 			jQuery('.ajaxCart').html(data);
            	checkCart();
            	return;
