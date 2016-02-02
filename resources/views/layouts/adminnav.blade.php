@@ -15,7 +15,7 @@
             <a class="btn btn-lg" href="{{route('inventory.index')}}">Inventory</a>
             <li class="btn btn-lg">Contacts</li>
             <li class="btn btn-lg">Venues</li>
-            <li class="btn btn-lg">Orders</li>
+            <li class="btn btn-lg"><a href="{{route('orders.index')}}">Orders</a></li>
             <li class="btn btn-lg">Bands</li>
             <a class="btn btn-lg" href="{{route('shippingManager')}}">Shipping</a>
             <li class="btn btn-lg">Shows</li>

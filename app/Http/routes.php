@@ -66,6 +66,7 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('facebook/{id?}', ['as' => 'facebook', 'uses' => 'ProductManagerController@facebook']);
 	});
 	Route::resource('shippingmanager', 'Admin\SalesManagerController');
+	Route::resource('orders', 'Admin\OrderManagerController');
 	Route::resource('imagemanager', 'Admin\ImageController');
 	Route::get('shipping/track/{id}', array('as' => 'trackPackage', 'uses' => 'Admin\SalesManagerController@trackPackage'));
 });
