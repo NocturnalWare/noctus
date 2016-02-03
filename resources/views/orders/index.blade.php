@@ -1,5 +1,4 @@
-@extends('layouts.master')
-@section('content')
+
 
 <div style="color:#fff;margin-top:80px;" class="col-sm-6">
 
@@ -30,5 +29,3 @@
 
 </div>
 
-
-@stop
