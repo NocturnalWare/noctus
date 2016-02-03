@@ -53,7 +53,12 @@
 			<br>
 			<div id="checkCart"></div> 
 			<br>
-			<button id="cart" type="button" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button><br><br>
+			@if($product->id !== 39)
+				<button id="cart" type="button" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button>
+			@else
+				<h3> This item is sold out :( </h3>
+			@endif
+				<br><br>
 			<a href="{{route('cart.index')}}" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-shopping-cart"></i> View Cart</a>
 			<div class="row">
 				<div class="col-sm-6 btn" style="color:transparent">
