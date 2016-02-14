@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('facebook-tags')
-	<meta property="og:image" content="http://bansheepilot.com/images/bansheealbum.jpg" />
+	<meta property="og:image" content="https://www.eternallynocturnal.com/images/banshee/bansheehead.PNG" />
     <meta property="og:description" content="Check out Eternally Nocturnal's First Artist Spotlight Interview with The Banshee Pilot" />
     <meta property="og:title" content="Eternally Nocturnal Artist Spotlight #1" />
 @stop
