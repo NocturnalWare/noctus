@@ -43,8 +43,8 @@
 
 </div>
 <div class="col-md-offset-2 col-md-8 col-sm-12">
-	<iframe  style="z-index:300;" class="col-sm-offset-2 col-sm-8" width="560" height="315" src="https://www.youtube.com/embed/OukL4GLWhiE" frameborder="0" allowfullscreen></iframe>
-	<div class="row hidden-xs" style="padding-bottom:50px;background-color:#000;opacity:.9;">&nbsp</div>
+	<iframe  style="z-index:300;" class="col-xs-offset-2 col-xs-8" width="56%" height="56%;" src="https://www.youtube.com/embed/OukL4GLWhiE" frameborder="0" allowfullscreen></iframe>
+	<div class="row" style="padding-bottom:50px;background-color:#000;opacity:.9;">&nbsp</div>
 </div>
 
 <div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;margin-top:0px;">
