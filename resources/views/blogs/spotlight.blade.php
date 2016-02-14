@@ -2,7 +2,7 @@
 
 @section('content')
 
-		<div class="row" style="margin-top:80px;background-image: url('http://localhost/banshee/banshee-group2.jpg');
+		<div class="row" style="margin-top:80px;background-image: url('https://www.eternallynocturnal.com/images/banshee/banshee-group2.jpg');
 		    background-position: center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -12,21 +12,21 @@
     height:100%;
     position:fixed;
     overflow-y: scroll;
-    width:101%;
+    width:104%;
     background-color:none;
     padding:10px;">
 			<div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;opacity:.996">
 				<h3 class="en-blog-title" style="text-align:center;border-bottom:0px;">Artist Spotlight #1:</h3>
 				<h1 class="en-blog-title" style="text-align:center;border-bottom:0px;">The Banshee Pilot</h1>
 
-				<img class="col-sm-12 img-responsive" src="http://localhost/banshee/bansheehead.PNG">
+				<img class="col-sm-12 img-responsive" src="https://www.eternallynocturnal.com/images/banshee/bansheehead.PNG">
 			</div>
 
-			<div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;opacity:.98;margin-top:0px;">
-					<p style="font-size:1.5em;text-align:center">
+			<div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;opacity:.9;margin-top:0px;padding-top:40px;padding-bottom:40px;">
+					<p style="font-size:1.5em;text-align:center;" class="col-md-10 col-md-offset-1">
 
 
-	We’re excited to announce our new Eternally Nocturnal sponsored band, The Banshee Pilot!<br>
+	We’re excited to announce our new Eternally Nocturnal sponsored band, The Banshee Pilot!<br><br>
 	These dudes are good friends of ours and they are extremely talented musicians.
 	Self-described as an Alternative concept rock band rising from the post-apocalyptic remains of Detroit, 
 	The Banshee Pilot offers an unrivaled sound and even better theatrics. 
@@ -38,32 +38,50 @@
 
 
 </div>
-<div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;padding-top:50px;padding-bottom:50px;">
-	<iframe class="hidden-md hidden-lg hidden-xl col-md-offset-3" width="560" height="315" src="https://www.youtube.com/embed/OukL4GLWhiE" frameborder="0" allowfullscreen></iframe>
-	<iframe class="hidden-sm hidden-xs col-md-offset-2" width="853" height="480" src="https://www.youtube.com/embed/OukL4GLWhiE" frameborder="0" allowfullscreen></iframe>
+<div class="col-md-offset-2 col-md-8 col-sm-12">
+	<iframe  style="z-index:300;" class="col-sm-offset-2 col-sm-8" width="560" height="315" src="https://www.youtube.com/embed/OukL4GLWhiE" frameborder="0" allowfullscreen></iframe>
+	<div class="row hidden-xs" style="padding-bottom:50px;background-color:#000;opacity:.9;">&nbsp</div>
 </div>
 
-<div class="col-md-offset-2 col-md-8 col-sm-12" style="opacity:.98;background-color:#000;margin-top:0px;padding-bottom:30px;">
+<div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;margin-top:0px;">
 	<div class="row">
-		<div class="col-sm-12 col-md-5 col-md-offset-1 ">
-			<img class="img-responsive" src="http://localhost/banshee/Nick.jpg">
+		<div class="col-sm-12 col-md-5 col-md-offset-1 col-sm-offset-1">
+			<img  style="z-index:300;" class="img-responsive" src="https://www.eternallynocturnal.com/images/banshee/Nick.jpg">
 		</div>
-		<div class="col-sm-12 col-md-5">
-			<img class="img-responsive" src="http://localhost/banshee/Gage.jpg">
+		<div class="col-sm-12 col-md-5 col-sm-offset-1">
+			<img  style="z-index:300;" class="img-responsive" src="https://www.eternallynocturnal.com/images/banshee/Gage.jpg">
 		</div>
 	</div>
 	<div class="row">&nbsp</div>
 	<div class="row">
-		<div class="col-sm-12 col-md-5 col-md-offset-1 ">
-			<img class="img-responsive" src="http://localhost/banshee/Brandan.jpg">
+		<div class="col-sm-12 col-md-5 col-md-offset-1 col-sm-offset-1" style="position:relative;z-index:1;">
+			<img  style="z-index:300;" class="img-responsive" src="https://www.eternallynocturnal.com/images/banshee/Brandan.jpg">
 		</div>
-		<div class="col-sm-12 col-md-5">
-			<img class="img-responsive" src="http://localhost/banshee/Anthony.jpg">
+		<div class="col-sm-12 col-md-5 col-sm-offset-1">
+			<img  style="z-index:300;" class="img-responsive" src="https://www.eternallynocturnal.com/images/banshee/Anthony.jpg">
 		</div>
 	</div>
+<div class="row" style="padding-bottom:60px;">
+	<div style="text-align:center;padding-top:40px;" class"col-sm-12">
+		See more and connect with The Banshee Pilot at the links below:
+	</div>
+	<div class="col-sm-12 col-md-6 col-md-offset-3" style="padding-top:10px;">
+		<a href="{{route('bands.show', 'thebansheepilot')}}"  class="col-xs-3 btn btn-lg nav-button-etnoc">
+			<i style="font-size:2em;" class="fa fa-music"></i>
+		</a>
+	    <a target="_blank" href="https://twitter.com/thebansheepilot" class="col-xs-3 btn btn-lg nav-button-etnoc">
+	        <i style="font-size:2em"class="fa fa-twitter"></i>
+	    </a>
+	    <a target="_blank" href="https://www.instagram.com/thebansheepilot/" class="col-xs-3 btn btn-lg nav-button-etnoc">
+	        <i style="font-size:2em"class="fa fa-instagram"></i>
+	    </a>
+	    <a target="_blank" href="https://www.facebook.com/thebansheepilotofficial/" class="col-xs-3 btn btn-lg nav-button-etnoc">
+	        <i style="font-size:2em"class="fa fa-facebook-official"></i>
+	    </a>
+	</div>
+</div>
 </div>
 <div class="row">
-
 </div>
 <div style="height:2400px">&nbsp
 </div>
