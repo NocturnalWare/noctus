@@ -51,6 +51,7 @@ Route::get('/alreadyPaid', array('as' => 'alreadyPaid', 'uses' => 'CheckoutsCont
 
 Route::resource('cart', 'CartsController');
 Route::resource('bands', 'BandsController');
+Route::resource('blogs', 'BlogsController');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('salesmanager', 'Admin\SalesManagerController');

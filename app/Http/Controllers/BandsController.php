@@ -55,6 +55,9 @@ class BandsController extends Controller
             case 'storiesuntold':
                 return view('bands.sponsored.storiesuntold');
             break;
+            case 'thebansheepilot':
+                return view('bands.sponsored.banshee');
+            break;
         
         }
     }

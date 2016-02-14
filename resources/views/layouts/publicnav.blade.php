@@ -66,7 +66,14 @@
               <a href="{{route('bands.show', 'adventurer')}}" style="color:#fff"><li class="btn btn-lg">Adventurer</li></a><br>
               <a href="{{route('bands.show', 'storiesuntold')}}" style="color:#fff"><li class="btn btn-lg">Stories Untold</li></a><br>
               <a href="{{route('bands.show', 'theillustrator')}}" style="color:#fff"><li class="btn btn-lg">The Illustrator</li></a><br>
+              <a href="{{route('bands.show', 'thebansheepilot')}}" style="color:#fff"><li class="btn btn-lg">The Banshee Pilot</li></a><br>
           </ul>
+        </li>
+        <li>
+          <a href="{{route('blogs.index')}}" style="color:#fff" class="nav-button-etnoc btn btn-lg">
+            <b>Blog</b>
+          </a>
+
         </li>
 
         <li>
@@ -75,6 +82,7 @@
           </a>
 
         </li>
+
         <li>
           @if(\Auth::check())
           @if(Auth::check())

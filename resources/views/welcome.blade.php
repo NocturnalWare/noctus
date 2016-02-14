@@ -10,19 +10,6 @@
 			<div class="col-md-8 col-sm-12 en-content-box" style="max-height:650px;overflow-y:scroll">
 				<h3 class="en-blog-title" style="text-align:center">Our Mission</h3>
 					<p style="font-size:1.5em;text-align:center">
-						Join us for our first ever Eternally Nocturnal Movie Theater Takeover!<br><br>
-
-2/11/16 8pm<br>
-Emagine Royal Oak<br>
-200 N Main St, Royal Oak, MI 48067<br>
-Bring your email confirmation to the show. See you there!<br>
-<div class="row">
-	<div class="col-sm-4">&nbsp</div>
-<a  href="http://store.eternallynocturnal.com/products/39"><img class="img-responsive col-sm-4" src="http://54.149.181.47/etnoc/deadpoolwebsite.png"></a>
-</div>
-						<br>
-						<br>
-						<br>
 						Here at Eternally Nocturnal we believe in dreams, we believe in passions, we believe in exploring creativity, and we believe that through such wonders, all people are drawn together.<br><br>
 
 We are more than a clothing brand. Here at Eternally Nocturnal, we offer the greatest connection between creative individuals; we understand what it takes to live the lifestyle of a free-thinking creative mind. <br><br>
