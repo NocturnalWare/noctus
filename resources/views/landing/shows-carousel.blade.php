@@ -11,34 +11,6 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <center>
-        <div class="col-sm-12">
-          Winter Showcase
-          <a href="https://www.facebook.com/events/1662778867304863/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/wintershowcase.jpg"></a>
-        </div>
-      </center>
-    </div>
-
-    <div class="item">
-      Beard Day Party
-      <div class="col-sm-12">
-        <center>
-          <a href="https://www.facebook.com/events/405393122992628/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/beard.jpg"></a>
-        </center>
-      </div>
-    </div>
-    
-
-    <div class="item">
-      Twas The Night Before Valentine's Day
-      <div class="col-sm-12">
-        <center>
-          <a href="https://www.facebook.com/events/1615891782005933/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/valentines.jpg"></a>
-        </center>
-      </div>
-    </div>
-
-    <div class="item">
       Athena's Grace "Martyrs" EP Release
       <div class="col-sm-12">
         <center>
