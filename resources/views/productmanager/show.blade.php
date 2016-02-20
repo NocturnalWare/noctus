@@ -36,6 +36,11 @@
 						  <li class="col-xs-6" role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Inventory</a></li>
 						</ul>
 						<table class="table" style="color:#000">
+							<thead>
+								<th class="col-xs-4">Available</th>
+								<th class="col-xs-4">Size</th>
+								<th class="col-xs-4">Price</th>
+							</thead>
 							<tbody class="table-striped">
 								@foreach(['xsmall', 'small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge'] as $size)
 							  		<tr>
@@ -45,7 +50,7 @@
 							  				<td><input type="checkbox" name="{{$size}}" value="1"></checkbox></td>
 							  			@endif
 							  			<td><label>{{studly_case($size)}}</label></td>
-							  			<td>{{number_format($product->prices[$size]/100, 2)}}</td>
+							  			<td><input value="{{number_format($product->prices[$size]/100, 2)}}" name="{{$size}}"/></td>
 							  		</tr>
 							  	@endforeach
 							</tbody>

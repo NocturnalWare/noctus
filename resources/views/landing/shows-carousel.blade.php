@@ -14,7 +14,7 @@
       Athena's Grace "Martyrs" EP Release
       <div class="col-sm-12">
         <center>
-          <a href="https://www.facebook.com/events/499669176872150/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/agshow.jpg"></a>
+          <a href="https://www.facebook.com/events/499669176872150/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="http://54.149.181.47/etnoc/shows/agshow.jpg"></a>
         </center>
       </div>
     </div>
@@ -23,7 +23,7 @@
       Cthulhu Entertainment Pizza Show 
       <div class="col-sm-12">
         <center>
-          <a href="https://www.facebook.com/events/610303422442850/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="https://www.eternallynocturnal.com/images/shows/pizzashow.jpg"></a>
+          <a href="https://www.facebook.com/events/610303422442850/" target="_blank"><img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="http://54.149.181.47/etnoc/shows/pizzashow.jpg"></a>
         </center>
       </div>
     </div>

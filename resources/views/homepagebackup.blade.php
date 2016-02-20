@@ -20,7 +20,7 @@
 
 					Thanks for sticking around,
 					<br><br>
-					<center><img height="10%" class="img-responsive" src="https://www.eternallynocturnal.com/images/mainenheader.png" /></center>
+					<center><img height="10%" class="img-responsive" src="http://54.149.181.47/etnoc/mainenheader.png" /></center>
 				</p>
 			</div>
 		</div>
