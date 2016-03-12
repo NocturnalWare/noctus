@@ -39,6 +39,7 @@ Route::get('products/sort/{category}', array('as' => 'productsort', 'uses' => 'P
 
 Route::post('/cart/checkCart', array('as' => 'checkCart', 'uses' => 'CartsController@checkCart'));
 Route::post('/cart/addToCart', array('as' => 'addToCart', 'uses' => 'CartsController@addToCart'));
+Route::post('/cart/addTicketToCart', array('as' => 'addTicketToCart', 'uses' => 'CartsController@addTicketToCart'));
 Route::post('/cart/removeFromCart', array('as' => 'removeFromCart', 'uses' => 'CartsController@removeFromCart'));
 Route::post('/cart/emptyCart', array('as' => 'emptyCart', 'uses' => 'CartsController@emptyCart'));
 Route::post('/cart/createshipping', array('as' => 'createShipping', 'uses' => 'CartsController@createShippingForm'));
@@ -52,6 +53,7 @@ Route::get('/alreadyPaid', array('as' => 'alreadyPaid', 'uses' => 'CheckoutsCont
 Route::resource('cart', 'CartsController');
 Route::resource('bands', 'BandsController');
 Route::resource('blogs', 'BlogsController');
+Route::resource('bandtickets', 'BandTicketController');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('salesmanager', 'Admin\SalesManagerController');

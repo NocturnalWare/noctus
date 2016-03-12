@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Cart\Handlers\CartHandler;
+use App\BandTicketSale;
+
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -134,6 +136,70 @@ class CartsController extends Controller
     {   
 
         $size = $request->input('size');
+        $item = $request->input('product');
+
+        if(!$this->handler->checkInventory($item, $size)){
+            $this->handler->checkoutAmt();
+            return ['failure' => 'Sorry! This is out of stock now! :('];
+        }
+
+        // Session::forget('cart_id');
+        if(\Session::get('cart_id')){
+            $customer_id = \Session::get('cart_id');
+        }else{
+            $customer_id = str_random(50);
+            \Session::put('cart_id', $customer_id);
+        }
+        // $item = Input::get('product_id');
+
+        if(\App\Cart::where('customer_id', $customer_id)
+            ->where('product_id', $item)
+            ->where('size', $size)
+            ->pluck('quantity')){
+            $quantit = \App\Cart::where('customer_id', $customer_id)
+                        ->where('product_id', $item)
+                        ->where('size', $size)
+                        ->pluck('quantity');
+            $cart = \App\Cart::where('customer_id', $customer_id)
+                    ->where('product_id', $item)
+                    ->where('size', $size)
+                    ->first();
+            $cart->customer_id = $customer_id;
+            $cart->product_id = $item;
+            $cart->size = $size;
+            $cart->quantity = $quantit+1;
+            $cart->save();
+            //recalculate the cart
+            $this->handler->checkoutAmt();
+            return $this->handler->countItems()+1;
+
+        }else{
+            $cart = \App\Cart::create([
+                'customer_id' => $customer_id,
+                'size' => $size,
+                'product_id' => $item,
+                'quantity' => 1,
+            ]);
+        return $this->handler->countItems()+1;
+        }
+    }
+
+    public function addTicketToCart(Request $request)
+    {   
+        if(\Session::get('cart_id')){
+            $customer_id = \Session::get('cart_id');
+        }else{
+            $customer_id = str_random(50);
+            \Session::put('cart_id', $customer_id);
+        }
+
+        BandTicketSale::create([
+            'cart_id' => $customer_id,
+            'product_id' => $request->input('product'),
+            'band_name' => $request->input('band_name'),
+        ]);
+
+        $size = 'onesize';
         $item = $request->input('product');
 
         if(!$this->handler->checkInventory($item, $size)){

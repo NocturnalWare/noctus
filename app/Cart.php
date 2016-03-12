@@ -25,7 +25,7 @@ class Cart extends Model
 	}
 
 	public function isTicket(){
-		if($this->product->category == 'Ticket'){
+		if($this->product->category == 'Ticket' || $this->product->category == 'BandTicket'){
 			return true;
 		}
 	}
