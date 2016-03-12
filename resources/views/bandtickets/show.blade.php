@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('facebook-tags')
-          <meta property="og:image" content="http://54.149.181.47/etnoc/{{$ticket->main_image}}" />
-          <meta property="og:description" content="{{$ticket->description}}" />
+          <meta property="og:image" content="http://54.149.181.47/etnoc/tickets/{{$ticket->main_image}}" />
+          <meta property="og:description" content="{{$product->description}}" />
           <meta property="og:title" content="{{$ticket->band_name}}" />
 @stop
 @section('content')
