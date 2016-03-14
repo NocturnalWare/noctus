@@ -4,10 +4,12 @@
 
 <div style="color:#fff;margin-top:80px;" class="col-sm-6">
 <?php $tickettotal = 0;?>
-		<table class="table"> <tr>
-			<th>Name</th>
-			<th>Ticket</th>
-			<th>Qty</th>
+		<table class="table"> 
+			<tr>
+				<th>Name</th>
+				<th>Ticket</th>
+				<th>Qty</th>
+			</tr>
 			@foreach($ticketsales as $sale)
 				@if($sale->cartsBySale->first()['product_id'] == '40')
 					<tr class="table-striped">
@@ -16,7 +18,7 @@
 						</td>
 							@foreach($sale->cartsBySale as $lol)
 						<td>
-							{{$lol->name}} 
+							{{$lol->product['name']}} 
 						</td>
 						<td>
 							{{$lol->quantity}} <?php $tickettotal += $lol->quantity?> 
@@ -25,10 +27,14 @@
 					</tr>
 				@endif
 			@endforeach
+			<tr>
+				<td colspan="4">
+					<h3>{{$tickettotal}}</h3>
+				</td>
+			</tr>
 	</table>
 </div>
 <div style="color:#fff;margin-top:80px;" class="col-sm-6">
-	<h3>{{$tickettotal}}</h3>
 </div>
 
 <div id="orderManager">
