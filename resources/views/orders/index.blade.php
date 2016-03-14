@@ -8,14 +8,18 @@
 			<th>Name</th>
 			<th>Tickets</th>
 			@foreach($ticketsales as $sale)
-				<tr class="table-striped">
-					<td>
-						{{$sale->getShippingAddress()->ship_f_name}} {{$sale->getShippingAddress()->ship_l_name}}
-					</td>
-					<td>
-						@foreach($sale->cartsBySale as $lol){{$lol->quantity}} <?php $tickettotal += $lol->quantity?> @endforeach<br>
-					</td>
-				</tr>
+				@if($sale->cartsBySale['product_id'] == 40)
+					<tr class="table-striped">
+						<td>
+							{{$sale->getShippingAddress()->ship_f_name}} {{$sale->getShippingAddress()->ship_l_name}}
+						</td>
+						<td>
+							@foreach($sale->cartsBySale as $lol)
+									{{$lol->quantity}} <?php $tickettotal += $lol->quantity?> 
+							@endforeach<br>
+						</td>
+					</tr>
+				@endif
 			@endforeach
 	</table>
 </div>
