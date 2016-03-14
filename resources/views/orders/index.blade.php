@@ -23,7 +23,7 @@
 						<td>
 							{{$lol->quantity}} <?php $tickettotal += $lol->quantity?> 
 						</td>
-							@endforeach<br>
+							@endforeach
 					</tr>
 				@endif
 			@endforeach
@@ -33,8 +33,6 @@
 				</td>
 			</tr>
 	</table>
-</div>
-<div style="color:#fff;margin-top:80px;" class="col-sm-6">
 </div>
 
 <div id="orderManager">
