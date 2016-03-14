@@ -8,6 +8,7 @@
 			<th>Name</th>
 			<th>Tickets</th>
 			@foreach($ticketsales as $sale)
+			{{dd($sale->cartsBySale)}}
 				@if($sale->cartsBySale['product_id'] == 40)
 					<tr class="table-striped">
 						<td>
