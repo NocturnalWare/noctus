@@ -6,19 +6,22 @@
 <?php $tickettotal = 0;?>
 		<table class="table"> <tr>
 			<th>Name</th>
-			<th>Tickets</th>
+			<th>Ticket</th>
+			<th>Qty</th>
 			@foreach($ticketsales as $sale)
-			{{dd($sale->cartsBySale)}}
-				@if($sale->cartsBySale['product_id'] == 40)
+				@if($sale->cartsBySale->first()['product_id'] == '40')
 					<tr class="table-striped">
 						<td>
 							{{$sale->getShippingAddress()->ship_f_name}} {{$sale->getShippingAddress()->ship_l_name}}
 						</td>
-						<td>
 							@foreach($sale->cartsBySale as $lol)
-									{{$lol->quantity}} <?php $tickettotal += $lol->quantity?> 
-							@endforeach<br>
+						<td>
+							{{$lol->name}} 
 						</td>
+						<td>
+							{{$lol->quantity}} <?php $tickettotal += $lol->quantity?> 
+						</td>
+							@endforeach<br>
 					</tr>
 				@endif
 			@endforeach
