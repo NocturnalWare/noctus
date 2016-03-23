@@ -35,9 +35,10 @@ class OrdersController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function eventCheckin(Request $request)
     {
-        //
+        \App\EventCheckin::create($request->except('_token'));
+        return redirect()->back();
     }
 
     /**

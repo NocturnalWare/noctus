@@ -15,9 +15,11 @@ class OrderManagerController extends Controller
      * @return Response
      */
     public function index()
-    {
-        $ticketsales = \App\Sale::where('created_at', '>', \Carbon::parse('1/31/2016'))->with('cartsBySale', 'cartsBySale.product')->get();
-        return view('orders.index', compact('ticketsales'));
+    {   
+        $exclude = \App\EventCheckin::lists('sale_checkin_id');
+        $ticketsales = \App\Sale::where('created_at', '>', \Carbon::parse('1/31/2016'))->whereNotIn('cart_id', $exclude)->with('cartsBySale', 'cartsBySale.product')->get();
+        $checkedin = \App\Sale::where('created_at', '>', \Carbon::parse('1/31/2016'))->WhereIn('cart_id', $exclude)->with('cartsBySale', 'cartsBySale.product')->get();
+        return view('orders.index', compact('ticketsales', 'checkedin'));
     }
 
     /**

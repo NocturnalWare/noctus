@@ -29,4 +29,8 @@ class Cart extends Model
 			return true;
 		}
 	}
+
+	public function checkedIn(){
+		return $this->hasOne('\App\EventCheckin', 'id', 'sale_checkin_id');
+	}
 }
