@@ -54,7 +54,9 @@ class ProductManagerController extends Controller
      */
     public function create()
     {
-        //
+        $products = \App\Product::with('inventories', 'prices')->get();
+
+        return view('inventory.show', compact('products'));
     }
 
     public function facebook($id = '1'){
