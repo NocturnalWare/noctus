@@ -7,6 +7,14 @@ use GuzzleHttp\Exception\ClientException;
 
 class SlackHandler
 {
+    public static function sendMessageToSlack($msg){
+        if(env('APP_ENV') == 'local'){
+           \Slack::to('#thunderdome')->send($msg); 
+        }else{
+           \Slack::to('#websales')->send($msg); 
+        }
+    }
+
     public function sendSaleMessage(){
     	$cart = $this->parseSale();
         if(env('APP_ENV') == 'local'){

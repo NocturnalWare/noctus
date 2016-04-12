@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Slack\SlackHandler;
 
 class ProductManagerController extends Controller
 {
@@ -24,16 +25,24 @@ class ProductManagerController extends Controller
         \Session::put('feedbackname', $request->input('name'));
         \Session::put('feedbackemail', $request->input('email'));
         \Session::put('feedbackmessage', $request->input('message'));
+        $name = "From: ".$request->input('name')." ".$request->input('email');
+        $message = "Msg: ".$request->input('message');
+        if($request->input('name') !== 'RonaldKa'){
+            SlackHandler::sendMessageToSlack($name);
+            sleep(2);
+            SlackHandler::sendMessageToSlack($message);
+        }else{
+            SlackHandler::sendMessageToSlack('RonaldKa got sent to Meatspin.com');
+            return view('meatspin');
+        }
+        // \Mail::send('emails.feedback', array(), function($message){
+        //     $message->to('feedback@eternallynocturnal.com', "FEEDBACK FROM ".\Session::get('feedbackname'))->subject('NEW FEEDBACK');
+        //     $message->to('tavares.joe@gmail.com', "FEEDBACK FROM ".\Session::get('feedbackname'))->subject('NEW FEEDBACK');
+        // });
 
-
-        \Mail::send('emails.feedback', array(), function($message){
-            $message->to('feedback@eternallynocturnal.com', "FEEDBACK FROM ".\Session::get('feedbackname'))->subject('NEW FEEDBACK');
-            $message->to('tavares.joe@gmail.com', "FEEDBACK FROM ".\Session::get('feedbackname'))->subject('NEW FEEDBACK');
-        });
-
-        \Mail::send('emails.feedbackreply', array(), function($message){
-            $message->to(\Session::get('feedbackemail'), "Thanks for your message.")->subject('Thank you for your comments!');
-        });
+        // \Mail::send('emails.feedbackreply', array(), function($message){
+        //     $message->to(\Session::get('feedbackemail'), "Thanks for your message.")->subject('Thank you for your comments!');
+        // });
 
         return redirect()->route('products.index');
     }

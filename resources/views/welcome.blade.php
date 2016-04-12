@@ -31,7 +31,7 @@ Together we will achieve the alternative lifestyle we collectively desire. We ar
 		
 		<div class="row">
 		<div class="col-md-6 col-sm-12 en-content-box embed-responsive-16by9"style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
-			@include('landing.video-carousel')
+      		<iframe style="width:100%;height:100%;max-height:675px;" src="https://www.youtube.com/embed/OukL4GLWhiE" allowfullscreen></iframe>
 		</div>
 		<div class="col-md-6 col-sm-12 en-content-box embed-responsive-16by9"style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
 			@include('landing.featured-products-carousel')
