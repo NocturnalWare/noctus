@@ -21,16 +21,18 @@
 					<tbody>
 						<?php $grandtotal = 0; ?>
 						@foreach($products as $product)
-							<tr>
-								<?php $ifsold = 0; ?>
-								<td>{{$product->name}}</td>
-								@foreach(['small', 'medium', 'large', 'xlarge', 'xxlarge', 'onesize'] as $size)
-									<td>{{$product->inventories[$size]}}</td>
-									<?php $ifsold += $product->prices[$size] * $product->inventories[$size] ?>
-								@endforeach
-								<td> ${{number_format($ifsold/100, 2)}} </td>
-									<?php $grandtotal += $ifsold/100;?>
-							</tr>
+							@if($product->category !== "Ticket")
+								<tr>
+									<?php $ifsold = 0; ?>
+									<td>{{$product->name}}</td>
+									@foreach(['small', 'medium', 'large', 'xlarge', 'xxlarge', 'onesize'] as $size)
+										<td>{{$product->inventories[$size]}}</td>
+										<?php $ifsold += $product->prices[$size] * $product->inventories[$size] ?>
+									@endforeach
+									<td> ${{number_format($ifsold/100, 2)}} </td>
+										<?php $grandtotal += $ifsold/100;?>
+								</tr>
+							@endif
 						@endforeach
 					</tbody>
 				</table>
