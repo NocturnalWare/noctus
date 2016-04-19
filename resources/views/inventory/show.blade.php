@@ -14,6 +14,7 @@
 							<th>Large</th>
 							<th>XLarge</th>
 							<th>XXLarge</th>
+							<th>One Size Only</th>
 							<th>If Sold</th>
 						</tr>
 					</thead>
@@ -23,7 +24,7 @@
 							<tr>
 								<?php $ifsold = 0; ?>
 								<td>{{$product->name}}</td>
-								@foreach(['small', 'medium', 'large', 'xlarge', 'xxlarge'] as $size)
+								@foreach(['small', 'medium', 'large', 'xlarge', 'xxlarge', 'onesize'] as $size)
 									<td>{{$product->inventories[$size]}}</td>
 									<?php $ifsold += $product->prices[$size] * $product->inventories[$size] ?>
 								@endforeach
