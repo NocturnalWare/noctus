@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Slack;
 
@@ -9,25 +9,25 @@ class SlackHandler
 {
     public static function sendMessageToSlack($msg){
         if(env('APP_ENV') == 'local'){
-           \Slack::to('#thunderdome')->send($msg); 
+           \Slack::to('#thunderdome')->send($msg);
         }else{
-           \Slack::to('#websales')->send($msg); 
+           \Slack::to('#thunderdome')->send($msg);
         }
     }
 
     public function sendSaleMessage(){
     	$cart = $this->parseSale();
         if(env('APP_ENV') == 'local'){
-           \Slack::to('#thunderdome')->attach($cart)->send('New WEB Sale!'); 
+           \Slack::to('#thunderdome')->attach($cart)->send('New WEB Sale!');
         }else{
-           \Slack::to('#websales')->attach($cart)->send('New WEB Sale!'); 
+           \Slack::to('#websales')->attach($cart)->send('New WEB Sale!');
         }
 
         sleep(2);
 
         $shipping = $this->parseShipping();
         if(env('APP_ENV') == 'local'){
-           \Slack::to('#thunderdome')->attach($shipping)->send('New WEB Sale!'); 
+           \Slack::to('#thunderdome')->attach($shipping)->send('New WEB Sale!');
         }else{
            \Slack::to('#websales')->attach($shipping)->send();
         }
@@ -38,7 +38,7 @@ class SlackHandler
         $messageitems = [];
 
     	foreach(\App\Cart::where('customer_id', \Session::get('cart_id'))->get() as $cart)
-        {    
+        {
     		$name = $cart->findItemProp('name');
 	        $messageitems[] = ['title' => "Item $name"];
 	        $messageitems[] = ['title' => "Size: $cart->size"];
@@ -70,7 +70,7 @@ class SlackHandler
                 'pretext' => "Total: \$$total",
                 'color' => 'good',
                 'fields' => $messageitems,
-            ]; 
+            ];
 
         return $shippingmessage;
     }
