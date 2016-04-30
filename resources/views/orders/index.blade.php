@@ -5,7 +5,7 @@
 <div style="color:#fff;margin-top:80px;" class="col-sm-6 col-xs-12">
 <?php $tickettotal = 0;?>
 	@foreach($ticketsales as $sale)
-		@if($sale->cartsBySale->first()['product_id'] == '40')
+		@if($sale->cartsBySale->first()['product_id'] == '41')
 			<?php $tickettotal += $sale->cartsBySale->first()['quantity']?> 
 		@endif
 	@endforeach
