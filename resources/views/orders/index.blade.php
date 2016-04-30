@@ -20,7 +20,7 @@
 				<th>Qty</th>
 			</tr>
 			@foreach($ticketsales as $sale)
-				@if($sale->cartsBySale->first()['product_id'] == '40')
+				@if($sale->cartsBySale->first()['product_id'] == '41')
 					<tr class="table-striped">
 						<td>
 							{{$sale->getShippingAddress()->ship_f_name}} {{$sale->getShippingAddress()->ship_l_name}}
@@ -53,7 +53,7 @@
 
 <?php $tickettotal = 0;?>
 	@foreach($checkedin as $sale)
-		@if($sale->cartsBySale->first()['product_id'] == '40')
+		@if($sale->cartsBySale->first()['product_id'] == '41')
 			<?php $tickettotal += $sale->cartsBySale->first()['quantity']?> 
 		@endif
 	@endforeach
@@ -68,7 +68,7 @@
 				<th>Qty</th>
 			</tr>
 			@foreach($checkedin as $sale)
-				@if($sale->cartsBySale->first()['product_id'] == '40')
+				@if($sale->cartsBySale->first()['product_id'] == '41')
 					<tr class="table-striped">
 						<td>
 							{{$sale->getShippingAddress()->ship_f_name}} {{$sale->getShippingAddress()->ship_l_name}}
