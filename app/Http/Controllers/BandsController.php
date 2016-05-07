@@ -58,6 +58,9 @@ class BandsController extends Controller
             case 'thebansheepilot':
                 return view('bands.sponsored.banshee');
             break;
+            case 'shapesandcolors':
+                return view('bands.sponsored.shapes');
+            break;
         
         }
     }

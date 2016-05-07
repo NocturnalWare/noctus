@@ -67,11 +67,12 @@
               <a href="{{route('bands.show', 'storiesuntold')}}" style="color:#fff"><li class="btn btn-lg">Stories Untold</li></a><br>
               <a href="{{route('bands.show', 'theillustrator')}}" style="color:#fff"><li class="btn btn-lg">The Illustrator</li></a><br>
               <a href="{{route('bands.show', 'thebansheepilot')}}" style="color:#fff"><li class="btn btn-lg">The Banshee Pilot</li></a><br>
+              <a href="{{route('bands.show', 'shapesandcolors')}}" style="color:#fff"><li class="btn btn-lg">Shapes & Colors</li></a><br>
           </ul>
         </li>
         <li>
           <a href="{{route('blogs.index')}}" style="color:#fff" class="nav-button-etnoc btn btn-lg">
-            <b>Blog</b>
+            <b>Spotlight</b>
           </a>
 
         </li>

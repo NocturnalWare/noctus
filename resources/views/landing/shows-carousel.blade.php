@@ -8,11 +8,11 @@
   <div class="carousel-inner" role="listbox">
 
     <div class="item active">
-      Jack and the Bear Album Release
+      As We Divide Album Release
       <div class="col-sm-12">
         <center>
-          <a href="https://www.facebook.com/events/1524414291192890/" target="_blank">
-            <img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="http://54.149.181.47/etnoc/shows/JackPosterWebsite.jpg">
+          <a href="https://www.facebook.com/events/2014973802061171/" target="_blank">
+            <img class="img-responsive" style="100%;max-height:500px;padding-bottom:35px;" src="./images/aswerelease.jpg">
           </a>
         </center>
       </div>
