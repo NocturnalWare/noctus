@@ -1,12 +1,12 @@
 @extends('layouts.master')
 @section('facebook-tags')
-	<meta property="og:image" content="http://54.149.181.47/etnoc/banshee/bansheehead.PNG" />
-    <meta property="og:description" content="Check out Eternally Nocturnal's First Artist Spotlight Interview with The Banshee Pilot" />
-    <meta property="og:title" content="Eternally Nocturnal Artist Spotlight #1" />
+	<meta property="og:image" content="./images/spotlight/shapesandcolors-05-2016/headerbackground.jpg" />
+    <meta property="og:description" content="Check out Eternally Nocturnal's Second Artist Spotlight Interview with Shapes and Colors" />
+    <meta property="og:title" content="Eternally Nocturnal Artist Spotlight #2" />
 @stop
 @section('content')
 
-		<div class="row" style="margin-top:80px;background-image: url('http://54.149.181.47/etnoc/banshee/banshee-group2.jpg');
+		<div class="row" style="margin-top:80px;background-image: url('./images/spotlight/shapesandcolors-05-2016/headerbackground.jpg');
 		    background-position: center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -20,66 +20,67 @@
     background-color:none;
     padding:10px;">
 			<div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;opacity:.996">
-				<h3 class="en-blog-title" style="text-align:center;border-bottom:0px;">Artist Spotlight #1:</h3>
-				<h1 class="en-blog-title" style="text-align:center;border-bottom:0px;">The Banshee Pilot</h1>
+				<h3 class="en-blog-title" style="text-align:center;border-bottom:0px;">Artist Spotlight #2:</h3>
+				<h1 class="en-blog-title" style="text-align:center;border-bottom:0px;">Shapes & Colors</h1>
 
-				<img class="col-sm-12 img-responsive" src="http://54.149.181.47/etnoc/banshee/bansheehead.PNG">
 			</div>
 
 			<div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;opacity:.9;margin-top:0px;padding-top:40px;padding-bottom:40px;">
+				<img class="col-xs-12 col-sm-6 col-sm-offset-3 img-responsive" src="./images/spotlight/shapesandcolors-05-2016/shapesalbum.jpg">
 					<p style="font-size:1.5em;text-align:center;" class="col-md-10 col-md-offset-1">
 
 
-	We’re excited to announce our new Eternally Nocturnal sponsored band, The Banshee Pilot!<br><br>
-	These dudes are good friends of ours and they are extremely talented musicians.
-	Self-described as an Alternative concept rock band rising from the post-apocalyptic remains of Detroit, 
-	The Banshee Pilot offers an unrivaled sound and even better theatrics. 
-	We love to work with truly unique and hard working bands, so Banshee was an obvious choice. 
-<br><br>
-	Our owner Jason Putnam sat down with The Banshee Pilot and asked them the tough questions about their origin and inspiration, followed by the not-so-tough questions. 
-<br><br>
-	Check out the interview below! <br>
+			We are so happy to announce that we’ve added the extremely talented dudes from Shapes & Colors to our sponsorship roster! <br><br>
 
+			Formed in 2011, Shapes & Colors is a rising rock band from Detroit, MI. Comprising of Travis Bobier (Vocals/Guitar), Bob Allers (Bass/Vocals), Mike Morris (Guitar), Kyle Labuta (Guitar), and Scott Solomon (Drums).
+
+			Shapes & Colors features a sound that combines rock with pop, heavy, and melodic influences to create a diverse catalog of songs. Their most recent release, On Display, was recorded by producer Aaron Sprinkle (Anberlin/The Almost/Emery) and is available <a href="{{route('bands.show', 'shapesandcolors')}}">Here</i></a>. 
+			<br><br>
+			Eternally Nocturnal owner Jason Putnam, got a chance to sit down with the guys and see what drives them and where they all started. 
+			<br><br>
+			Check out the Interview below!<br>
 
 </div>
 <div class="col-md-offset-2 col-md-8 col-sm-12">
-	<iframe  style="z-index:300;" class="col-xs-offset-2 col-xs-8" width="56%" height="56%;" src="https://www.youtube.com/embed/OukL4GLWhiE" frameborder="0" allowfullscreen></iframe>
+	<iframe  style="z-index:300;" class="col-xs-offset-2 col-xs-8" width="56%" height="56%;" src="https://www.youtube.com/watch?v=eUUTTNHYOwg" frameborder="0" allowfullscreen></iframe>
 	<div class="row" style="padding-bottom:50px;background-color:#000;opacity:.9;">&nbsp</div>
 </div>
 
 <div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;margin-top:0px;">
 	<div class="row">
+		<div class="col-xs-9 col-md-5 col-md-offset-4 col-sm-offset-3">
+			<img  style="z-index:300;" class="img-responsive" src="./images/spotlight/shapesandcolors-05-2016/10.jpg">
+		</div>
+	</div>	
+	<div class="row">
 		<div class="col-sm-12 col-md-5 col-md-offset-1 col-sm-offset-1">
-			<img  style="z-index:300;" class="img-responsive" src="http://54.149.181.47/etnoc/banshee/Nick.jpg">
+			<img  style="z-index:300;" class="img-responsive" src="./images/spotlight/shapesandcolors-05-2016/15.jpg">
 		</div>
 		<div class="col-sm-12 col-md-5 col-sm-offset-1">
-			<img  style="z-index:300;" class="img-responsive" src="http://54.149.181.47/etnoc/banshee/Gage.jpg">
+			<img  style="z-index:300;" class="img-responsive" src="./images/spotlight/shapesandcolors-05-2016/2.jpg">
 		</div>
 	</div>
 	<div class="row">&nbsp</div>
 	<div class="row">
 		<div class="col-sm-12 col-md-5 col-md-offset-1 col-sm-offset-1" style="position:relative;z-index:1;">
-			<img  style="z-index:300;" class="img-responsive" src="http://54.149.181.47/etnoc/banshee/Brandan.jpg">
+			<img  style="z-index:300;" class="img-responsive" src="./images/spotlight/shapesandcolors-05-2016/12.jpg">
 		</div>
 		<div class="col-sm-12 col-md-5 col-sm-offset-1">
-			<img  style="z-index:300;" class="img-responsive" src="http://54.149.181.47/etnoc/banshee/Anthony.jpg">
+			<img  style="z-index:300;" class="img-responsive" src="./images/spotlight/shapesandcolors-05-2016/14.jpg">
 		</div>
 	</div>
 <div class="row" style="padding-bottom:60px;">
 	<div style="text-align:center;padding-top:40px;" class"col-sm-12">
-		See more and connect with The Banshee Pilot at the links below:
+		See more and connect with Shapes & Colors at the links below:
 	</div>
-	<div class="col-sm-12 col-md-6 col-md-offset-3" style="padding-top:10px;">
-		<a href="{{route('bands.show', 'thebansheepilot')}}"  class="col-xs-3 btn btn-lg nav-button-etnoc">
+	<div class="col-sm-12 col-md-6 col-md-offset-4" style="padding-top:10px;">
+		<a href="{{route('bands.show', 'shapesandcolors')}}"  class="col-xs-3 btn btn-lg nav-button-etnoc">
 			<i style="font-size:2em;" class="fa fa-music"></i>
 		</a>
-	    <a target="_blank" href="https://twitter.com/thebansheepilot" class="col-xs-3 btn btn-lg nav-button-etnoc">
-	        <i style="font-size:2em"class="fa fa-twitter"></i>
-	    </a>
-	    <a target="_blank" href="https://www.instagram.com/thebansheepilot/" class="col-xs-3 btn btn-lg nav-button-etnoc">
+	    <a target="_blank" href="https://www.instagram.com/shapescolorsmi" class="col-xs-3 btn btn-lg nav-button-etnoc">
 	        <i style="font-size:2em"class="fa fa-instagram"></i>
 	    </a>
-	    <a target="_blank" href="https://www.facebook.com/thebansheepilotofficial/" class="col-xs-3 btn btn-lg nav-button-etnoc">
+	    <a target="_blank" href="https://www.facebook.com/shapesandcolorsmusic" class="col-xs-3 btn btn-lg nav-button-etnoc">
 	        <i style="font-size:2em"class="fa fa-facebook-official"></i>
 	    </a>
 	</div>
