@@ -48,7 +48,7 @@
 
 <div class="col-md-offset-2 col-md-8 col-sm-12" style="background-color:#000;margin-top:0px;">
 	<div class="row">
-		<div class="col-xs-12 col-md-5 col-md-offset-4 col-xs-offset-1">
+		<div class="col-xs-12 col-md-5 col-md-offset-4">
 			<img  style="z-index:300;" class="img-responsive" src="./images/spotlight/shapesandcolors-05-2016/10.jpg">
 		</div>
 	</div>	
