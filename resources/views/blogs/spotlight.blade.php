@@ -42,7 +42,7 @@
 
 </div>
 <div class="col-md-offset-2 col-md-8 col-sm-12">
-	<iframe  style="z-index:300;" class="col-xs-offset-2 col-xs-8" width="56%" height="56%;" src="https://www.youtube.com/watch?v=eUUTTNHYOwg" frameborder="0" allowfullscreen></iframe>
+	<iframe  style="z-index:300;" class="col-xs-offset-2 col-xs-8" width="56%" height="56%;" src="https://www.youtube.com/embed/eUUTTNHYOwg" frameborder="0" allowfullscreen></iframe>
 	<div class="row" style="padding-bottom:50px;background-color:#000;opacity:.9;">&nbsp</div>
 </div>
 
