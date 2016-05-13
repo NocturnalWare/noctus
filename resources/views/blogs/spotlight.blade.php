@@ -86,6 +86,7 @@
 	</div>
 </div>
 <div class="row" style="text-align:center;padding-bottom:60px;">
+	Images & videography by Brandan Keller
 </div>
 
 </div>
