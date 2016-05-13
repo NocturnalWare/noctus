@@ -69,11 +69,11 @@
 			<img  style="z-index:300;" class="img-responsive" src="./images/spotlight/shapesandcolors-05-2016/14.jpg">
 		</div>
 	</div>
-<div class="row" style="padding-bottom:60px;">
+<div class="row">
 	<div style="text-align:center;padding-top:40px;" class"col-sm-12">
 		See more and connect with Shapes & Colors at the links below:
 	</div>
-	<div class="col-sm-12 col-md-6 col-md-offset-4" style="padding-top:10px;">
+	<div class="col-sm-12 col-md-5 col-md-offset-4" style="padding-top:10px;">
 		<a href="{{route('bands.show', 'shapesandcolors')}}"  class="col-xs-3 btn btn-lg nav-button-etnoc">
 			<i style="font-size:2em;" class="fa fa-music"></i>
 		</a>
@@ -85,8 +85,12 @@
 	    </a>
 	</div>
 </div>
+<div class="row" style="text-align:center;padding-bottom:60px;">
+</div>
+
 </div>
 <div class="row">
+
 </div>
 <div style="height:2400px">&nbsp
 </div>
