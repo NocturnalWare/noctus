@@ -6,7 +6,7 @@
 	width: 30%;
 }
 </style>
-<div class="col-sm-12 col-md-6">
+<div style="margin-top:100px;" class="col-sm-12 col-md-6">
 @foreach($products as $product)
 <div class="col-sm-12 col-md-4" >
 	<div id="size_{{$product->id}}" class="btn-sm btn-danger">{{$product->name}}</div><br>
