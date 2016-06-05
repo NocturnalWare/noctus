@@ -16,7 +16,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001684c8', e
 }
 
 .window1{
-  background-image: url('http://159.203.77.45/images/midyear.png');
+  background-image: url('./images/background.png');
     background-position: center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
