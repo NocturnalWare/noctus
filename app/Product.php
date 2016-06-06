@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
 	protected $rules = [];
-	protected $fillable = [];
+	protected $fillable = ['name'];
 	protected $table = 'products';
 
 	public function inventories()

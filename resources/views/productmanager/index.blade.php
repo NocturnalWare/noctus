@@ -2,6 +2,7 @@
 @section('content')
 
 <div  style="margin-top:70px;">
+	<a href="{{route('productmanager.create')}}" class="btn btn-sm btn-primary col-sm-12">New Product</a>
 @foreach($products as $product)
 <div class="col-xs-6 col-md-3">
 	<a href="{{route('productmanager.show', $product->id)}}">

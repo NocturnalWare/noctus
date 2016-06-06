@@ -77,6 +77,16 @@
 								</a>	
 							</div>
 						</li>
+						<li class="list-group-item btn col-xs-12" style="background-color:#fff">
+							<form action="{{route('productmanager.destroy', $product->id)}}" method="POST">
+								<input type="hidden" name="_method" value="DELETE">
+								<input type="hidden" name="_token" value="{{csrf_token()}}">
+								<button class="btn btn-danger" type="submit">
+									DELETE <i class="fa fa-times"></i>
+								</button>
+							</form>
+
+						</li>
 					</ul>
 				</div>
 		</div>
