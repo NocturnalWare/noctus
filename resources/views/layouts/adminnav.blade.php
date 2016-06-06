@@ -13,7 +13,7 @@
             <li></li>
             <a class="btn btn-lg" href="{{route('productmanager.index')}}">Products</a>
             <a class="btn btn-lg" href="{{route('inventory.index')}}">Inventory</a>
-            <a class="btn btn-lg" href="{{route('productmanager.create')}}">Inventory Report</a>
+            <a class="btn btn-lg" href="{{route('reports.index')}}">Inventory Report</a>
             <li class="btn btn-lg">Contacts</li>
             <li class="btn btn-lg">Venues</li>
             <li class="btn btn-lg"><a href="{{route('orders.index')}}">Orders</a></li>

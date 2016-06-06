@@ -59,6 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('salesmanager', 'Admin\SalesManagerController');
 	Route::get('shipping/buildLabel/{id}/{size}', array('as' => 'buildLabel', 'uses' => 'Admin\SalesManagerController@show'));
 	Route::resource('inventory', 'InventoryController');
+	Route::resource('reports', 'Reports\ReportsController');
 	Route::get('contactmanager/index', array('as' => 'contactManager', 'uses' => 'ProductManagerController@index'));
 	Route::post('orders/eventCheckin', array('as' => 'eventCheckin', 'uses' => 'OrdersController@eventCheckin'));
 	Route::get('venuemanager/index', array('as' => 'venueManager', 'uses' => 'ProductManagerController@index'));
