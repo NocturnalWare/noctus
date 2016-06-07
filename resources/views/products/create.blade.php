@@ -111,7 +111,7 @@
 				</tr>
 
 			</tbody>
-
-	<span @click="addProduct" class="btn btn-warning"> Do the Thing</span>
+		</table>
+	<span @click="addProduct" class="btn btn-primary col-sm-12">ADD <i class="fa fa-plus"></i></span>
 </div>
 @stop
