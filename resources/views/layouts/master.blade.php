@@ -32,7 +32,6 @@
     /></noscript>
     <!-- End Facebook Pixel Code -->
 
-  <script src="http://159.203.77.45/js/bundle.js"></script>
   <title>#StayAwakeToCreate</title>
   @yield('facebook-tags')            
 </head>
@@ -59,6 +58,7 @@
 @yield('content')
 </body>
 
+<script src="http://localhost/noctus/public/js/bundle.js"></script>
 
 
 </html>
