@@ -54,9 +54,7 @@ class ProductManagerController extends Controller
      */
     public function create()
     {
-        $products = \App\Product::with('inventories', 'prices')->get();
-
-        return view('inventory.show', compact('products'));
+        return view('products.create');
     }
 
     public function facebook($id = '1'){
@@ -72,7 +70,26 @@ class ProductManagerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = $request->get('product');
+        $inventory = $request->get('inventory');
+        $prices = $request->get('prices');
+        $fixedprice = [];
+        
+        foreach($inventory as $key => $value){
+            if(!empty($value) && $value > 0){
+                $product[$key] = 1;
+            }
+        }
+
+        foreach($prices as $key => $value){
+            $fixedprice[$key] = $value * 100;
+        }
+
+        $newproduct = \App\Product::create($product);
+        $newproduct->addInventory($inventory);
+        $newproduct->addPrices($fixedprice);
+
+        return route('productmanager.index');
     }
 
     /**
@@ -119,6 +136,8 @@ class ProductManagerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Product::find($id)->delete();
+
+        return redirect()->route('productmanager.index');
     }
 }
