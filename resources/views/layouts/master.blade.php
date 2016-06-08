@@ -17,7 +17,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  <script src="http://store.eternallynocturnal.com/js/bundle.js"></script>
+
 
   <!-- Facebook Pixel Code -->
     <script>
@@ -49,6 +49,7 @@
   ga('send', 'pageview');
 
 </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!-- <div id='stars'></div> -->
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
