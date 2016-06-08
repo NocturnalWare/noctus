@@ -17,6 +17,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
+  <script src="http://store.eternallynocturnal.com/js/bundle.js"></script>
 
   <!-- Facebook Pixel Code -->
     <script>
@@ -34,7 +35,7 @@
     <!-- End Facebook Pixel Code -->
 
   <title>#StayAwakeToCreate</title>
-  @yield('facebook-tags')            
+  @yield('facebook-tags')
 </head>
 
 <body style="background-color:#000">
@@ -48,7 +49,6 @@
   ga('send', 'pageview');
 
 </script>
-<script src="http://store.eternallynocturnal.com/js/bundle.js"></script>
 <!-- <div id='stars'></div> -->
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
