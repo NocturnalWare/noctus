@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="http://store.eternallynocturnal.com/final.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
   <script>
-    var jQuery = require('http://store.eternallynocturnal.com/js/jquery.min.js');
 
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -49,6 +48,7 @@
   ga('send', 'pageview');
 
 </script>
+<script src="http://store.eternallynocturnal.com/js/bundle.js"></script>
 <!-- <div id='stars'></div> -->
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
