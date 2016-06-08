@@ -17,7 +17,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-
+  <script src="http://store.eternallynocturnal.com/js/bundle.js"></script>
 
   <!-- Facebook Pixel Code -->
     <script>
