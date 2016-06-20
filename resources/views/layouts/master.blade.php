@@ -48,8 +48,6 @@
   ga('send', 'pageview');
 
 </script>
-<script src="http://localhost/noctus/public/js/bundle.js"></script>
-
 <!-- <div id='stars'></div> -->
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
@@ -59,6 +57,7 @@
   <div id="fb-root"></div>
 
 @yield('content')
+<script src="http://eternallynocturnal.com/js/bundle.js"></script>
 </body>
 
 
