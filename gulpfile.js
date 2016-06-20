@@ -18,5 +18,5 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('app.scss');
     mix.styles(['noctus.css'], 'public/final.css');
-    mix.browserify(['main.js', 'productmanager.js', 'vue.min.js', 'jquery.min.js']);
+    mix.browserify(['main.js', 'productmanager.js', 'vue.min.js', 'jquery.min.js', 'bootstrap.min.js']);
 });
