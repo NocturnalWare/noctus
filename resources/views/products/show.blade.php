@@ -11,7 +11,7 @@
 									
 	<legend style="margin-top:70px;text-align:center;color:#fff" class="product-header-etnoc">{{$product->name}}</legend>
 	<div class="col-xs-12 col-md-7">
-		<img class="img-responsive" src="http://54.149.181.47/etnoc/{{$product->main_image}}" />
+		<img class="img-responsive" src="{{$product->getMainImage()}}" />
 	</div>
 	<div class="well col-xs-12 col-md-2" style="color:#000;">
 		{{$product->description}}

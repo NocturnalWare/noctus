@@ -46,4 +46,8 @@ class Product extends Model
 		\App\Price::create($prices);
 		return;
 	}
+	
+	public function getMainImage(){
+		return 'https://s3-us-west-2.amazonaws.com/etnoc/images/products/'.$this->main_image;
+	}
 }

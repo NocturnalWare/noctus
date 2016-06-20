@@ -48,7 +48,8 @@
   ga('send', 'pageview');
 
 </script>
-<script src="http://store.eternallynocturnal.com/js/bundle.js"></script>
+<script src="http://localhost/noctus/public/js/bundle.js"></script>
+
 <!-- <div id='stars'></div> -->
 <!-- <div id='stars2'></div> -->
 <!-- <div id='stars3'></div> -->
@@ -60,7 +61,6 @@
 @yield('content')
 </body>
 
-<script src="http://store.eternallynocturnal.com/js/bundle.js"></script>
 
 
 </html>
