@@ -75,7 +75,7 @@
         data-amount="{{$checkoutAmt}}"
         data-name="Eternally Nocturnal"
         data-description= "${{number_format(Session::get('checkoutAmt')/100, 2)}}"
-        data-image="http://54.149.181.47/images/blackskull.jpg">
+        data-image="https://eternallynocturnal.com/images/blackskull.jpg">
       </script>
     </form>
 

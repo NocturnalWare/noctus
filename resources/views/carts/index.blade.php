@@ -2,11 +2,11 @@
 
 @section('content')
 	@foreach($carts as $cart)
-		
+
 		<div class="row" style="margin-top:70px;margin-left:40px;width:80%;border:1px #ffffff solid;border-radius:35px;border-left:transparent;border-right:transparent;padding:15px;">
 				<div class="col-xs-12 col-md-3">
 					<center>
-						<img  style="height:100px" class="img-responsive" src="http://54.149.181.47/etnoc/{{$cart->findItemProp('main_image')}}" />
+						<img  style="height:100px" class="img-responsive" src="https://s3-us-west-2.amazonaws.com/etnoc/images/products/{{$cart->findItemProp('main_image')}}" />
 					</center>
 				</div>
 				<div class="col-xs-12 col-md-3">
@@ -29,10 +29,10 @@
 
 							<button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
 						</form>
-					
+
 					</div>
 				</div>
-				
+
 		</div>
 
 
