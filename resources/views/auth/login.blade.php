@@ -1,7 +1,7 @@
 
 <div class="row" style="@if(isset($redirected))background-color:#000;@endif color:#000">
     <center>
-        <img src="https://eternallynocturnal.com/images/witeskull.jpg" class="img-responsive" />
+        <img src="https://eternallynocturnal.com/images/whiteskull.jpg" class="img-responsive" />
         <form method="POST" action="{{route('login')}}">
             {!! csrf_field() !!}
 
