@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('facebook-tags')
-	<meta property="og:image" content="http://54.149.181.47/images/blackskull.jpg">
+	<meta property="og:image" content="https://eternallynocturnal.com/images/blackskull.jpg">
 @stop
 
 @section('content')
@@ -16,7 +16,7 @@ We are more than a clothing brand. Here at Eternally Nocturnal, we offer the gre
 
 This company aims to empathize with the sleepless creative minds who will do whatever it takes to pursue the fruition of their deepest passions. <br><br>
 
-Together we will achieve the alternative lifestyle we collectively desire. We are Eternally Nocturnal. 
+Together we will achieve the alternative lifestyle we collectively desire. We are Eternally Nocturnal.
 <br><br>
 
 <span style="font-size:1.4em">#StayAwakeToCreate</span>
@@ -28,7 +28,7 @@ Together we will achieve the alternative lifestyle we collectively desire. We ar
 				@include('landing.shows-carousel')
 			</div>
 		</div>
-		
+
 		<div class="row">
 		<div class="col-md-6 col-sm-12 en-content-box embed-responsive-16by9"style="opacity:1;text-align:center;overflow:visible;z-index:5;position:relative;">
       		<iframe style="width:100%;height:100%;max-height:675px;" src="https://www.youtube.com/embed/OukL4GLWhiE" allowfullscreen></iframe>
