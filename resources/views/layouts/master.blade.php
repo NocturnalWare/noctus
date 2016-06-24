@@ -62,6 +62,7 @@
 
 @yield('content')
 <script src="https://eternallynocturnal.com/js/bundle.js"></script>
+@yield('javascript')
 </body>
 
 

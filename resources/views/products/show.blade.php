@@ -77,6 +77,7 @@
 	</div>
 </center>
 	<div class="col-md-3"></div>
+    @section('javascript')
 	<script>
 	checkCart();
 	function checkCart(){
@@ -134,4 +135,5 @@
         return false;
 	});
 	</script>
+    @stop
 @stop
