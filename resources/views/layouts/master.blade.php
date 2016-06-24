@@ -5,7 +5,7 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://159.203.77.45/bootstrap/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="http://store.eternallynocturnal.com/final.css">
+  <link rel="stylesheet" href="https://eternallynocturnal.com/final.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
   <script>
 
@@ -34,7 +34,7 @@
     <!-- End Facebook Pixel Code -->
 
   <title>#StayAwakeToCreate</title>
-  @yield('facebook-tags')            
+  @yield('facebook-tags')
 </head>
 
 <body style="background-color:#000">
@@ -57,7 +57,7 @@
   <div id="fb-root"></div>
 
 @yield('content')
-<script src="http://eternallynocturnal.com/js/bundle.js"></script>
+<script src="https://eternallynocturnal.com/js/bundle.js"></script>
 </body>
 
 
