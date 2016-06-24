@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('facebook-tags')
-          <meta property="og:image" content="http://54.149.181.47/etnoc/{{$product->main_image}}" />
+          <meta property="og:image" content="{{product->getMainImage()}}" />
           <meta property="og:description" content="{{$product->description}}" />
           <meta property="og:title" content="{{$product->name}}" />
 @stop
@@ -8,7 +8,7 @@
 
 
 <center>
-									
+
 	<legend style="margin-top:70px;text-align:center;color:#fff" class="product-header-etnoc">{{$product->name}}</legend>
 	<div class="col-xs-12 col-md-7">
 		<img class="img-responsive" src="{{$product->getMainImage()}}" />
@@ -49,9 +49,9 @@
 					<option value="xxxlarge">XXX-Large ${{substr($product->prices->xxxlarge,0,-2)}}.{{substr($product->prices->xxxlarge,-2)}}</option>
 				@endif
 			</select>
-		@endif	
+		@endif
 			<br>
-			<div id="checkCart"></div> 
+			<div id="checkCart"></div>
 			<br>
 			@if($product->id !== 39)
 				<button id="cart" type="button" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-plus"></i> Add to Cart</button>
@@ -62,9 +62,9 @@
 			<a href="{{route('cart.index')}}" class="col-sm-12 btn btn-sm btn-default"><i class="fa fa-shopping-cart"></i> View Cart</a>
 			<div class="row">
 				<div class="col-sm-6 btn" style="color:transparent">
-					<div class="fb-like" 
+					<div class="fb-like"
 						data-href="http://store.eternallynocturnal.com/products/{{$product->id}}"
-						data-layout="button_count" 
+						data-layout="button_count"
 						data-action="like">
 					</div>
 				</div>
@@ -100,27 +100,27 @@
 				});
 				if(data > ''){
 					jQuery('#showCartIcon').removeClass('hidden');
-					jQuery('#hideCartIcon').addClass('hidden');					
+					jQuery('#hideCartIcon').addClass('hidden');
 				}
                return;
             }
         });
-		return false;	
+		return false;
 	}
 
-		
+
 	jQuery('#cart').on('click', function(){
 		var $post = {};
     	var url = "{{route('addToCart')}}";
-        $post.size = jQuery(this).parent().find('.size').val(); 
-        $post.product = jQuery(this).parent().find('.product').val(); 
+        $post.size = jQuery(this).parent().find('.size').val();
+        $post.product = jQuery(this).parent().find('.product').val();
         $post._token = "{{csrf_token()}}";
         jQuery.ajax({
         type: "POST",
         url: url,
         data: $post,
         cache: false,
-        success: function(data){            	
+        success: function(data){
 
             	if(data['failure']){
             		return jQuery('#checkCart').append(data['failure']+'<br>');
