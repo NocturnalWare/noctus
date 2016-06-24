@@ -14,7 +14,7 @@
         <a href="{{route('products.show', '32')}}">
           <div class="well well-sm en-big-well-button">
             <label class="en-label-bl">Devaux Tee 23.99</label><br>
-            <img class="img-responsive" src="http://54.149.181.47/images/newline/devaux.jpg">
+                <img class="img-responsive" src="{{\App\Product::find(32)->getMainImage()}}">
           </div>
         </a>
       </div>
@@ -25,7 +25,7 @@
           <a href="{{route('products.show', '17')}}">
             <div class="well well-sm en-big-well-button">
               <label class="en-label-bl">Geo Owl Tee 19.99</label><br>
-              <img class="img-responsive" src="http://54.149.181.47/images/newline/geomens.jpg">
+                <img class="img-responsive" src="{{\App\Product::find(17)->getMainImage()}}">
             </div>
           </a>
         </div>
@@ -36,7 +36,7 @@
           <a href="{{route('products.show', '34')}}">
             <div class="well well-sm en-big-well-button">
               <label class="en-label-bl">Native Owl ¾ 25.99</label><br>
-                <img class="img-responsive" src="http://54.149.181.47/images/newline/nativeowl34.jpg">
+                <img class="img-responsive" src="{{\App\Product::find(34)->getMainImage()}}">
             </div>
           </a>
         </div>
@@ -69,7 +69,7 @@
           <a href="{{route('products.show', '37')}}">
             <div class="well well-sm en-big-well-button">
               <label class="en-label-bl">Plum Crossbones Beanie 17.99</label><br>
-                <img class="img-responsive" src="http://54.149.181.47/images/newline/plumbeanie.jpg">
+                <img class="img-responsive" src="{{\App\Product::find(37)->getMainImage()}}">
             </div>
           </a>
         </div>
@@ -80,7 +80,7 @@
           <a href="{{route('products.show', '6')}}">
             <div class="well well-sm en-big-well-button">
               <label class="en-label-bl">Stay Awake to Create Baseball Tee 19.99</label><br>
-                <img class="img-responsive" src="http://54.149.181.47/images/newline/satcbaseball.jpg">
+                <img class="img-responsive" src="{{\App\Product::find(6)->getMainImage()}}">
             </div>
           </a>
         </div>
@@ -91,7 +91,7 @@
           <a href="{{route('products.show', '35')}}">
             <div class="well well-sm en-big-well-button">
               <label class="en-label-bl">Native Owl Womens Swoop Neck 29.99</label><br>
-                <img class="img-responsive" src="http://54.149.181.47/images/newline/nativefemalesweater.jpg">
+                <img class="img-responsive" src="{{\App\Product::find(35)->getMainImage()}}">
             </div>
           </a>
         </div>
