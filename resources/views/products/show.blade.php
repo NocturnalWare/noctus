@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('facebook-tags')
-          <meta property="og:image" content="{{product->getMainImage()}}" />
+          <meta property="og:image" content="{{$product->getMainImage()}}" />
           <meta property="og:description" content="{{$product->description}}" />
           <meta property="og:title" content="{{$product->name}}" />
 @stop
