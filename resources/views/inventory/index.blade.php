@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@section('javascript')
 <style>
 .quantity{
 	width: 30%;
@@ -11,7 +12,7 @@
 <div class="col-sm-12 col-md-4" >
 	<div id="size_{{$product->id}}" class="btn-sm btn-danger">{{$product->name}}</div><br>
 <script>
-		var oParams = '';
+var oParams = '';
 var money = "{{$product->id}}";
 </script>
 
@@ -161,4 +162,5 @@ jQuery('#size_{{$product->id}}').on('click', function(){
 </script>
 
 
+@stop
 @stop
