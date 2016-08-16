@@ -8,7 +8,7 @@
 @stop
 
 @section('content') 
-	<div class="col-xs-12 col-md-8 col-md-offset-2" style="padding:80px">
+	<div class="col-xs-12 col-md-8 col-md-offset-2" style="padding-top:80px">
 		<center>
 
 			<h3>
@@ -26,7 +26,7 @@
 				Please <span class="fb-share-button" data-href="https://eternallynocturnal.com/singles/as-we-divide" data-layout="button"></span>
 				 this around and let us know what you think!
 			</h3>
-			
+
 			<div class="col-xs-12">
 				<img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/etnoc/images/AWD_Single_Photo.jpg"></img>
 				<audio controls>
