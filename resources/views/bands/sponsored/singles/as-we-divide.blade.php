@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('facebook-tags')
-          <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/etnoc/images/AWD_Single_Photo.jpg" />
+          <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/etnoc/images/AWD_fb.jpg" />
           <meta property="og:description" content="To show you all how much we appreciate you, enjoy a 
 			free download of our new single “Ease The Pain”" />
           <meta property="og:title" content="As We Divide - Ease The Pain" />
