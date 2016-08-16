@@ -8,7 +8,7 @@
 @stop
 
 @section('content') 
-	<div class="col-xs-12 col-md-8 col-md-offset-2" style="padding-top:80px">
+	<div class="col-xs-12 col-md-8 col-md-offset-2" style="padding-top:20px">
 		<center>
 
 			<h3>
