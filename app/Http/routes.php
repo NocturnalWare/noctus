@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/singles/as-we-divide', function(){
+	return view('bands.sponsored.singles.as-we-divide');
+});
+
 Route::get('/home', function () {
     return view('welcome');
 });
