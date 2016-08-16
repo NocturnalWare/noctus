@@ -46,12 +46,12 @@
 				<br>
 				<br>
 			
-			<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="www.facebook.com/AsWeDivide">
+			<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="https://www.facebook.com/AsWeDivide">
 				As We Divide <i class="fa fa-facebook-official"></i> 
 			</a>
 
 			
-			<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="www.facebook.com/EternallyNocturnal">
+			<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="https://www.facebook.com/EternallyNocturnal">
 				Eternally Nocturnal <i class="fa fa-facebook-official"></i> 
 			</a>
 		</center>
