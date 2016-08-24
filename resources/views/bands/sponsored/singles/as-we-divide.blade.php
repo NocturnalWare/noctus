@@ -55,13 +55,12 @@
 				Eternally Nocturnal <i class="fa fa-facebook-official"></i>
 			</a>
 
-			<div class="col-xs-12">
-				Recorded and produced at <a href="http://www.undeadstudiosmi.com/">Undead Studios</a>
-				<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="https://www.facebook.com/undeadstudiosmi">
-					<i class="fa fa-facebook-official"></i>
-				</a>
-
-			</a>div>
+				<div class="col-xs-12">
+					Recorded and produced at <a href="http://www.undeadstudiosmi.com/">Undead Studios</a>
+					<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="https://www.facebook.com/undeadstudiosmi">
+						<i class="fa fa-facebook-official"></i>
+					</a>
+				</div>
 
 			</div>
 		</center>
