@@ -46,7 +46,7 @@
 				<br>
 				<br>
 
-			<div class="col-xs-12">
+			<div class="col-xs-12" style="color:#fff;font-size:1.5em">
 				Recorded and produced at <a href="http://www.undeadstudiosmi.com/">Undead Studios</a>
 				<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="https://www.facebook.com/undeadstudiosmi">
 					<i class="fa fa-facebook-official"></i>
@@ -54,7 +54,7 @@
 			</div>
 
 			<a style="color:#fff;font-size:1.5em" class="btn btn-sm mobile-nav-button-etnoc" href="https://www.facebook.com/AsWeDivide">
-				As We Divide DERP <i class="fa fa-facebook-official"></i>
+				As We Divide <i class="fa fa-facebook-official"></i>
 			</a>
 
 
